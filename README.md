@@ -6,8 +6,8 @@ Here live the base styles and components for iVantage Healthcare Analytics.
 
 Docs for base style and components can be found in:
 
-- `/packages/ivh-base-components/README.md`
-- `/pacakges/ivh-base-style/README.md`
+- [`/packages/ivh-base-components/README.md`](/packages/ivh-base-components/README.md)
+- [`/packages/ivh-base-style/README.md`](/packages/ivh-base-style/README.md)
 
 ## Publishing
 
