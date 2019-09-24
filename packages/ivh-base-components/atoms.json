@@ -1,0 +1,343 @@
+{
+  "atoms": [
+    [
+      "AuBadge",
+      "span",
+      ["au-badge"],
+      [],
+      true,
+      [],
+      "An indicator for notification counts, etc."
+    ],
+
+    [
+      "AuWithBadge",
+      "span",
+      ["au-with-badge"],
+      [],
+      false,
+      [],
+      "A helper for `AuBadge`, marks an element as having a badge."
+    ],
+
+    [
+      "AuAccordion",
+      "div",
+      ["au-accordion"],
+      [],
+      false,
+      [],
+      "A top level accordion wrapper. Pair with panels, header, and body."
+    ],
+
+    [
+      "AuAccordionPanel",
+      "div",
+      ["au-accordion-panel"],
+      ["active"],
+      false,
+      [],
+      "An accordion panel. Panels have a header and a body."
+    ],
+
+    [
+      "AuAccordionHeader",
+      "div",
+      ["au-accordion-header"],
+      [],
+      false,
+      [],
+      "An accordion panel header."
+    ],
+
+    [
+      "AuAccordionBody",
+      "div",
+      ["au-accordion-body"],
+      [],
+      false,
+      [],
+      "An accordion panel body."
+    ],
+
+    [
+      "AuAlert",
+      "p",
+      ["au-alert"],
+      ["flat"],
+      true,
+      [],
+      "Fancy alerts for fancy people."
+    ],
+
+    [
+      "AuButton",
+      "button",
+      ["au-btn"],
+      ["secondary", "tertiary", "cta", "actions", "sm", "area", "link", "text", "badge"],
+      true,
+      [],
+      "Fancy buttons for fancy people."
+    ],
+
+    [
+      "AuCard",
+      "div",
+      ["au-card"],
+      ["muted"],
+      true,
+      [],
+      "A generic container."
+    ],
+
+    [
+      "AuCardHeader",
+      "div",
+      ["au-card-header"],
+      [],
+      false,
+      [],
+      "A header for cards, not to be confused with `h` elements."
+    ],
+
+    [
+      "AuClose",
+      "span",
+      ["au-close"],
+      [],
+      false,
+      [],
+      "A close button for cards, alerts, etc."
+    ],
+
+    [
+      "AuDropdown",
+      "div",
+      ["au-dropdown"],
+      ["open"],
+      false,
+      [],
+      "An outer wrapper for dropdown components."
+    ],
+
+    [
+      "AuDropdownButton",
+      "div",
+      ["au-dropdown-button"],
+      [],
+      false,
+      [],
+      "A button for dropdowns, this is what you would click to open a dropdown."
+    ],
+
+    [
+      "AuDropdownBackdrop",
+      "div",
+      ["au-dropdown-backdrop"],
+      [],
+      false,
+      [],
+      "A transparent shim to listen for clicks to close a dropdown."
+    ],
+
+    [
+      "AuDropdownMenu",
+      "div",
+      ["au-dropdown-menu"],
+      [],
+      false,
+      [],
+      "A menu for dropdowns."
+    ],
+
+    [
+      "AuInput",
+      "input",
+      ["au-input"],
+      [],
+      false,
+      [],
+      "Fancy inputs for fancy people. In most cases may be used as a drop-in for `input`."
+    ],
+
+    [
+      "AuCheckbox",
+      "input",
+      ["au-checkbox"],
+      [],
+      false,
+      ["type='checkbox'"],
+      "A special case for checkbox inputs."
+    ],
+
+    [
+      "AuRadio",
+      "input",
+      ["au-radio"],
+      [],
+      false,
+      ["type='radio'"],
+      "A special case for radio button inputs."
+    ],
+
+    [
+      "AuList",
+      "ul",
+      ["au-list"],
+      ["slim", "relaxed", "selectable"],
+      false,
+      [],
+      "A list wrapper."
+    ],
+
+    [
+      "AuListItem",
+      "li",
+      ["au-list-item"],
+      ["active"],
+      false,
+      [],
+      "A list item."
+    ],
+
+    [
+      "AuMarker",
+      "span",
+      ["au-marker"],
+      ["placeholder", "muted"],
+      true,
+      [],
+      "A color marker, often used to connect legends with data visualizations."
+    ],
+
+    [
+      "AuPill",
+      "span",
+      ["au-pill"],
+      ["active"],
+      true,
+      [],
+      "Fancy pills for fancy people."
+    ],
+
+    [
+      "AuPillNav",
+      "a",
+      ["au-pill-nav", "au-pill"],
+      ["active"],
+      false,
+      [],
+      "A pill styled for navigation."
+    ],
+
+    [
+      "AuLabel",
+      "span",
+      ["au-label"],
+      ["active"],
+      true,
+      [],
+      "A label for form inputs."
+    ],
+
+    [
+      "AuShadow",
+      "div",
+      ["au-shadow"],
+      ["short", "medium", "tall"],
+      false,
+      [],
+      "Apply a shadown to give the wrapped element some depth."
+    ],
+
+    [
+      "AuTable",
+      "table",
+      ["au-table"],
+      [],
+      true,
+      [],
+      "Fancy tables for fancy people. Pair with table rows, columns, and/or cells."
+    ],
+
+    [
+      "AuTableRow",
+      "tr",
+      ["au-table-row"],
+      [],
+      false,
+      [],
+      "Fancy table rows for fancy people."
+    ],
+
+    [
+      "AuTableCol",
+      "td",
+      ["au-col"],
+      ["checkbox", "text", "data"],
+      false,
+      [],
+      "Fancy table columns for fancy people."
+    ],
+
+    [
+      "AuGrid",
+      "div",
+      ["au-grid"],
+      [],
+      true,
+      [],
+      "A grid, similar to tables but with divs and such instead of an actual `table` element."
+    ],
+
+    [
+      "AuCell",
+      "div",
+      ["au-cell"],
+      ["divider", "row", "checkbox", "text", "data"],
+      true,
+      [],
+      "A cell for grids."
+    ],
+
+    [
+      "AuTextarea",
+      "textarea",
+      ["au-input"],
+      [],
+      false,
+      [],
+      "A special case for textarea inputs."
+    ],
+
+    [
+      "AuTabContainer",
+      "ul",
+      ["au-tab-container"],
+      [],
+      false,
+      [],
+      "A simple tab container."
+    ],
+
+    [
+      "AuTab",
+      "li",
+      ["au-tab"],
+      [],
+      false,
+      [],
+      "A simple tab."
+    ],
+
+    [
+      "AuTabContent",
+      "div",
+      ["au-tab-content"],
+      [],
+      false,
+      [],
+      "A panel for contents of a tab."
+    ]
+  ]
+}

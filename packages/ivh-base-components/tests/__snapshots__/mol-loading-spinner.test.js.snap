@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuLoadingMask should render consistently 1`] = `
+<div
+  className="au-mask"
+>
+  <div
+    className="au-mask-spinner"
+  >
+    <span
+      className="au-spinner-dot"
+    />
+    <span
+      className="au-spinner-dot"
+    />
+    <span
+      className="au-spinner-dot"
+    />
+  </div>
+  Please wait, the bears are waking from hibernation...
+</div>
+`;

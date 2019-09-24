@@ -1,0 +1,80 @@
+
+/**
+ * Radio Buttons
+ */
+
+.au-radio {
+  position: relative;
+  height: 16px;
+  width: 16px;
+}
+
+.au-radio:before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-lines-gray);
+}
+
+.au-radio:checked:before {
+  background-image: radial-gradient(
+    circle,
+    var(--color-secondary-blue),
+    var(--color-secondary-blue) 4.9px,
+    var(--color-white) 5.1px,
+    var(--color-white) 7px,
+    var(--color-secondary-blue) 7px,
+    var(--color-secondary-blue)
+  );
+  border: 1px solid var(--color-secondary-blue);
+}
+
+.au-radio:hover:before,
+.au-radio:focus:before {
+  border: 1px solid var(--color-primary-blue);
+}
+
+.au-radio:checked:hover:before {
+  background-image: radial-gradient(
+    circle,
+    var(--color-primary-blue),
+    var(--color-primary-blue) 4.9px,
+    var(--color-white) 5.1px,
+    var(--color-white) 7px,
+    var(--color-primary-blue) 7px,
+    var(--color-primary-blue)
+  );
+  border: 1px solid var(--color-primary-blue);
+}
+
+
+.au-radio:disabled:before,
+.au-radio:disabled:focus:before,
+.au-radio:disabled:hover:before {
+  cursor: not-allowed;
+  color: var(--color-light-gray);
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-inactive-gray);
+}
+
+.au-radio:checked:disabled:before,
+.au-radio:checked:disabled:focus:before,
+.au-radio:checked:disabled:hover:before {
+  background-image: radial-gradient(
+    circle,
+    var(--color-inactive-gray),
+    var(--color-inactive-gray) 4.9px,
+    var(--color-white) 5.1px,
+    var(--color-white) 7px,
+    var(--color-inactive-gray) 7px,
+    var(--color-inactive-gray)
+  );
+  border: 1px solid var(--color-inactive-gray);
+}
+
+

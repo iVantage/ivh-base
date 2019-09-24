@@ -1,0 +1,36 @@
+/**
+ * Alerts
+ */
+.au-tab-container {
+    align-items: baseline;
+    border-bottom: 5px solid var(--color-hover-darker-gray);
+    display: flex;
+    overflow-y: hidden;
+    overflow: hidden;
+    list-style-type: none;
+    padding: inherit;
+}
+
+.au-tab {
+    background-color: inherit;
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+    cursor: pointer;
+    flex-grow: 1;
+    float: left;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .au-tab:hover {
+    background-color: var(--color-light-gray);
+  }
+  
+  .au-tab.active {
+    background-color: var(--color-hover-darker-gray);
+  }
+  
+  .au-tab-content {
+    background-color: var(--color-white);
+    padding: 10px;
+  }

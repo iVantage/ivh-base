@@ -1,0 +1,27 @@
+.au-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #495357;
+  outline: none !important;
+  box-sizing: border-box;
+  border: 1px solid #dfe4e6;
+  border-radius: 2px; 
+}
+
+.au-input-hint {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  text-transform: none;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.au-input-label {
+  color: var(--color-text-gray);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-heavy);
+  font-family: var(--font-family-condensed);
+  font-size: 12px;
+  display: block;
+}

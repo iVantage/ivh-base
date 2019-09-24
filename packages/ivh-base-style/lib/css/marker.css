@@ -1,0 +1,39 @@
+
+/**
+ * Markers connect elements on the page
+ *
+ * As such we have a marker for each data viz color as well as semantic flavor
+ * markers.
+ */
+
+.au-marker:before {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: var(--color-muted);
+  margin-right: 5px;
+}
+
+.au-marker-placeholder:before { background-color: transparent; }
+
+/* Data-viz markers */
+.au-marker-0:before { background-color: var(--color-viz-0); }
+.au-marker-1:before { background-color: var(--color-viz-1); }
+.au-marker-2:before { background-color: var(--color-viz-2); }
+.au-marker-3:before { background-color: var(--color-viz-3); }
+.au-marker-4:before { background-color: var(--color-viz-4); }
+.au-marker-5:before { background-color: var(--color-viz-5); }
+.au-marker-6:before { background-color: var(--color-viz-6); }
+.au-marker-7:before { background-color: var(--color-viz-7); }
+.au-marker-8:before { background-color: var(--color-viz-8); }
+.au-marker-9:before { background-color: var(--color-viz-9); }
+
+/* Semantic Makers */
+.au-marker-muted:before { background-color: var(--color-muted); }
+.au-marker-info:before { background-color: var(--color-info); }
+.au-marker-primary:before { background-color: var(--color-primary); }
+.au-marker-success:before { background-color: var(--color-success); }
+.au-marker-warning:before { background-color: var(--color-warning); }
+.au-marker-danger:before { background-color: var(--color-danger); }

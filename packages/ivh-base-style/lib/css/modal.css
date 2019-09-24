@@ -1,0 +1,21 @@
+
+/**
+ * Modals
+ *
+ * This is largely a placeholder for now to provide classnames for other modals
+ * that allow boosting zIndices for nested children
+ */
+
+.au-modal {
+  position: absolute;
+  z-index: var(--z-index-modal);
+}
+
+.au-modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-index-modal-backdrop);
+}

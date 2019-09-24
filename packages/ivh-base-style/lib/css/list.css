@@ -1,0 +1,35 @@
+
+/**
+ * Standalone lists and to be support complex components
+ */
+
+.au-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.au-list li,
+.au-list-item {
+  line-height: 16px;
+  padding: 6px 20px;
+}
+
+.au-list-slim li,
+.au-list-slim .au-list-item {
+  padding: 3px 10px;
+}
+
+.au-list-relaxed li,
+.au-list-relaxed .au-list-item {
+  padding: 9px 23px;
+}
+
+.au-list li.active,
+.au-list-selectable li:hover,
+.au-list-selectable .au-list-item:hover,
+.au-list-item.active,
+.au-list-item-active {
+  cursor: pointer;
+  background-color: var(--color-selection-blue);
+}

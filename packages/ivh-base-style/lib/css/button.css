@@ -1,0 +1,324 @@
+
+/**
+ * Buttons
+ */
+
+/* Buttons - base button */
+.au-btn:hover,
+.au-btn:focus {
+  background-color: var(--color-selection-blue);
+  border: 1px solid var(--color-secondary-blue);
+}
+
+.au-btn {
+  outline: none; /* this makes me cry inside */
+  padding: 12px 20px;
+  color: var(--color-primary-blue);
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-lines-gray);
+  font-family: var(--font-family-condensed);
+  font-weight: var(--font-weight-heavy);
+}
+
+.au-btn:active {
+  color: var(--color-white);
+  background-color: var(--color-primary-blue);
+}
+
+.au-btn:disabled {
+  color: var(--color-inactive-gray);
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-inactive-gray);
+}
+
+.au-btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+/* Buttons - primary */
+.au-btn-primary:not(:disabled):hover,
+.au-btn-primary:not(:disabled):focus {
+  background-color: var(--color-secondary-blue);
+  border: 1px solid var(--color-secondary-blue);
+}
+
+.au-btn-primary,
+.au-btn-primary:active {
+  color: var(--color-white);
+  background-color: var(--color-primary-blue);
+  border: 1px solid var(--color-primary-blue);
+}
+
+.au-btn-primary:disabled {
+  color: var(--color-white);
+  background-color: var(--color-inactive-gray);
+  border: 1px solid var(--color-inactive-gray);
+}
+
+/* Buttons - secondary */
+.au-btn-secondary:not(:disabled):hover,
+.au-btn-secondary:not(:disabled):focus {
+  color: var(--color-primary-blue);
+	background-color: var(--color-selection-blue);
+}
+
+.au-btn-secondary {
+  color: var(--color-primary-blue);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-primary-blue);
+}
+
+.au-btn-secondary:active {
+  color: var(--color-white);
+  background-color: var(--color-primary-blue);
+}
+
+.au-btn-secondary:disabled {
+  color: var(--color-inactive-gray);
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-inactive-gray);
+}
+
+/* Buttons - tertiary */
+.au-btn-tertiary:not(:disabled):hover,
+.au-btn-tertiary:not(:disabled):focus {
+  color: var(--color-primary-blue);
+	background-color: var(--color-selection-blue);
+  border: 1px solid var(--color-selection-blue);
+}
+
+.au-btn-tertiary {
+  color: var(--color-primary-blue);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+.au-btn-tertiary:active {
+  color: var(--color-white);
+  background-color: var(--color-primary-blue);
+  border: 1px solid var(--color-primary-blue);
+}
+
+.au-btn-tertiary:disabled {
+  color: var(--color-inactive-gray);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+/* Buttons - call to action */
+.au-btn-cta:not(:disabled):hover,
+.au-btn-cta:not(:disabled):focus {
+  background-color: #95a56d; /* non-standard color :( */
+}
+
+.au-btn-cta,
+.au-btn-cta:not(:disabled):active {
+  color: var(--color-white);
+  background-color: var(--color-insight-green);
+  border: 1px solid var(--color-insight-green);
+}
+
+/* Buttons - actions */
+.au-btn-actions:after {
+  content: "\25BC";
+  font-size: 8px;
+  position: relative;
+  bottom: 2px;
+  left: 4px;
+}
+
+/* Obligatory semantic flavors */
+.au-btn-info,
+.au-btn-info:disabled,
+.au-btn-info:not(:disabled):not(:active):hover,
+.au-btn-info:not(:disabled):not(:active):focus {
+  color: var(--color-white);
+  background-color: var(--color-info);
+  border: 1px solid var(--color-info);
+}
+
+.au-btn-success,
+.au-btn-success:disabled,
+.au-btn-success:not(:disabled):not(:active):hover,
+.au-btn-success:not(:disabled):not(:active):focus {
+  color: var(--color-white);
+  background-color: var(--color-success);
+  border: 1px solid var(--color-success);
+}
+
+.au-btn-warning,
+.au-btn-warning:disabled,
+.au-btn-warning:not(:disabled):not(:active):hover,
+.au-btn-warning:not(:disabled):not(:active):focus {
+  color: var(--color-white);
+  background-color: var(--color-warning);
+  border: 1px solid var(--color-warning);
+}
+
+.au-btn-danger,
+.au-btn-danger:disabled,
+.au-btn-danger:not(:disabled):not(:active):hover,
+.au-btn-danger:not(:disabled):not(:active):focus {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+}
+
+/* Buttons - dopdown */
+.au-btn-dropdown,
+.au-btn-dropdown:hover,
+.au-btn-dropdown:active {
+  position: relative;
+  text-transform: inherit;
+  color: inherit;
+  background-color: var(--color-white);
+  font-family: inherit;
+  font-weight: inherit;
+  border: 1px solid var(--color-lines);
+  padding: 10px 30px 10px 10px;
+  min-width: 200px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.au-btn-dropdown:not(:disabled):hover,
+.au-btn-dropdown:not(:disabled):focus,
+.au-btn-dropdown:not(:disabled):active {
+  border: 1px solid var(--color-hover-darker-gray);
+}
+
+.au-btn-dropdown:after {
+  content: " ";
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border-left: 2px solid var(--color-lines);
+  border-bottom: 2px solid var(--color-lines);
+  background-color: transparent;
+  transform: rotate(-45deg);
+}
+
+.au-btn-dropdown:not(:disabled):hover:after,
+.au-btn-dropdown:not(:disabled):focus:after,
+.au-btn-dropdown:not(:disabled):active:after {
+  border-left: 2px solid var(--color-hover-darker-gray);
+  border-bottom: 2px solid var(--color-hover-darker-gray);
+}
+
+.au-btn-dropdown:disabled {
+  color: var(--color-inactive-gray);
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-inactive-gray);
+}
+
+/* Buttons - area add */
+.au-btn-area {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--color-hover-darker-gray);
+  background-color: var(--color-light-gray);
+  border: 1px dashed var(--color-hover-darker-gray);
+}
+
+.au-btn-area:hover,
+.au-btn-area:focus {
+  background-color: #E9EEF0;
+  border: 1px dashed var(--color-hover-darker-gray);
+}
+
+.au-btn-area:active {
+  background-color: var(--color-light-gray);
+}
+
+/* Buttons - small */
+.au-btn-sm {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.au-btn-link,
+.au-btn-link:hover,
+.au-btn-link:focus {
+  text-transform: inherit;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-family: var(--font-family-base);
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  color: var(--color-link);
+}
+
+.au-btn-link:hover {
+  text-decoration: underline;
+  outline: none;
+}
+
+.au-btn-link:disabled,
+.au-btn-link:disabled:focus,
+.au-btn-link:disabled:hover {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: var(--color-inactive-gray);
+  cursor: not-allowed;
+}
+
+.au-btn-text,
+.au-btn-text:hover,
+.au-btn-text:focus {
+  text-transform: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-normal);
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.au-btn-text:hover {
+  outline: none;
+}
+
+.au-btn-text:disabled,
+.au-btn-text:disabled:focus,
+.au-btn-text:disabled:hover {
+  background-color: transparent;
+  border: none;
+  color: var(--color-inactive-gray);
+  cursor: not-allowed;
+}
+
+/* Helper for notification badges */
+.au-btn-badge {
+  position: relative;
+  overflow: visible;
+}
+
+.au-btn-info:not(:disabled):not(:active):hover, .au-btn.au-btn-info:not(:disabled):not(:active):focus,
+.au-btn-primary:not(:disabled):not(:active):hover, .au-btn.au-btn-primary:not(:disabled):not(:active):focus,
+.au-btn-success:not(:disabled):not(:active):hover, .au-btn.au-btn-success:not(:disabled):not(:active):focus,
+.au-btn-warning:not(:disabled):not(:active):hover, .au-btn.au-btn-warning:not(:disabled):not(:active):focus,
+.au-btn-danger:not(:disabled):not(:active):hover, .au-btn.au-btn-danger:not(:disabled):not(:active):focus {
+  filter: brightness(110%);
+}
+
+/* primary is handled above */
+.au-btn-info:disabled,
+.au-btn-success:disabled,
+.au-btn-warning:disabled,
+.au-btn-danger:disabled {
+  filter: brightness(80%);
+}

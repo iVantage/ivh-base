@@ -1,0 +1,73 @@
+
+/**
+ * Checkboxes
+ */
+
+.au-checkbox {
+  position: relative;
+}
+
+.au-checkbox:before {
+  content: var(--glyph-check);
+  position: absolute;
+  top: -4px;
+  left: -5px;
+  cursor: pointer;
+  padding: 1px 5px 2px 5px;
+  transform: scale(0.7);
+  font-weight: var(--font-weight-heavy);
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-lines-gray);
+}
+
+.au-checkbox:checked:before {
+  content: var(--glyph-check);
+  color: var(--color-white);
+  background-color: var(--color-secondary-blue);
+  border: 1px solid var(--color-secondary-blue);
+}
+
+.au-checkbox:hover:before,
+.au-checkbox:focus:before {
+  border: 1px solid var(--color-primary-blue);
+}
+
+.au-checkbox:checked:hover:before,
+.au-checkbox:checked:focus:before {
+  background-color: var(--color-primary-blue);
+  border: 1px solid var(--color-primary-blue);
+}
+
+.au-checkbox:disabled:before,
+.au-checkbox:disabled:focus:before,
+.au-checkbox:disabled:hover:before {
+  cursor: not-allowed;
+  color: var(--color-light-gray);
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-inactive-gray);
+}
+
+.au-checkbox:checked:disabled:before,
+.au-checkbox:checked:disabled:focus:before,
+.au-checkbox:checked:disabled:hover:before {
+  background-color: var(--color-inactive-gray);
+  border: 1px solid var(--color-inactive-gray);
+}
+
+.au-checkbox:indeterminate:before,
+.au-checkbox:indeterminate:hover:before,
+.au-checkbox:indeterminate:focus:before {
+  content: var(--glyph-horizontal-bar);
+  color: var(--color-primary-blue);
+  padding: 1px 5px;
+  font-size: 17px;
+}
+
+.au-checkbox:disabled:indeterminate:before,
+.au-checkbox:disabled:indeterminate:hover:before,
+.au-checkbox:disabled:indeterminate:focus:before {
+  color: var(--color-inactive-gray);
+}
+

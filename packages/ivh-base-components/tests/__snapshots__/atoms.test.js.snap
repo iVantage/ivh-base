@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Its a party, all The atoms are there The AuAccordion atom 1`] = `
+<div
+  className="au-accordion"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuAccordionBody atom 1`] = `
+<div
+  className="au-accordion-body"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuAccordionHeader atom 1`] = `
+<div
+  className="au-accordion-header"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuAccordionPanel atom 1`] = `
+<div
+  className="au-accordion-panel"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuAlert atom 1`] = `
+<p
+  className="au-alert"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuBadge atom 1`] = `
+<span
+  className="au-badge"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuButton atom 1`] = `
+<button
+  className="au-btn"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuCard atom 1`] = `
+<div
+  className="au-card"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuCardHeader atom 1`] = `
+<div
+  className="au-card-header"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuCell atom 1`] = `
+<div
+  className="au-cell"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuCheckbox atom 1`] = `
+<input
+  className="au-checkbox"
+  type="checkbox"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuClose atom 1`] = `
+<span
+  className="au-close"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuDropdown atom 1`] = `
+<div
+  className="au-dropdown"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuDropdownBackdrop atom 1`] = `
+<div
+  className="au-dropdown-backdrop"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuDropdownButton atom 1`] = `
+<div
+  className="au-dropdown-button"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuDropdownMenu atom 1`] = `
+<div
+  className="au-dropdown-menu"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuGrid atom 1`] = `
+<div
+  className="au-grid"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuInput atom 1`] = `
+<input
+  className="au-input"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuLabel atom 1`] = `
+<span
+  className="au-label"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuList atom 1`] = `
+<ul
+  className="au-list"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuListItem atom 1`] = `
+<li
+  className="au-list-item"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuMarker atom 1`] = `
+<span
+  className="au-marker"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuPill atom 1`] = `
+<span
+  className="au-pill"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuPillNav atom 1`] = `
+<a
+  className="au-pill-nav au-pill"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuRadio atom 1`] = `
+<input
+  className="au-radio"
+  type="radio"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuShadow atom 1`] = `
+<div
+  className="au-shadow"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuTab atom 1`] = `
+<li
+  className="au-tab"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuTabContainer atom 1`] = `
+<ul
+  className="au-tab-container"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuTabContent atom 1`] = `
+<div
+  className="au-tab-content"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuTable atom 1`] = `
+<table
+  className="au-table"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuTableCol atom 1`] = `
+<td
+  className="au-col"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuTableRow atom 1`] = `
+<tr
+  className="au-table-row"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuTextarea atom 1`] = `
+<textarea
+  className="au-input"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuWithBadge atom 1`] = `
+<span
+  className="au-with-badge"
+/>
+`;

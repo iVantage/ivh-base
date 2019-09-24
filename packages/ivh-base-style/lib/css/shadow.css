@@ -1,0 +1,13 @@
+
+.au-shadow,
+.au-shadow-short {
+  box-shadow: var(--box-shadow-short);
+}
+
+.au-shadow-medium {
+  box-shadow: var(--box-shadow-medium);
+}
+
+.au-shadow-tall {
+  box-shadow: var(--box-shadow-tall);
+}

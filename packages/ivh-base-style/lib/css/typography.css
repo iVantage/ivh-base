@@ -1,0 +1,103 @@
+
+/**
+ * Typography
+ *
+ * Copy, text elements, and page ambiance
+ */
+
+html, body {
+  height: 100%;
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text-gray);
+  background-color: var(--color-background);
+  padding: 0;
+  margin: 0;
+}
+
+.au-voice {
+  font-family: var(--font-family-voice);
+}
+
+h1 {
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 64px;
+}
+
+h2 {
+  font-weight: var(--font-weight-medium);
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h3 {
+  font-weight: var(--font-weight-medium);
+  font-size: 17px;
+  line-height: 23px;
+}
+
+h4 {
+  font-weight: var(--font-weight-heavy);
+  font-size: 15px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-weight: var(--font-weight-heavy);
+}
+
+h6 {
+  font-weight: var(--font-weight-heavy);
+}
+
+a {
+  outline: none; /* this makes me cry inside */
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
+label {
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: var(--font-family-base);
+}
+
+.au-text-muted { color: var(--color-muted); }
+.au-text-info { color: var(--color-info); }
+.au-text-primary { color: var(--color-primary); }
+.au-text-success { color: var(--color-success); }
+.au-text-warning { color: var(--color-warning); }
+.au-text-danger { color: var(--color-danger); }
+.au-text-heavy { font-weight: var(--font-weight-heavy); }
+
+.au-text-dollars:before {
+  content: "$ ";
+  color: var(--color-muted);
+}
+
+.au-text-percentage:after {
+  content: " %";
+  color: var(--color-muted);
+}
+
+.au-text-target:before {
+  content: var(--glyph-target);
+  color: var(--color-danger);
+  margin-right: 2px;
+  font-weight: var(--font-weight-heavy);
+}
+
+.au-text-target-muted:before {
+  color: var(--color-muted);
+}

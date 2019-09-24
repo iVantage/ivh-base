@@ -1,0 +1,1222 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700" rel="stylesheet">
+    <link href="dist/ivh-base-style.css" rel="stylesheet" type="text/css">
+    <link href="demo.css" rel="stylesheet" type="text/css">
+    <title>Base Styles for iVantage VERSION</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <ol>
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#body-copy">Body Copy</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#inputs">Inputs</a></li>
+          <li><a href="#alerts">Alerts</a></li>
+          <li><a href="#cards">Cards</a></li>
+          <li><a href="#lists">Lists</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#pills">Pills and Labels</a></li>
+          <li><a href="#badges">Badges</a></li>
+          <li><a href="#markers">Markers</a></li>
+          <li><a href="#scrollbars">Scrollbars</a></li>
+          <li><a href="#accordions">Accordions</a></li>
+          <li><a href="#shadows">Shadows</a></li>
+          <li><a href="#dropdowns">Dropdowns</a></li>
+          <li><a href="#placeholders">Placeholders</a></li>
+          <li><a href="#masks">Loading Masks</a></li>
+          <li><a href="#mini-tail">Mini-Tail</a></li>
+        </ol>
+      </nav>
+
+      <section id="intro">
+        <div class="explain logo">
+        </div>
+        <div class="demo">
+          <h1>First, we apply a base layer.</h1>
+          <p>Goals of this project:</p>
+          <ul>
+            <li>Provide iVantage styled elements with zero dependecies. No CSS
+              frameworks. No JavaScript (period). Just HTML and vanilla
+              CSS.</li>
+            <li>Avoid extra markup to accomodate style. No wrappers, or helpers.
+              Just a single (standard) element and its classname(s) whenever
+              possible.</li>
+            <li>Export theme variables as a plain JavaScript object to be
+              leveraged by React styles, CSS in JS, styled components, PostCSS
+              custom properties, templating engines, etc.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="headings">
+        <div class="explain">
+          <h2>Headings</h2>
+          <p>Say it kinda loud.</p>
+        </div>
+
+        <div class="demo">
+          <h1>h1. iVantage Heading</h1>
+          <h2>h2. iVantage Heading</h2>
+          <h3>h3. iVantage Heading</h3>
+          <h4>h4. iVantage Heading</h4>
+          <h5>h5. iVantage Heading</h5>
+          <h6>h6. iVantage Heading</h6>
+        </div>
+      </section>
+
+      <section id="body-copy">
+        <div class="explain">
+          <h2>Body Copy</h2>
+          <p>Say it kinda normal.</p>
+        </div>
+
+        <div class="demo">
+          <div class="row row-even">
+            <div>
+              <h2>Standard Copy</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              at elit ut augue feugiat rhoncus vitae non neque. Fusce aliquet
+              cursus congue.  Donec malesuada cursus mollis. Vestibulum
+              imperdiet pharetra diam vel auctor. Sed porttitor, est non
+              hendrerit mattis, augue nisl ultricies ligula, et tristique nunc
+              lacus nec quam. Donec eu lectus et metus tristique egestas ut vel
+              metus. Nunc vitae volutpat metus. Integer fringilla dui ex, eu
+              semper metus dapibus non. Aliquam varius pretium diam, in egestas
+              diam volutpat ut.  Vivamus suscipit tortor vitae massa ultricies
+              rhoncus.</p>
+            </div>
+            <div>
+              <h2 class="au-voice">iVantage Voice</h2>
+              <p class="au-voice">Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Duis at elit ut augue feugiat rhoncus vitae non
+              neque. Fusce aliquet cursus congue.  Donec malesuada cursus
+              mollis. Vestibulum imperdiet pharetra diam vel auctor. Sed
+              porttitor, est non hendrerit mattis, augue nisl ultricies ligula,
+              et tristique nunc lacus nec quam. Donec eu lectus et metus
+              tristique egestas ut vel metus. Nunc vitae volutpat metus. Integer
+              fringilla dui ex, eu semper metus dapibus non. Aliquam varius
+              pretium diam, in egestas diam volutpat ut.  Vivamus suscipit
+              tortor vitae massa ultricies rhoncus.</p>
+            </div>
+          </div>
+
+          <h2>Semantic Class Names</h2>
+          <div class="row">
+            <ul class="plain-list">
+              <li class="au-text-muted">Muted</li>
+              <li class="au-text-info">Info</li>
+              <li class="au-text-primary">Primary</li>
+              <li class="au-text-success">Success</li>
+              <li class="au-text-warning">Warning</li>
+              <li class="au-text-danger">Danger</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-text-heavy au-text-muted">Heavy Muted</li>
+              <li class="au-text-heavy au-text-info">Heavy Info</li>
+              <li class="au-text-heavy au-text-primary">Heavy Primary</li>
+              <li class="au-text-heavy au-text-success">Heavy Success</li>
+              <li class="au-text-heavy au-text-warning">Heavy Warning</li>
+              <li class="au-text-heavy au-text-danger">Heavy Danger</li>
+            </ul>
+          </div>
+
+          <h2>Text Formatting</h2>
+          <div class="row">
+            <div>
+              <h3>Currency</h3>
+              <ul>
+                <li class="au-text-dollars">5</li>
+                <li class="au-text-dollars">50</li>
+                <li class="au-text-dollars">500</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Percentages</h3>
+              <ul>
+                <li class="au-text-percentage">5</li>
+                <li class="au-text-percentage">50</li>
+                <li class="au-text-percentage">500</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Targets</h3>
+              <ul>
+                <li class="au-text-target">5</li>
+                <li class="au-text-target">50</li>
+                <li class="au-text-target">500</li>
+              </ul>
+
+              <ul>
+                <li class="au-text-target au-text-target-muted">5</li>
+                <li class="au-text-target au-text-target-muted">50</li>
+                <li class="au-text-target au-text-target-muted">500</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="buttons">
+        <div class="explain">
+          <h2>Buttons</h2>
+          <p>Such clicky. Wow.</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-info"><strong>FYI...</strong> The action
+          buttons here are for display only, actual dropdown fuctionality should
+          be implemented externally.</p>
+
+          <h2>Enabled</h2>
+          <button class="au-btn au-btn-primary">Primary</button>
+          <button class="au-btn au-btn-secondary">Secondary</button>
+          <button class="au-btn au-btn-tertiary">Tertiary</button>
+          <button class="au-btn au-btn-cta">Call to action</button>
+          <button class="au-btn au-btn-actions">Actions</button>
+
+          <h2>Disabled</h2>
+          <button disabled class="au-btn au-btn-primary">Primary</button>
+          <button disabled class="au-btn au-btn-secondary">Secondary</button>
+          <button disabled class="au-btn au-btn-tertiary">Tertiary</button>
+          <button disabled class="au-btn au-btn-actions">Actions</button>
+
+          <h2>Small</h2>
+          <button class="au-btn au-btn-sm au-btn-primary">Primary</button>
+          <button class="au-btn au-btn-sm au-btn-secondary">Secondary</button>
+          <button class="au-btn au-btn-sm au-btn-tertiary">Tertiary</button>
+          <button class="au-btn au-btn-sm au-btn-cta">Call to action</button>
+          <button class="au-btn au-btn-sm au-btn-actions">Actions</button>
+
+          <h2>Small and Disabled</h2>
+          <button disabled class="au-btn au-btn-sm au-btn-primary">Primary</button>
+          <button disabled class="au-btn au-btn-sm au-btn-secondary">Secondary</button>
+          <button disabled class="au-btn au-btn-sm au-btn-tertiary">Tertiary</button>
+          <button disabled class="au-btn au-btn-sm au-btn-actions">Actions</button>
+
+          <h2>Dropdowns</h2>
+          <button class="au-btn au-btn-dropdown">Pick things!</button>
+          <button disabled class="au-btn au-btn-dropdown">No picky for you!</button>
+
+          <h2>Area</h2>
+          <button class="au-btn au-btn-area">A drop zone thing</button>
+
+          <h2>Obligatory Semantic Flavors</h2>
+          <div>
+              <button class="au-btn">Vanilla</button>
+              <button class="au-btn au-btn-info">Info</button>
+              <button class="au-btn au-btn-primary">Primary</button>
+              <button class="au-btn au-btn-success">Success</button>
+              <button class="au-btn au-btn-warning">Warning</button>
+              <button class="au-btn au-btn-danger">Danger</button>
+          </div>
+
+          <br>
+
+          <div>
+            <button class="au-btn au-btn-sm">Vanilla</button>
+            <button class="au-btn au-btn-sm au-btn-info">Info</button>
+            <button class="au-btn au-btn-sm au-btn-primary">Primary</button>
+            <button class="au-btn au-btn-sm au-btn-success">Success</button>
+            <button class="au-btn au-btn-sm au-btn-warning">Warning</button>
+            <button class="au-btn au-btn-sm au-btn-danger">Danger</button>
+          </div>
+
+          <br>
+
+          <div>
+              <button disabled class="au-btn">Vanilla</button>
+              <button disabled class="au-btn au-btn-info">Info</button>
+              <button disabled class="au-btn au-btn-primary">Primary</button>
+              <button disabled class="au-btn au-btn-success">Success</button>
+              <button disabled class="au-btn au-btn-warning">Warning</button>
+              <button disabled class="au-btn au-btn-danger">Danger</button>
+          </div>
+
+          <h2>Link Style</h2>
+
+          <div>
+            <button class="au-btn au-btn-link">This is a link button</button>
+            <br />
+            <button disabled class="au-btn au-btn-link">This is a disabled link button</button>
+            <br />
+            <button class="au-btn au-btn-text">This is a text button</button>
+            <br />
+            <button disabled class="au-btn au-btn-text">This is a disabled text button</button>
+            <br />
+            <a href="javascrip:void(0)">This is just a link ;)</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="inputs">
+        <div class="explain">
+          <h2>Inputs</h2>
+          <p>Question...</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-warning">
+            <strong>Heads up!</strong> Checkboxes and radio buttons revert to
+            browser defaults in non-webkit browsers. I.e. Chrome and Safari get
+            fancy toggles, Firefox and Edge get browser defaults.
+          </p>
+          <h2>Checkboxes</h2>
+          <div class="row">
+            <div>
+              <label>
+                <input type="checkbox" class="au-checkbox">
+                Unchecked
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" id="cb1" class="au-checkbox">
+                Indeterminate
+                <script type="text/javascript">document.getElementById('cb1').indeterminate = true</script>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" checked class="au-checkbox">
+                Checked
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <input type="checkbox" disabled class="au-checkbox">
+                Disabled and unchecked
+              </label>
+              <br>
+              <label>
+                <input id="cb2" type="checkbox" disabled class="au-checkbox">
+                Disabled and indeterminate
+                <script type="text/javascript">document.getElementById('cb2').indeterminate = true</script>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" checked disabled class="au-checkbox">
+                Disabled and checked
+              </label>
+            </div>
+          </div>
+
+          <h2>Radio Buttons</h2>
+          <div class="row">
+            <div>
+              <label>
+                <input type="radio" class="au-radio" name="radio-group-1">
+                Unchecked
+              </label>
+              <br>
+              <label>
+                <input type="radio" class="au-radio" checked name="radio-group-1">
+                Checked
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" class="au-radio" disabled name="radio-group-2">
+                Disabled and unchecked
+              </label>
+              <br>
+              <label>
+                <input type="radio" class="au-radio" disabled checked name="radio-group-2">
+                Disabled and checked
+              </label>
+            </div>
+          </div>
+
+          <h2>Text</h2>
+          <div class="row">
+            <div>
+              <label class="au-input-label">
+                Some text
+                <input type="text" class="au-input" placeholder="Your ad here" />
+              </label>
+            </div>
+            <div>
+              <label class="au-input-label">
+                Other text
+                <input type="text" class="au-input" placeholder="Your ad here" />
+                <span class="au-input-hint au-text-muted">Try harder</span>
+              </label>
+            </div>
+          </div>
+
+          <h2>Text Areas</h2>
+          <div class="row">
+            <div class="full-width">
+              <label class="au-input-label">
+                Small text area
+              </label>
+              <textarea class="au-input" rows=3>All your texts here</textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="full-width">
+              <label class="au-input-label">
+                Bigger text area
+              </label>
+              <textarea class="au-input" rows=5>All the forgotten texts</textarea>
+              <span class="au-input-hint au-text-muted">Try harder</span>
+            </div>
+          </div>
+
+          <h2>Date Picker</h2>
+          <div class="row">
+            <label class="au-input-label">
+              Pick a date, any date
+            </label>
+            <input type="date" class="au-input" />
+            <span class="au-input-hint">Falls back on text input in boring browsers.</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="alerts">
+        <div class="explain">
+          <h2>Alerts</h2>
+          <p>Look out!</p>
+        </div>
+
+        <div class="demo column">
+
+          <p class="au-alert">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Is it still going? I think maybe it froze.
+          </p>
+
+          <p class="au-alert au-alert-info">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Guess what?
+          </p>
+
+          <p class="au-alert au-alert-primary">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            FYI...
+          </p>
+
+          <p class="au-alert au-alert-success">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Huzzah!
+          </p>
+
+          <p class="au-alert au-alert-warning">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Tread carefully...
+          </p>
+
+          <p class="au-alert au-alert-danger">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Oh snap!
+          </p>
+
+          <p class="au-alert au-alert-flat">
+            Alerts go flat when inside an element with height (so no nested
+            shadows). This includes cards, modals, things with shadows, or even
+            other alerts. You can also ask for a flat alert explicitly.
+          </p>
+        </div>
+      </section>
+
+      <section id="cards">
+        <div class="explain">
+          <h2 class="au-card-title">Cards</h2>
+          <p>Because wells were awful.</p>
+        </div>
+
+        <div class="demo column">
+
+          <div class="au-card">
+            <span class="au-card-header">Basic Card with white top border</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>This card can be used in cases where we don't want a top border. Making it white keeps the component pixels consistent.<a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-muted">
+            <h2 class="au-card-title">Card Header Text</h2>
+            <p>Cards with an <code>h1</code> get special treatment (see below),
+            they can also optionally have a special header shelf for labels and
+            icons.</p>
+          </div>
+
+          <div class="au-card au-card-info">
+            <span class="au-card-header">Just FYI</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-primary">
+            <span class="au-card-header">The most prime</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-success">
+            <span class="au-card-header">Such Win</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-warning">
+            <span class="au-card-header">Tread carefully...</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-danger">
+            <span class="au-card-header">Welcome to the town of frowns</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="lists">
+        <div class="explain">
+          <h2>Lists</h2>
+          <p>These area few of my favorite things.</li>
+        </div>
+
+
+        <div class="demo">
+          <p class="au-alert au-alert-info">
+            <strong>FYI...</strong> This demo uses real checkboxes but does
+            not update list item class names to match selected states.
+          </p>
+
+          <h2>Selectable Lists</h2>
+
+          <div class="row">
+            <div>
+              <h3>Slim Fit</h3>
+              <ul class="au-list au-list-selectable au-list-slim">
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Whiskey</li>
+                  </label>
+                <li class="active">
+                  <label>
+                    <input class="au-checkbox"  checked type="checkbox"> Fedora
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Monacle
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Playing Cards
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Stickers
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Regular</h3>
+              <ul class="au-list au-list-selectable">
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Whiskey</li>
+                  </label>
+                <li class="active">
+                  <label>
+                    <input class="au-checkbox"  checked type="checkbox"> Fedora
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Monacle
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Playing Cards
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Stickers
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Relaxed Fit</h3>
+              <ul class="au-list au-list-selectable au-list-relaxed">
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Whiskey</li>
+                  </label>
+                <li class="active">
+                  <label>
+                    <input class="au-checkbox"  checked type="checkbox"> Fedora
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Monacle
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Playing Cards
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Stickers
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tables">
+        <div class="explain">
+          <h2>Tables</h2>
+          <p>For tabular data only!</p>
+        </div>
+
+        <div class="demo">
+          <h2>A True Table</h2>
+          <p class="au-text-muted">tr, td, etc.</p>
+          <table class="au-table" style="width: 100%;">
+            <thead>
+              <tr>
+                <th class="au-col-text">A header</th>
+                <th class="au-col-data">A header</th>
+                <th class="au-col-data">A header</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td class="au-col-text">A footer</td>
+                <td class="au-col-data au-text-percentage">A footer</td>
+                <td class="au-col-data au-text-dollars">A footer</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td class="au-col-text">Unstyled</td>
+                <td class="au-col-data au-text-percentage">Percentage</td>
+                <td class="au-col-data au-text-dollars">Currency</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>A Grid</h2>
+          <p class="au-text-muted">Just a bunch of divs, spans, or lis.</p>
+
+          <p class="au-alert au-alert-warning">The generic grid requires you
+          to specify your own column layout. Your layout should minimally
+          support named grid lines <code>start</code> and <code>end</code> to
+          facilitate cells spanning the entire grid width, as in the divider row
+          demonstrated below.</p>
+
+          <div class="au-grid au-grid-success" id="demo-grid-1">
+            <span class="au-cell-header au-cell-text">A Header</span>
+            <span class="au-cell-header au-cell-data">A Header</span>
+            <span class="au-cell-header au-cell-data">A Header</span>
+
+            <span class="au-cell-text">Unstyled</span>
+            <span class="au-cell-data au-text-percentage">Percentage</span>
+            <span class="au-cell-data au-text-dollars">Currency</span>
+
+            <span class="au-cell-row au-cell-divider">Divider</span>
+
+            <span class="au-cell-text">Unstyled</span>
+            <span class="au-cell-data au-text-percentage">Percentage</span>
+            <span class="au-cell-data au-text-dollars">Currency</span>
+
+            <span class="au-cell-total au-cell-text">A Totals Row</span>
+            <span class="au-cell-total au-cell-data au-text-percentage">A Footer</span>
+            <span class="au-cell-total au-cell-data au-text-dollars">A Footer</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="pills">
+        <div class="explain">
+          <h2>Pills and Labels</h2>
+          <p>Little chicklety things.</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-info"><strong>FYI...</strong>
+          <code>a</code> and <code>button</code> labels and pills get special
+          treatment. Other element types will not get hover effects.</p>
+          <h2>Inactive</h2>
+          <div class="demo row">
+            <ul class="plain-list">
+              <li><a href="#" class="au-pill">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-info">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-primary">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-success">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-warning">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-danger">A Pill</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-text-heavy au-pill">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-info">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-primary">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-success">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-warning">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-danger">A Heavy Pill</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-label">A Label</a></li>
+              <li><a href="#" class="au-label au-label-info">A Label</a></li>
+              <li><a href="#" class="au-label au-label-primary">A Label</a></li>
+              <li><a href="#" class="au-label au-label-success">A Label</a></li>
+              <li><a href="#" class="au-label au-label-warning">A Label</a></li>
+              <li><a href="#" class="au-label au-label-danger">A Label</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-text-heavy au-label">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-info">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-primary">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-success">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-warning">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-danger">A Heavy Label</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-label au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-info au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-primary au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-success au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-warning au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-danger au-label-small">Mini</a></li>
+            </ul>
+          </div>
+
+          <h2>Active</h2>
+          <div class="demo row">
+            <ul class="plain-list">
+              <li><a href="#" class="au-pill au-pill-active">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-info">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-primary">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-success">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-warning">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-danger">A Pill</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-info">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-primary">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-success">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-warning">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-danger">A Heavy Pill</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-label au-label-active">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-info">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-primary">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-success">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-warning">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-danger">A Label</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-text-heavy au-label au-label-active">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-info">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-primary">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-success">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-warning">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-danger">A Heavy Label</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-label au-label-active au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-info au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-primary au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-success au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-warning au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-danger au-label-small">Mini</a></li>
+            </ul>
+          </div>
+
+          <h2>Navigation</h2>
+          <div>
+            <a href="#" class="au-pill au-pill-nav au-pill-nav-active">
+                You're here
+            </a>
+            <a href="#" class="au-pill au-pill-nav">
+              Not here
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="badges">
+        <div class="explain">
+          <h2>Badges</h2>
+          <p>A mark of honor.</p>
+        </div>
+
+        <div class="demo">
+
+          <p class="au-alert au-alert-info"><strong>FYI...</strong> Badges
+          require their containing element to have non-static positioning. Use
+          the <code>au-with-badge</code> classname to apply relative positioning
+          to your badgified element for symantic wins.</p>
+
+          <h2>Must Check Notifications...</h2>
+          <button class="au-btn au-btn-badge">
+            Clicky
+            <span class="au-badge">4</span>
+          </button>
+
+          <h2>Semantic Flavors</h2>
+          <div class="row">
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-info">1</span>
+            </button>
+
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-primary">2</span>
+            </button>
+
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-success">3</span>
+            </button>
+
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-warning">4</span>
+            </button>
+
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-danger">!</span>
+            </button>
+          </div>
+
+          <h2>On Other Elements</h2>
+          <div>
+            <button class="au-btn au-btn-sm au-btn-actions au-btn-badge">
+              Clicky
+              <span class="au-badge au-badge-info">
+                5
+              </span>
+            </button>
+          </div>
+
+          <p class="au-alert au-alert-info au-with-badge">
+            <strong>You don't say...</strong> on an alert!
+            <span class="au-badge au-badge-info">
+              9
+            </span>
+          </p>
+
+          <div style="height: 130px;">
+            <div class="au-dropdown au-dropdown-open">
+              <button class="au-btn">On a Menu</button>
+              <div class="au-dropdown-menu">
+                <ul class="au-list au-list-selectable">
+                  <li>First</li>
+                  <li>Second</li>
+                  <li>Third</li>
+                </ul>
+                <span class="au-badge au-badge-warning">7</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="markers">
+        <div class="explain">
+          <h2>Markers</h2>
+          <p>Connecting text and viz.</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-info"><strong>FYI...</strong> The
+          companion JavaScript file contains variables for all marker colors to
+          be used in data visualizations.</p>
+
+          <h2>Viz Colors</h2>
+          <div class="row">
+            <ul class="plain-list">
+              <li class="au-marker au-marker-0">Marked</li>
+              <li class="au-marker au-marker-5">Marked</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-marker au-marker-1">Marked</li>
+              <li class="au-marker au-marker-6">Marked</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-marker au-marker-2">Marked</li>
+              <li class="au-marker au-marker-7">Marked</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-marker au-marker-3">Marked</li>
+              <li class="au-marker au-marker-8">Marked</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-marker au-marker-4">Marked</li>
+              <li class="au-marker au-marker-9">Marked</li>
+            </ul>
+          </div>
+
+          <h2>Obligatory Semantic Flavors</h2>
+          <ul class="plain-list">
+            <li class="au-marker au-marker-muted">Muted</li>
+            <li class="au-marker au-marker-info">Info</li>
+            <li class="au-marker au-marker-primary">Primary</li>
+            <li class="au-marker au-marker-success">Success</li>
+            <li class="au-marker au-marker-warning">Warning</li>
+            <li class="au-marker au-marker-danger">Danger</li>
+          </ul>
+
+          <h2>The Placeholder Marker</h2>
+          <p class="au-text-muted">Use the placeholder marker to align non-marked
+          text with marked text.</p>
+          <ul class="plain-list">
+            <li class="au-marker">This text is marked.</li>
+            <li class="au-marker au-marker-placeholder">The text has a placeholder marker</li>
+            <li>This has no marker, see how it doesn't like up?</li>
+            <li class="au-marker">Marked again.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="scrollbars">
+        <div class="explain">
+          <h2>Scrollbars</h2>
+          <p>X &amp; Y</p>
+        </div>
+
+        <div class="demo">
+
+          <p class="au-alert au-alert-warning"><strong>Heads up!</strong>
+          Scrollbars will revert to browser defaults in non-webkit browsers.</p>
+
+          <div class="scrollbar-demo-wrapper">
+            <div class="scrollbar-demo-inner"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="accordions">
+        <div class="explain">
+          <h2>Accordions</h2>
+          <p>Vertical</p>
+        </div>
+
+        <div class="demo">
+          <div class="accordion-wrapper">
+            <div class="au-accordion">
+              <div class="au-accordion-panel">
+                  <div class="au-accordion-header">
+                    <span>About Us</span>
+                  </div>
+                  <div class="au-accordion-body">
+                    Rub whiskers on bare skin act innocent plays league of legends scratch the box or then cats take over the world pounce on unsuspecting person flee in terror at cucumber discovered on floor for you call this cat food. Mrow purrrrrr. Loves cheeseburgers jump off balcony, onto stranger's head yet small kitty warm kitty little balls of fur, all of a sudden cat goes crazy, for make meme, make cute face. Scratch at the door then walk away chase dog then run away but nap all day, so stick butt in face, but climb a tree, wait for a fireman jump to fireman then scratch his face so when in doubt, wash licks your face. Kitty kitty intrigued by the shower.
+                  </div>
+              </div>
+              <div class="au-accordion-panel">
+                  <div class="au-accordion-header">
+                    <span>Services</span>
+                  </div>
+                  <div class="au-accordion-body">
+                    Rub whiskers on bare skin act innocent plays league of legends scratch the box or then cats take over the world pounce on unsuspecting person flee in terror at cucumber discovered on floor for you call this cat food. Mrow purrrrrr. Loves cheeseburgers jump off balcony, onto stranger's head yet small kitty warm kitty little balls of fur, all of a sudden cat goes crazy, for make meme, make cute face. Scratch at the door then walk away chase dog then run away but nap all day, so stick butt in face, but climb a tree, wait for a fireman jump to fireman then scratch his face so when in doubt, wash licks your face. Kitty kitty intrigued by the shower.
+                  </div>
+              </div>
+              <div class="au-accordion-panel au-accordion-panel-active">
+                  <div class="au-accordion-header">
+                    <span>Active panel</span>
+                  </div>
+                  <div class="au-accordion-body">
+                    Rub whiskers on bare skin act innocent plays league of legends scratch the box or then cats take over the world pounce on unsuspecting person flee in terror at cucumber discovered on floor for you call this cat food. Mrow purrrrrr. Loves cheeseburgers jump off balcony, onto stranger's head yet small kitty warm kitty little balls of fur, all of a sudden cat goes crazy, for make meme, make cute face. Scratch at the door then walk away chase dog then run away but nap all day, so stick butt in face, but climb a tree, wait for a fireman jump to fireman then scratch his face so when in doubt, wash licks your face. Kitty kitty intrigued by the shower.
+                  </div>
+              </div>
+              <div class="au-accordion-panel">
+                  <div class="au-accordion-header">
+                    <span>Contact</span>
+                  </div>
+                  <div class="au-accordion-body">
+                    Rub whiskers on bare skin act innocent plays league of legends scratch the box or then cats take over the world pounce on unsuspecting person flee in terror at cucumber discovered on floor for you call this cat food. Mrow purrrrrr. Loves cheeseburgers jump off balcony, onto stranger's head yet small kitty warm kitty little balls of fur, all of a sudden cat goes crazy, for make meme, make cute face. Scratch at the door then walk away chase dog then run away but nap all day, so stick butt in face, but climb a tree, wait for a fireman jump to fireman then scratch his face so when in doubt, wash licks your face. Kitty kitty intrigued by the shower.
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shadows">
+        <div class="explain">
+          <h2>Shadows</h2>
+          <p>Tall, dark, and handsome.</p>
+        </div>
+
+        <div class="demo">
+          <div class="row shadows">
+            <div class="au-shadow au-shadow-short">short</div>
+            <div class="au-shadow au-shadow-medium">medium</div>
+            <div class="au-shadow au-shadow-tall">tall</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dropdowns">
+        <div class="explain">
+          <h2>Dropdowns</h2>
+          <p>ohai!</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-info">
+            Just FYI... these dropdowns are all shown open. Your JS framework of
+            choice would be responsible for hiding and showing dropdown menus.
+          </p>
+          <div class="row" style="min-height: 190px;">
+            <div style="width: 180px; padding-top: 12px;">
+              <div class="au-dropdown au-dropdown-open">
+                <button class="au-btn au-btn-primary au-btn-sm au-btn-actions">
+                  With a button
+                </button>
+                <ul class="au-dropdown-menu au-list au-list-selectable">
+                  <li>First</li>
+                  <li>Second</li>
+                  <li>Third</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="width: 180px;">
+              <div class="au-dropdown au-dropdown-open">
+                <input type="text" class="au-input" placeholder="With a textbox..." />
+                <ul class="au-dropdown-menu au-list au-list-selectable">
+                  <li>First</li>
+                  <li>Second</li>
+                  <li>Third</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="width: 180px; padding-top: 8px;">
+              <div class="au-dropdown au-dropdown-open">
+                <a class="au-pill au-pill-active au-pill-warning" href="javascript:void(0)">
+                  Anything can be a toggle
+                </a>
+                <div class="au-dropdown-menu" style="width: 350px; padding: 3px 10px;">
+                  <span class="au-marker au-marker-success">Anything can be in a menu</span>
+                  <br>
+                  <button class="au-btn au-btn-info">info</button>
+                  <button class="au-btn au-btn-primary">primary</button>
+                  <p class="au-alert au-alert-danger">HALP! I'm in a menu with custom width!</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="placeholders">
+        <div class="explain">
+          <h2>Placeholders</h2>
+          <p>For progressive content.</p>
+        </div>
+
+        <div class="demo">
+          <h2>Placeholder Circle Thing</h2>
+          <span class="au-placeholder au-placeholder-circle"></span>
+
+          <h2>Placeholder Headers</h2>
+          <h1 class="au-placeholder"></h1>
+          <h2 class="au-placeholder"></h2>
+          <h3 class="au-placeholder"></h3>
+          <h4 class="au-placeholder"></h4>
+          <h5 class="au-placeholder"></h5>
+          <h6 class="au-placeholder"></h6>
+
+          <h2>Placeholder Copy</h2>
+          <p>
+            <span class="au-placeholder" style="width: 98%;"></span>
+            <span class="au-placeholder" style="width: 95%;"></span>
+            <span class="au-placeholder" style="width: 99%;"></span>
+            <span class="au-placeholder" style="width: 90%;"></span>
+            <span class="au-placeholder" style="width: 97%;"></span>
+            <span class="au-placeholder" style="width: 23%;"></span>
+          </p>
+
+          <p>
+            <span class="au-placeholder" style="width: 98%;"></span>
+            <span class="au-placeholder" style="width: 95%;"></span>
+            <span class="au-placeholder" style="width: 99%;"></span>
+            <span class="au-placeholder" style="width: 90%;"></span>
+            <span class="au-placeholder" style="width: 97%;"></span>
+            <span class="au-placeholder" style="width: 23%;"></span>
+          </p>
+
+          <h2>Placeholder Buttons</h2>
+          <div style="text-align: right;">
+            <span class="au-placeholder au-placeholder-button"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-primary"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-info"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-success"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-warning"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-danger"></span>
+          </div>
+
+          <div style="text-align: right;">
+            <span class="au-placeholder au-placeholder-button au-button-small"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-primary"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-info"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-success"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-warning"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-danger"></span>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="masks">
+        <div class="explain">
+          <h2>Loading Masks</h2>
+          <p>You can't see me!</p>
+        </div>
+
+        <div class="demo">
+
+          <div style="position: relative">
+            <div class="au-mask">
+              <div class="au-mask-spinner">
+                <span class="au-spinner-dot"></span>
+                <span class="au-spinner-dot"></span>
+                <span class="au-spinner-dot"></span>
+              </div>
+              Hey! Why don't you grab me a coffee too?
+            </div>
+            <div class="au-card">
+              <span class="au-card-header">HALP!</span>
+              <h1 class="au-card-title">It's Not Really Loading!!!</h1>
+              <p>This is all a lie to keep you from knowing something is broken!</p>
+            </div>
+          </div>
+
+          <div class="row row-even" style="margin-top: 20px">
+            <div style="position: relative; height: 150px; width: 150px; display: inline-block">
+              <div class="au-mask au-mask-small">
+                <div class="au-mask-spinner">
+                  <span class="au-spinner-dot"></span>
+                  <span class="au-spinner-dot"></span>
+                  <span class="au-spinner-dot"></span>
+                </div>
+                A small flavor
+              </div>
+            </div>
+
+            <div style="position: relative; height: 150px; width: 150px; display: inline-block">
+              <div class="au-mask au-mask-small">
+                <div class="au-mask-spinner">
+                  <span class="au-spinner-dot"></span>
+                  <span class="au-spinner-dot"></span>
+                  <span class="au-spinner-dot"></span>
+                </div>
+              </div>
+              <div style="padding: 20px;">
+                <p>Loading text and spinner are borth optional.</p>
+                <p>Also, you can use as many dots as you like!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mini-tail">
+        <div class="explain">
+          <h2>Mini-Tail</h2>
+          <p>For displaying a small tail pointing upwards from drop-down</p>
+        </div>
+
+        <div class="demo">
+          <h3>Short shadow</h3>
+          <div class="au-tail au-shadow au-shadow-short">
+            <ul class="au-list au-list-relaxed au-list-selectable">
+              <li>Foo</li>
+              <li>Bar</li>
+              <li>Barus</li>
+            </ul>
+          </div>
+          <h3>Medium shadow</h3>
+          <div class="au-tail au-shadow au-shadow-medium">
+            <ul class="au-list au-list-relaxed au-list-selectable">
+              <li>Foo</li>
+              <li>Bar</li>
+              <li>Barus</li>
+            </ul>
+          </div>
+            <h3>Tall shadow</h3>
+            <div class="au-tail au-shadow au-shadow-tall">
+            <ul class="au-list au-list-relaxed au-list-selectable">
+              <li>Foo</li>
+              <li>Bar</li>
+              <li>Barus</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab">
+        <div class="explain">
+          <h2>Tab</h2>
+          <p>For delineating content through the use of tabs</p>
+        </div>
+        <div class="demo">
+          <ul class="au-tab-container">
+            <li class="au-tab">
+              <span class="au-marker au-marker-0"></span><span>Tab 1</span>
+            </li>
+            <li class="au-tab">
+              <span class="au-marker au-marker-1"></span><span>Tab 2</span>
+            </li>
+            <li class="au-tab">
+              <span class="au-marker au-marker-2"></span><span>Tab 3</span>
+            </li>
+            <li class="au-tab active">
+              Active Tab
+            </li>
+          </ul>
+          <div class="au-tab-content">
+            <h3>Tab Contents</h3>
+            <p>Here's some tab contents.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuSelect should render consistently 1`] = `
+<div
+  className="AuSelect au-dropdown"
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  style={Object {}}
+>
+  <div
+    className="au-dropdown-button"
+    onClick={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "display": "inherit",
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+    >
+      Toggle
+    </button>
+  </div>
+</div>
+`;

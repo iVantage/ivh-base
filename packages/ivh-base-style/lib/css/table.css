@@ -1,0 +1,131 @@
+
+.au-table,
+.au-grid {
+  font-family: var(--font-family-condensed);
+  border-top: 4px solid var(--color-muted);
+  box-shadow: var(--box-shadow-short);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  border-collapse: collapse;
+}
+
+.au-grid {
+  display: grid;
+  /* To support ul.au-grid */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.au-table-info,
+.au-grid-info {
+  border-top: 4px solid var(--color-info);
+}
+
+.au-table-primary,
+.au-grid-primary {
+  border-top: 4px solid var(--color-primary);
+}
+
+.au-table-success,
+.au-grid-success {
+  border-top: 4px solid var(--color-success);
+}
+
+.au-table-warning,
+.au-grid-warning {
+  border-top: 4px solid var(--color-warning);
+}
+
+.au-table-danger,
+.au-grid-danger {
+  border-top: 4px solid var(--color-danger);
+}
+
+.au-table thead th,
+.au-grid > *.au-cell-header {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-heavy);
+  border-bottom: 2px solid var(--color-lines);
+  border-left: 1px solid var(--color-lines);
+}
+
+/* In support of font-awesome, make sure the icon gets the appropriate
+   line-height */
+.au-table thead th,
+.au-table thead th .fa,
+.au-grid > *.au-cell-header,
+.au-grid > *.au-cell-header .fa {
+  line-height: 30px;
+}
+
+.au-table tfoot td,
+.au-grid .au-cell-total {
+  background-color: var(--color-light-gray);
+}
+
+.au-table tfoot td.au-col-text,
+.au-grid .au-cell-total.au-cell-text {
+  font-weight: var(--font-weight-heavy);
+}
+
+.au-table .au-col-text,
+.au-grid .au-cell-text {
+  text-align: left;
+}
+
+.au-table .au-col-data,
+.au-grid .au-cell-data {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.au-table td.au-col-data {
+  width: 1%;
+}
+
+.au-table .au-col-checkbox,
+.au-grid .au-cell-checkbox {
+  /* silence is golden */
+}
+
+.au-table th,
+.au-table td,
+.au-grid > * {
+  padding: 10px;
+}
+
+.au-table td,
+.au-grid > * {
+  font-size: 14px;
+  border-top: 1px solid var(--color-lines);
+  border-left: 1px solid var(--color-lines);
+}
+
+.au-table th:first-child,
+.au-table td:first-child,
+.au-table-row > *:first-child {
+  border-left: none;
+}
+
+.au-cell-divider {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: var(--font-weight-heavy);
+  text-transform: uppercase;
+  background-color: var(--color-light-gray);
+  color: var(--color-hover-darker-gray);
+}
+
+/* Requires from parent:
+ *
+ * ```
+ * grid-column-template: [start] ... [end]
+ * ```
+ */
+.au-cell-divider,
+.au-cell-row {
+  grid-column-start: start;
+  grid-column-end: end;
+}

@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "publish": "lerna publish --force-publish=*",
+    "test": "lerna run test",
+    "ps-cdn": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command scripts/cdn.ps1"
+  },
+  "devDependencies": {
+    "lerna": "^3.2.1",
+    "shelljs": "^0.8.1"
+  },
+  "name": "ivh-base"
+}

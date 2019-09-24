@@ -1,0 +1,29 @@
+
+/**
+ * A cancel (X) link
+ *
+ * Intended use:
+ *
+ * ```
+ * <a href="..." class="au-close">&times;</a>
+ * ```
+ */
+
+.au-close {
+  position: absolute;
+  /* top should center vertically reletive to text inputs */
+  top: 12px;
+  right: 12px;
+  color: var(--color-muted);
+  font-family: var(--font-family-base);
+  font-size: 25px;
+  line-height: 15px;
+  text-decoration: none;
+  font-weight: 300px;
+}
+
+.au-close:hover,
+.au-close:focus {
+  text-decoration: none;
+  color: var(--color-hover-darker-gray);
+}

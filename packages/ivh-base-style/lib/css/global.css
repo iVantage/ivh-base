@@ -1,0 +1,11 @@
+
+* {
+  transition: color 0.2s linear;
+  transition: border 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+

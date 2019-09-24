@@ -1,0 +1,82 @@
+
+/**
+ * Dropdown things (menus, autocompletes, etc.)
+ *
+ * These require some orchestration, at least three elements:
+ *
+ * ```
+ * .au-dropdown[.au-dropdown-open]
+ *   .au-dropdown-button
+ *   .au-dropdown-backdrop
+ *   .au-dropdown-menu
+ * ```
+ *
+ * The dropdown button can really be anything, it's on the JS framework to
+ * manage add/removing the `au-dropdown-open` class from the overall dropdown.
+ *
+ * The backdrop is optional, it's meant to facilitate closing dropdowns when
+ * you click outside the menu. If used, you should listen for click events on
+ * `.au-dropdown-backdrop` and close the dropdown when this occurs.
+ *
+ * The menu itself is just a wrapper
+ *
+ */
+
+/* The wrapper */
+.au-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* The toggle */
+.au-dropdown-button {
+  display: inherit;
+}
+
+/* The backdrop */
+.au-dropdown-backdrop {
+  display: none;
+  position: fixed;
+  z-index: calc( var(--z-index-dropdown-menu) - 1);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.au-modal .au-dropdown .au-dropdown-backdrop {
+  z-index: calc( var(--z-index-modal) + var(--z-index-dropdown-menu) - 1 );
+}
+
+.au-dropdown-open .au-dropdown-backdrop {
+  display: block;
+}
+
+/* The menu */
+.au-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 2px;
+  float: left;
+  z-index: var(--z-index-dropdown-menu);
+  min-width: 160px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-short);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-lines);
+  /* Counteract label styles when we're nested instide a label */
+  font-size: 14px;
+  font-weight: var(--font-weight-normal);
+  text-transform: none;
+}
+
+.au-modal .au-dropdown .au-dropdown-menu {
+  z-index: calc( var(--z-index-modal) + var(--z-index-dropdown-menu) );
+}
+
+.au-dropdown-menu-open,
+.au-dropdown-open .au-dropdown-menu {
+  display: block;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@ivantagehealth/ivh-base-style",
+  "version": "5.1.0",
+  "description": "A base style layer for iVantage apps.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "yarn run build:dev && yarn run build:prod",
+    "build:dev": "cross-env NODE_ENV=development postcss -o dist/ivh-base-style.css lib/index.css",
+    "build:prod": "cross-env NODE_ENV=production postcss -o dist/ivh-base-style.min.css lib/index.css",
+    "build:watch": "cross-env NODE_ENV=development postcss -w -o dist/ivh-base-style.css lib/index.css",
+    "clean": "rimraf dist",
+    "lint": "standard --fix && yarn run lint:free",
+    "lint:free": "echo Such style. Much class. Wow.",
+    "test": "node postcss.config.js"
+  },
+  "author": "iVantage",
+  "contributors": [
+    "jrussell",
+    "lpytel"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "cross-env": "5.1.4",
+    "cssnano": "^4.0.0-rc.2",
+    "postcss": "^6.0.22",
+    "postcss-cli": "^5.0.0",
+    "postcss-custom-properties": "^7.0.0",
+    "postcss-import": "^11.1.0",
+    "rimraf": "^2.6.2"
+  },
+  "standard": {
+    "ignore": [
+      "dist"
+    ],
+    "parser": "babel-eslint"
+  }
+}

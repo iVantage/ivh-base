@@ -1,0 +1,58 @@
+
+.au-accordion {
+  background-color: var(--color-white)
+}
+
+.au-accordion-panel {
+  position: relative;
+  height: 37px;
+  overflow: hidden;
+  color: var(--color-text-gray);
+  cursor: pointer;
+  transition: height 0.2s ease-out;
+}
+
+.au-accordion-panel:not(:first-child) {
+  border-top: 1px solid var(--color-lines);
+}
+
+.au-accordion-header {
+  padding: 9px 10px 7px 25px;
+  display:block;
+  color: var(--color-text-gray);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-heavy);
+  font-family: var(--font-family-condensed);
+}
+
+.au-accordion-body {
+  display: block;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.au-accordion-panel-active {
+  height: auto;
+}
+
+.au-accordion-panel-active:before,
+.au-accordion-panel:not(.au-accordion-panel-active):before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  border: 6px solid transparent;
+  border-right: none;
+  transition: all 0.2s ease-out;
+}
+
+.au-accordion-panel-active:before {
+  border-left: 6px solid var(--color-primary-blue);
+  transform: rotate(90deg);
+}
+
+.au-accordion-panel:not(.au-accordion-panel-active):before {
+  border-left: 6px solid var(--color-inactive-gray);
+  transform: rotate(0deg);
+}

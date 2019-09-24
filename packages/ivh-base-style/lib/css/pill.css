@@ -1,0 +1,111 @@
+
+/**
+ * Labels and Pills
+ *
+ * Pills are basically rounded labels
+ */
+
+.au-pill,
+.au-label {
+  display: inline-block;
+  padding: 7px 12px;
+  border: 1px solid var(--color-muted);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  line-height: 14px;
+  font-weight: var(--font-weight-medium);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.au-pill {
+  border-radius: 14px;
+}
+
+.au-label {
+  border-radius: var(--border-radius);
+}
+
+.au-label-small {
+  transform:scale(0.7);
+  padding: 1px 6px !important;
+}
+
+.au-pill:hover, .au-pill:focus,
+.au-label:hover, .au-label:focus,
+.au-pill:hover, .au-pill:focus,
+.au-label:hover, .au-label:focus {
+  cursor: pointer;
+  filter: brightness(110%);
+  text-decoration: none;
+}
+
+.au-pill-active,
+.au-label-active {
+  background-color: var(--color-muted);
+  color: var(--color-white);
+}
+
+.au-pill-nav,
+.au-label-nav {
+  color: var(--color-link);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.au-pill-nav-active,
+.au-label-nav-active {
+  color: var(--color-white);
+  background-color: var(--color-nav-active);
+  border-color: var(--color-nav-active);
+}
+
+.au-pill-info,
+.au-label-info {
+  border: 1px solid var(--color-info);
+}
+
+.au-pill-info.au-pill-active,
+.au-label-info.au-label-active {
+  background-color: var(--color-info);
+}
+
+.au-pill-primary,
+.au-label-primary {
+  border: 1px solid var(--color-primary);
+}
+
+.au-pill-primary.au-pill-active,
+.au-label-primary.au-label-active {
+  background-color: var(--color-primary);
+}
+
+.au-pill-success,
+.au-label-success {
+  border: 1px solid var(--color-success);
+}
+
+.au-pill-success.au-pill-active,
+.au-label-success.au-label-active {
+  background-color: var(--color-success);
+}
+
+.au-pill-warning,
+.au-label-warning {
+  border: 1px solid var(--color-warning);
+}
+
+.au-pill-warning.au-pill-active,
+.au-label-warning.au-label-active {
+  background-color: var(--color-warning);
+}
+
+.au-pill-danger,
+.au-label-danger {
+  border: 1px solid var(--color-danger);
+}
+
+.au-pill-danger.au-pill-active,
+.au-label-danger.au-label-active {
+  background-color: var(--color-danger);
+}
