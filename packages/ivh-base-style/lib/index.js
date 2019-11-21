@@ -3,7 +3,7 @@ const theme = {
   /**
    * Colors
    */
-  colorBackground: '#f8fafa',
+  colorBackground: '#eaeef0',
   colorBaseGreen: '#f5f9d7',
   colorBlack: '#000',
   colorOrange: '#e79d2a',
