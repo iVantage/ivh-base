@@ -20,7 +20,7 @@ for using with the post CSS plugin `postcss-custom-properties`:
 ```JavaScript
 // in your postcss.config.js
 const customProperties = require('postcss-custom-properties')()
-const theme = require('@ivantage/ivh-base-style')
+const theme = require('@ivantagehealth/ivh-base-style')
 
 customProperties.setVariables(theme.asCustomPropertyVariables())
 
