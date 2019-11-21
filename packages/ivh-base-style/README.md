@@ -8,8 +8,8 @@
 In your JS app:
 
 ```JavaScript
-import theme from '@ivantage/ivh-base-style'
-import '@ivantage/ivh-base-style/dist/ivh-base-style.css'
+import theme from '@ivantagehealth/ivh-base-style'
+import '@ivantagehealth/ivh-base-style/dist/ivh-base-style.css'
 
 // Use variables on `theme` to style your custom stuff
 ```
