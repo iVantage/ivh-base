@@ -531,8 +531,9 @@
 
 /* primary is handled above */
 
-.au-btn-info:disabled,
 .au-btn-cta:disabled,
+.au-btn-info:disabled,
+.au-btn-success:disabled,
 .au-btn-warning:disabled,
 .au-btn-danger:disabled {
   -webkit-filter: brightness(70%);
