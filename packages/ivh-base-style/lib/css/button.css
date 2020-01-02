@@ -109,19 +109,6 @@
   border: 1px solid var(--color-white);
 }
 
-/* Buttons - call to action */
-.au-btn-cta:not(:disabled):hover,
-.au-btn-cta:not(:disabled):focus {
-  background-color: #95a56d; /* non-standard color :( */
-}
-
-.au-btn-cta,
-.au-btn-cta:not(:disabled):active {
-  color: var(--color-white);
-  background-color: var(--color-insight-green);
-  border: 1px solid var(--color-insight-green);
-}
-
 /* Buttons - actions */
 .au-btn-actions:after {
   content: "\25BC";
@@ -141,8 +128,14 @@
   border: 1px solid var(--color-info);
 }
 
+.au-btn-cta,
+.au-btn-cta:disabled,
+.au-btn-cta:not(:disabled):active,
+.au-btn-cta:not(:disabled):not(:active):hover,
+.au-btn-cta:not(:disabled):not(:active):focus,
 .au-btn-success,
 .au-btn-success:disabled,
+.au-btn-success:not(:disabled):active,
 .au-btn-success:not(:disabled):not(:active):hover,
 .au-btn-success:not(:disabled):not(:active):focus {
   color: var(--color-white);
@@ -152,6 +145,7 @@
 
 .au-btn-warning,
 .au-btn-warning:disabled,
+.au-btn-warning:not(:disabled):active,
 .au-btn-warning:not(:disabled):not(:active):hover,
 .au-btn-warning:not(:disabled):not(:active):focus {
   color: var(--color-white);
@@ -161,6 +155,7 @@
 
 .au-btn-danger,
 .au-btn-danger:disabled,
+.au-btn-danger:not(:disabled):active,
 .au-btn-danger:not(:disabled):not(:active):hover,
 .au-btn-danger:not(:disabled):not(:active):focus {
   color: var(--color-white);
@@ -307,6 +302,7 @@
   overflow: visible;
 }
 
+.au-btn-cta:not(:disabled):not(:active):hover, .au-btn.au-btn-cta:not(:disabled):not(:active):focus,
 .au-btn-info:not(:disabled):not(:active):hover, .au-btn.au-btn-info:not(:disabled):not(:active):focus,
 .au-btn-primary:not(:disabled):not(:active):hover, .au-btn.au-btn-primary:not(:disabled):not(:active):focus,
 .au-btn-success:not(:disabled):not(:active):hover, .au-btn.au-btn-success:not(:disabled):not(:active):focus,
@@ -317,8 +313,8 @@
 
 /* primary is handled above */
 .au-btn-info:disabled,
-.au-btn-success:disabled,
+.au-btn-cta:disabled,
 .au-btn-warning:disabled,
 .au-btn-danger:disabled {
-  filter: brightness(80%);
+  filter: brightness(70%);
 }
