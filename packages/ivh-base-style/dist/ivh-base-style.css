@@ -9,6 +9,7 @@
   overflow: hidden;
   color: #495357;
   cursor: pointer;
+  -webkit-transition: height 0.2s ease-out;
   transition: height 0.2s ease-out;
 }
 
@@ -44,11 +45,12 @@
   left: 10px;
   border: 6px solid transparent;
   border-right: none;
+  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
 .au-accordion-panel-active:before {
-  border-left: 6px solid #45788e;
+  border-left: 6px solid #35738c;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
@@ -102,21 +104,21 @@
 }
 
 .au-alert-info {
-  border-left: 5px solid #599bb3;
+  border-left: 5px solid #267c9f;
 }
 
 .au-alert-info:before {
-  color: #599bb3;
-  border: 3px solid #599bb3;
+  color: #267c9f;
+  border: 3px solid #267c9f;
 }
 
 .au-alert-primary {
-  border-left: 5px solid #45788e;
+  border-left: 5px solid #35738c;
 }
 
 .au-alert-primary:before {
-  color: #45788e;
-  border: 3px solid #45788e;
+  color: #35738c;
+  border: 3px solid #35738c;
 }
 
 .au-alert-danger {
@@ -140,7 +142,7 @@
 }
 
 .au-alert-success {
-  border-left: 5px solid #7c8a59;
+  border-left: 5px solid #5f9535;
 }
 
 .au-alert-success:before {
@@ -148,8 +150,8 @@
   top: 4px;
   left: 0;
   padding: 5px 10px;
-  color: #7c8a59;
-  border: 4px solid #7c8a59;
+  color: #5f9535;
+  border: 4px solid #5f9535;
   -webkit-transform: scale(0.4);
           transform: scale(0.4);
 }
@@ -193,11 +195,11 @@
   font-size: 11px;
 }
 
-.au-badge-info { border: 2px solid #599bb3; color: #599bb3; }
+.au-badge-info { border: 2px solid #267c9f; color: #267c9f; }
 
-.au-badge-primary { border: 2px solid #45788e; color: #45788e; }
+.au-badge-primary { border: 2px solid #35738c; color: #35738c; }
 
-.au-badge-success { border: 2px solid #7c8a59; color: #7c8a59; }
+.au-badge-success { border: 2px solid #5f9535; color: #5f9535; }
 
 .au-badge-warning { border: 2px solid #e79d2a; color: #e79d2a; }
 
@@ -212,13 +214,13 @@
 .au-btn:hover,
 .au-btn:focus {
   background-color: #e4f6fd;
-  border: 1px solid #599bb3;
+  border: 1px solid #267c9f;
 }
 
 .au-btn {
   outline: none; /* this makes me cry inside */
   padding: 12px 20px;
-  color: #45788e;
+  color: #35738c;
   text-transform: uppercase;
   border-radius: 2px;
   background-color: #fff;
@@ -229,7 +231,7 @@
 
 .au-btn:active {
   color: #fff;
-  background-color: #45788e;
+  background-color: #35738c;
 }
 
 .au-btn:disabled {
@@ -240,23 +242,23 @@
 
 .au-btn-primary {
   color: #fff;
-  background-color: #45788e;
-  border: 1px solid #45788e;
+  background-color: #35738c;
+  border: 1px solid #35738c;
 }
 
 /* Buttons - primary */
 
 .au-btn-primary:not(:disabled):hover,
 .au-btn-primary:not(:disabled):focus {
-  background-color: #599bb3;
-  border: 1px solid #599bb3;
+  background-color: #267c9f;
+  border: 1px solid #267c9f;
 }
 
 .au-btn-primary,
 .au-btn-primary:active {
   color: #fff;
-  background-color: #45788e;
-  border: 1px solid #45788e;
+  background-color: #35738c;
+  border: 1px solid #35738c;
 }
 
 .au-btn-primary:disabled {
@@ -269,19 +271,19 @@
 
 .au-btn-secondary:not(:disabled):hover,
 .au-btn-secondary:not(:disabled):focus {
-  color: #45788e;
+  color: #35738c;
 	background-color: #e4f6fd;
 }
 
 .au-btn-secondary {
-  color: #45788e;
+  color: #35738c;
   background-color: #fff;
-  border: 1px solid #45788e;
+  border: 1px solid #35738c;
 }
 
 .au-btn-secondary:active {
   color: #fff;
-  background-color: #45788e;
+  background-color: #35738c;
 }
 
 .au-btn-secondary:disabled {
@@ -294,41 +296,27 @@
 
 .au-btn-tertiary:not(:disabled):hover,
 .au-btn-tertiary:not(:disabled):focus {
-  color: #45788e;
+  color: #35738c;
 	background-color: #e4f6fd;
   border: 1px solid #e4f6fd;
 }
 
 .au-btn-tertiary {
-  color: #45788e;
+  color: #35738c;
   background-color: #fff;
   border: 1px solid #fff;
 }
 
 .au-btn-tertiary:active {
   color: #fff;
-  background-color: #45788e;
-  border: 1px solid #45788e;
+  background-color: #35738c;
+  border: 1px solid #35738c;
 }
 
 .au-btn-tertiary:disabled {
   color: #ccd6d9;
   background-color: #fff;
   border: 1px solid #fff;
-}
-
-/* Buttons - call to action */
-
-.au-btn-cta:not(:disabled):hover,
-.au-btn-cta:not(:disabled):focus {
-  background-color: #95a56d; /* non-standard color :( */
-}
-
-.au-btn-cta,
-.au-btn-cta:not(:disabled):active {
-  color: #fff;
-  background-color: #7c8a59;
-  border: 1px solid #7c8a59;
 }
 
 /* Buttons - actions */
@@ -348,21 +336,28 @@
 .au-btn-info:not(:disabled):not(:active):hover,
 .au-btn-info:not(:disabled):not(:active):focus {
   color: #fff;
-  background-color: #599bb3;
-  border: 1px solid #599bb3;
+  background-color: #267c9f;
+  border: 1px solid #267c9f;
 }
 
+.au-btn-cta,
+.au-btn-cta:disabled,
+.au-btn-cta:not(:disabled):active,
+.au-btn-cta:not(:disabled):not(:active):hover,
+.au-btn-cta:not(:disabled):not(:active):focus,
 .au-btn-success,
 .au-btn-success:disabled,
+.au-btn-success:not(:disabled):active,
 .au-btn-success:not(:disabled):not(:active):hover,
 .au-btn-success:not(:disabled):not(:active):focus {
   color: #fff;
-  background-color: #7c8a59;
-  border: 1px solid #7c8a59;
+  background-color: #5f9535;
+  border: 1px solid #5f9535;
 }
 
 .au-btn-warning,
 .au-btn-warning:disabled,
+.au-btn-warning:not(:disabled):active,
 .au-btn-warning:not(:disabled):not(:active):hover,
 .au-btn-warning:not(:disabled):not(:active):focus {
   color: #fff;
@@ -372,6 +367,7 @@
 
 .au-btn-danger,
 .au-btn-danger:disabled,
+.au-btn-danger:not(:disabled):active,
 .au-btn-danger:not(:disabled):not(:active):hover,
 .au-btn-danger:not(:disabled):not(:active):focus {
   color: #fff;
@@ -472,7 +468,7 @@
   font-size: inherit;
   line-height: inherit;
   cursor: pointer;
-  color: #599bb3;
+  color: #267c9f;
 }
 
 .au-btn-link:hover {
@@ -523,6 +519,7 @@
   overflow: visible;
 }
 
+.au-btn-cta:not(:disabled):not(:active):hover, .au-btn.au-btn-cta:not(:disabled):not(:active):focus,
 .au-btn-info:not(:disabled):not(:active):hover, .au-btn.au-btn-info:not(:disabled):not(:active):focus,
 .au-btn-primary:not(:disabled):not(:active):hover, .au-btn.au-btn-primary:not(:disabled):not(:active):focus,
 .au-btn-success:not(:disabled):not(:active):hover, .au-btn.au-btn-success:not(:disabled):not(:active):focus,
@@ -534,12 +531,13 @@
 
 /* primary is handled above */
 
+.au-btn-cta:disabled,
 .au-btn-info:disabled,
 .au-btn-success:disabled,
 .au-btn-warning:disabled,
 .au-btn-danger:disabled {
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%);
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 
 /**
@@ -581,19 +579,19 @@
 }
 
 .au-card-info {
-  border-top: 4px solid #599bb3;
+  border-top: 4px solid #267c9f;
 }
 
 .au-card-info .au-card-header {
-  color: #599bb3;
+  color: #267c9f;
 }
 
 .au-card-primary {
-  border-top: 4px solid #45788e;
+  border-top: 4px solid #35738c;
 }
 
 .au-card-primary .au-card-header {
-  color: #45788e;
+  color: #35738c;
 }
 
 .au-card-warning {
@@ -605,11 +603,11 @@
 }
 
 .au-card-success {
-  border-top: 4px solid #7c8a59;
+  border-top: 4px solid #5f9535;
 }
 
 .au-card-success .au-card-header {
-  color: #7c8a59;
+  color: #5f9535;
 }
 
 .au-card-danger {
@@ -647,19 +645,19 @@
 .au-checkbox:checked:before {
   content: "\2713";
   color: #fff;
-  background-color: #599bb3;
-  border: 1px solid #599bb3;
+  background-color: #267c9f;
+  border: 1px solid #267c9f;
 }
 
 .au-checkbox:hover:before,
 .au-checkbox:focus:before {
-  border: 1px solid #45788e;
+  border: 1px solid #35738c;
 }
 
 .au-checkbox:checked:hover:before,
 .au-checkbox:checked:focus:before {
-  background-color: #45788e;
-  border: 1px solid #45788e;
+  background-color: #35738c;
+  border: 1px solid #35738c;
 }
 
 .au-checkbox:disabled:before,
@@ -682,7 +680,7 @@
 .au-checkbox:indeterminate:hover:before,
 .au-checkbox:indeterminate:focus:before {
   content: "\2013";
-  color: #45788e;
+  color: #35738c;
   padding: 1px 5px;
   font-size: 17px;
 }
@@ -809,8 +807,11 @@
 }
 
 * {
+  -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
+  -webkit-transition: border 0.2s linear;
   transition: border 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 
@@ -926,11 +927,11 @@
 
 .au-marker-muted:before { background-color: #ccd6d9; }
 
-.au-marker-info:before { background-color: #599bb3; }
+.au-marker-info:before { background-color: #267c9f; }
 
-.au-marker-primary:before { background-color: #45788e; }
+.au-marker-primary:before { background-color: #35738c; }
 
-.au-marker-success:before { background-color: #7c8a59; }
+.au-marker-success:before { background-color: #5f9535; }
 
 .au-marker-warning:before { background-color: #e79d2a; }
 
@@ -953,10 +954,15 @@
 
   font-size: 17px;
   color: #ccd6d9;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .au-modal .au-mask {
@@ -1104,7 +1110,7 @@
 
 .au-pill-nav,
 .au-label-nav {
-  color: #599bb3;
+  color: #267c9f;
   background-color: transparent;
   border-color: transparent;
 }
@@ -1118,32 +1124,32 @@
 
 .au-pill-info,
 .au-label-info {
-  border: 1px solid #599bb3;
+  border: 1px solid #267c9f;
 }
 
 .au-pill-info.au-pill-active,
 .au-label-info.au-label-active {
-  background-color: #599bb3;
+  background-color: #267c9f;
 }
 
 .au-pill-primary,
 .au-label-primary {
-  border: 1px solid #45788e;
+  border: 1px solid #35738c;
 }
 
 .au-pill-primary.au-pill-active,
 .au-label-primary.au-label-active {
-  background-color: #45788e;
+  background-color: #35738c;
 }
 
 .au-pill-success,
 .au-label-success {
-  border: 1px solid #7c8a59;
+  border: 1px solid #5f9535;
 }
 
 .au-pill-success.au-pill-active,
 .au-label-success.au-label-active {
-  background-color: #7c8a59;
+  background-color: #5f9535;
 }
 
 .au-pill-warning,
@@ -1253,11 +1259,11 @@ h6.au-placeholder {
   height: 26px;
 }
 
-.au-placeholder-button-primary { background-color: #45788e; }
+.au-placeholder-button-primary { background-color: #35738c; }
 
-.au-placeholder-button-info { background-color: #599bb3; }
+.au-placeholder-button-info { background-color: #267c9f; }
 
-.au-placeholder-button-success { background-color: #7c8a59; }
+.au-placeholder-button-success { background-color: #5f9535; }
 
 .au-placeholder-button-warning { background-color: #e79d2a; }
 
@@ -1288,32 +1294,32 @@ h6.au-placeholder {
 .au-radio:checked:before {
   background-image: radial-gradient(
     circle,
-    #599bb3,
-    #599bb3 4.9px,
+    #267c9f,
+    #267c9f 4.9px,
     #fff 5.1px,
     #fff 7px,
-    #599bb3 7px,
-    #599bb3
+    #267c9f 7px,
+    #267c9f
   );
-  border: 1px solid #599bb3;
+  border: 1px solid #267c9f;
 }
 
 .au-radio:hover:before,
 .au-radio:focus:before {
-  border: 1px solid #45788e;
+  border: 1px solid #35738c;
 }
 
 .au-radio:checked:hover:before {
   background-image: radial-gradient(
     circle,
-    #45788e,
-    #45788e 4.9px,
+    #35738c,
+    #35738c 4.9px,
     #fff 5.1px,
     #fff 7px,
-    #45788e 7px,
-    #45788e
+    #35738c 7px,
+    #35738c
   );
-  border: 1px solid #45788e;
+  border: 1px solid #35738c;
 }
 
 .au-radio:disabled:before,
@@ -1403,8 +1409,10 @@ body::-webkit-scrollbar-track {
  */
 
 .au-tab-container {
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
     border-bottom: 5px solid #869297;
+    display: -webkit-box;
     display: flex;
     overflow-y: hidden;
     overflow: hidden;
@@ -1417,7 +1425,8 @@ body::-webkit-scrollbar-track {
     border-radius: 10px 10px 0px 0px;
     border: none;
     cursor: pointer;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
     float: left;
     padding: 5px;
     text-align: center;
@@ -1457,17 +1466,17 @@ body::-webkit-scrollbar-track {
 
 .au-table-info,
 .au-grid-info {
-  border-top: 4px solid #599bb3;
+  border-top: 4px solid #267c9f;
 }
 
 .au-table-primary,
 .au-grid-primary {
-  border-top: 4px solid #45788e;
+  border-top: 4px solid #35738c;
 }
 
 .au-table-success,
 .au-grid-success {
-  border-top: 4px solid #7c8a59;
+  border-top: 4px solid #5f9535;
 }
 
 .au-table-warning,
@@ -1668,7 +1677,7 @@ h6 {
 a {
   outline: none; /* this makes me cry inside */
   text-decoration: none;
-  color: #599bb3;
+  color: #267c9f;
 }
 
 a:hover,
@@ -1687,11 +1696,11 @@ input, textarea {
 
 .au-text-muted { color: #ccd6d9; }
 
-.au-text-info { color: #599bb3; }
+.au-text-info { color: #267c9f; }
 
-.au-text-primary { color: #45788e; }
+.au-text-primary { color: #35738c; }
 
-.au-text-success { color: #7c8a59; }
+.au-text-success { color: #5f9535; }
 
 .au-text-warning { color: #e79d2a; }
 

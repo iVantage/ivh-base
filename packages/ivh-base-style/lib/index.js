@@ -1,4 +1,3 @@
-
 const theme = {
   /**
    * Colors
@@ -12,11 +11,11 @@ const theme = {
   colorHighlightOrange: '#c76837',
   colorHoverDarkerGray: '#869297',
   colorInactiveGray: '#ccd6d9',
-  colorInsightGreen: '#7c8a59',
+  colorInsightGreen: '#5f9535',
   colorLightGray: '#f0f4f5',
   colorLinesGray: '#dfe4e6',
-  colorPrimaryBlue: '#45788e',
-  colorSecondaryBlue: '#599bb3',
+  colorPrimaryBlue: '#35738c',
+  colorSecondaryBlue: '#267c9f',
   colorSelectionBlue: '#e4f6fd',
   colorSelectionYellow: '#f5d8aa',
   colorTextGray: '#495357',
@@ -76,9 +75,9 @@ const theme = {
    */
   zIndexLoadMask: 100,
   zIndexDropdownMenu: 1 * 1000,
-  zIndexDropdownMenuBackdrop: (1 * 1000) - 1,
+  zIndexDropdownMenuBackdrop: 1 * 1000 - 1,
   zIndexModal: 5 * 1000,
-  zIndexModalBackdrop: (5 * 1000) - 1,
+  zIndexModalBackdrop: 5 * 1000 - 1,
   zIndexTooltip: 7 * 1000,
   zIndexToast: 15 * 1000,
 
@@ -144,11 +143,10 @@ const dasherize = function (str) {
 }
 
 const formatForCustomProperties = function (hash) {
-  return Object.keys(hash)
-    .reduce(function (customProps, hashKey) {
-      customProps['--' + dasherize(hashKey)] = hash[hashKey]
-      return customProps
-    }, {})
+  return Object.keys(hash).reduce(function (customProps, hashKey) {
+    customProps['--' + dasherize(hashKey)] = hash[hashKey]
+    return customProps
+  }, {})
 }
 
 theme.asCustomPropertyVariables = function () {
