@@ -33,17 +33,12 @@
   border: 1px solid var(--color-inactive-gray);
 }
 
-.au-btn-primary {
+.au-btn-primary,
+.au-btn-primary:not(:disabled):hover,
+.au-btn-primary:not(:disabled):focus {
   color: var(--color-white);
   background-color: var(--color-primary);
   border: 1px solid var(--color-primary);
-}
-
-/* Buttons - primary */
-.au-btn-primary:not(:disabled):hover,
-.au-btn-primary:not(:disabled):focus {
-  background-color: var(--color-secondary-blue);
-  border: 1px solid var(--color-secondary-blue);
 }
 
 .au-btn-primary,

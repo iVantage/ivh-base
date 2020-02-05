@@ -15,13 +15,14 @@ const theme = {
   colorLightGray: '#f0f4f5',
   colorLinesGray: '#dfe4e6',
   colorPrimaryBlue: '#35738c',
-  colorSecondaryBlue: '#267c9f',
+  colorSecondaryBlue: '#679ab1',
   colorSelectionBlue: '#e4f6fd',
   colorSelectionYellow: '#f5d8aa',
   colorTextGray: '#495357',
   colorWhite: '#fff',
   colorYellow: '#eeba69',
   colorNavActive: '#c76837',
+  colorLink: '#267c9f',
 
   /**
    * Data Viz Colors
