@@ -462,7 +462,7 @@
   font-size: inherit;
   line-height: inherit;
   cursor: pointer;
-  color: #679ab1;
+  color: #267c9f;
 }
 
 .au-btn-link:hover {
@@ -1104,7 +1104,7 @@
 
 .au-pill-nav,
 .au-label-nav {
-  color: #679ab1;
+  color: #267c9f;
   background-color: transparent;
   border-color: transparent;
 }
@@ -1671,7 +1671,7 @@ h6 {
 a {
   outline: none; /* this makes me cry inside */
   text-decoration: none;
-  color: #679ab1;
+  color: #267c9f;
 }
 
 a:hover,

@@ -102,8 +102,6 @@ theme.colorToDo = theme.colorPrimary
 theme.colorInProgress = theme.colorWarning
 theme.colorDone = theme.colorSuccess
 
-theme.colorLink = theme.colorSecondaryBlue
-
 /**
  * Utilitarian colors
  */
