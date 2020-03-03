@@ -9,7 +9,6 @@
   overflow: hidden;
   color: #495357;
   cursor: pointer;
-  -webkit-transition: height 0.2s ease-out;
   transition: height 0.2s ease-out;
 }
 
@@ -45,7 +44,6 @@
   left: 10px;
   border: 6px solid transparent;
   border-right: none;
-  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
@@ -801,11 +799,8 @@
 }
 
 * {
-  -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
-  -webkit-transition: border 0.2s linear;
   transition: border 0.2s linear;
-  -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 
@@ -948,15 +943,10 @@
 
   font-size: 17px;
   color: #ccd6d9;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .au-modal .au-mask {
@@ -1403,10 +1393,8 @@ body::-webkit-scrollbar-track {
  */
 
 .au-tab-container {
-    -webkit-box-align: baseline;
-            align-items: baseline;
+    align-items: baseline;
     border-bottom: 5px solid #869297;
-    display: -webkit-box;
     display: flex;
     overflow-y: hidden;
     overflow: hidden;
@@ -1419,8 +1407,7 @@ body::-webkit-scrollbar-track {
     border-radius: 10px 10px 0px 0px;
     border: none;
     cursor: pointer;
-    -webkit-box-flex: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     float: left;
     padding: 5px;
     text-align: center;
@@ -1573,6 +1560,28 @@ body::-webkit-scrollbar-track {
       grid-column-start: start;
   -ms-grid-column-span: NaN;
   grid-column-end: end;
+}
+
+.au-table-slim th,
+.au-table-slim td {
+  padding: 7px 10px;
+}
+
+.au-table-borderless {
+  border-top:none;
+}
+
+.au-table-borderless th:first-child,
+.au-table-borderless td:first-child,
+.au-table-borderless > *:first-child,
+.au-table-borderless th,
+.au-table-borderless td,
+.au-table-borderless > * {
+  border: unset !important;
+}
+
+.au-table-stripped tbody > tr:nth-child(odd){
+  background-color: #EFF0F1;
 }
 
 .au-tail {
