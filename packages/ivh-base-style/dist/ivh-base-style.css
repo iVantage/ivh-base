@@ -1567,6 +1567,11 @@ body::-webkit-scrollbar-track {
   padding: 7px 10px;
 }
 
+.au-table-relaxed th,
+.au-table-relaxed td {
+  padding: 13px 10px;
+}
+
 .au-table-borderless {
   border-top:none;
 }
@@ -1580,7 +1585,7 @@ body::-webkit-scrollbar-track {
   border: unset !important;
 }
 
-.au-table-stripped tbody > tr:nth-child(odd){
+.au-table-striped tbody > tr:nth-child(odd){
   background-color: #EFF0F1;
 }
 

@@ -254,7 +254,7 @@
       "AuTable",
       "table",
       ["au-table"],
-      [],
+      ["slim", "relaxed", "striped", "borderless"],
       true,
       [],
       "Fancy tables for fancy people. Pair with table rows, columns, and/or cells."
