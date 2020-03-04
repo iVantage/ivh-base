@@ -1,6 +1,6 @@
 {
   "name": "@ivantagehealth/ivh-base-style",
-  "version": "5.4.1",
+  "version": "5.5.0",
   "description": "A base style layer for iVantage apps.",
   "main": "lib/index.js",
   "scripts": {
