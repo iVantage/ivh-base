@@ -1576,13 +1576,11 @@ body::-webkit-scrollbar-track {
   border-top:none;
 }
 
-.au-table-borderless th:first-child,
-.au-table-borderless td:first-child,
-.au-table-borderless > *:first-child,
+.au-table-borderless thead th,
 .au-table-borderless th,
 .au-table-borderless td,
 .au-table-borderless > * {
-  border: unset !important;
+  border: unset;
 }
 
 .au-table-striped tbody > tr:nth-child(odd){
