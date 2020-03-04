@@ -621,6 +621,10 @@ export const AuShadow = (props) => {
 export const AuTable = (props) => {
   const {
     className,
+    slim,
+    relaxed,
+    striped,
+    borderless,
     info,
     primary,
     success,
@@ -632,6 +636,10 @@ export const AuTable = (props) => {
   const _className = [
     className,
     'au-table',
+    slim && 'au-table-slim',
+    relaxed && 'au-table-relaxed',
+    striped && 'au-table-striped',
+    borderless && 'au-table-borderless',
     info && 'au-table-info',
     primary && 'au-table-primary',
     success && 'au-table-success',

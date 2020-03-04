@@ -453,7 +453,11 @@ the standard `div`:
 
 **Semantic props**: Yes.
 
-**Additional props**: None.
+**Additional props**: 
+- slim
+- relaxed
+- striped
+- borderless
 
 **Default props**: None.
 
