@@ -1580,6 +1580,31 @@ body::-webkit-scrollbar-track {
   grid-column-end: end;
 }
 
+.au-table-slim th,
+.au-table-slim td {
+  padding: 7px 10px;
+}
+
+.au-table-relaxed th,
+.au-table-relaxed td {
+  padding: 13px 10px;
+}
+
+.au-table-borderless {
+  border-top:none;
+}
+
+.au-table-borderless thead th,
+.au-table-borderless th,
+.au-table-borderless td,
+.au-table-borderless > * {
+  border: unset;
+}
+
+.au-table-striped tbody > tr:nth-child(odd){
+  background-color: #EFF0F1;
+}
+
 .au-tail {
   position: relative;
   z-index: 1;
@@ -1853,7 +1878,7 @@ section {
   text-align: center;
 }
 </style>
-<title>Base Styles for iVantage v5.4.1</title>
+<title>Base Styles for iVantage v5.5.0</title>
   </head>
   <body>
     <div class="wrapper">
@@ -2442,10 +2467,126 @@ section {
           <p>For tabular data only!</p>
         </div>
 
-        <div class="demo">
-          <h2>A True Table</h2>
+
+      <div class="demo">
+        <h2>A Default Table</h2>
+        <p class="au-text-muted">tr, td, etc.</p>
+        <table class="au-table" style="width: 100%;">
+          <thead>
+            <tr>
+              <th class="au-col-text">A header</th>
+              <th class="au-col-data">A header</th>
+              <th class="au-col-data">A header</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td class="au-col-text">A footer</td>
+              <td class="au-col-data au-text-percentage">A footer</td>
+              <td class="au-col-data au-text-dollars">A footer</td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>A Releaxed Fit Table</h2>
+        <p class="au-text-muted">tr, td, etc.</p>
+        <table class="au-table au-table-relaxed" style="width: 100%;">
+          <thead>
+            <tr>
+              <th class="au-col-text">A header</th>
+              <th class="au-col-data">A header</th>
+              <th class="au-col-data">A header</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td class="au-col-text">A footer</td>
+              <td class="au-col-data au-text-percentage">A footer</td>
+              <td class="au-col-data au-text-dollars">A footer</td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>A Slim Fit Table</h2>
+        <p class="au-text-muted">tr, td, etc.</p>
+        <table class="au-table au-table-slim" style="width: 100%;">
+          <thead>
+            <tr>
+              <th class="au-col-text">A header</th>
+              <th class="au-col-data">A header</th>
+              <th class="au-col-data">A header</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td class="au-col-text">A footer</td>
+              <td class="au-col-data au-text-percentage">A footer</td>
+              <td class="au-col-data au-text-dollars">A footer</td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+            <tr>
+              <td class="au-col-text">Unstyled</td>
+              <td class="au-col-data au-text-percentage">Percentage</td>
+              <td class="au-col-data au-text-dollars">Currency</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+
+          <h2>A Striped Table</h2>
           <p class="au-text-muted">tr, td, etc.</p>
-          <table class="au-table" style="width: 100%;">
+          <table class="au-table au-table-striped" style="width: 100%;">
             <thead>
               <tr>
                 <th class="au-col-text">A header</th>
@@ -2453,14 +2594,46 @@ section {
                 <th class="au-col-data">A header</th>
               </tr>
             </thead>
-            <tfoot>
-              <tr>
-                <td class="au-col-text">A footer</td>
-                <td class="au-col-data au-text-percentage">A footer</td>
-                <td class="au-col-data au-text-dollars">A footer</td>
-              </tr>
-            </tfoot>
             <tbody>
+              <tr>
+                <td class="au-col-text">Unstyled</td>
+                <td class="au-col-data au-text-percentage">Percentage</td>
+                <td class="au-col-data au-text-dollars">Currency</td>
+              </tr>
+              <tr>
+                <td class="au-col-text">Unstyled</td>
+                <td class="au-col-data au-text-percentage">Percentage</td>
+                <td class="au-col-data au-text-dollars">Currency</td>
+              </tr>
+              <tr>
+                <td class="au-col-text">Unstyled</td>
+                <td class="au-col-data au-text-percentage">Percentage</td>
+                <td class="au-col-data au-text-dollars">Currency</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>A Borderless Striped Table</h2>
+          <p class="au-text-muted">tr, td, etc.</p>
+          <table class="au-table au-table-borderless au-table-striped" style="width: 100%;">
+            <thead>
+              <tr>
+                <th class="au-col-text">A header</th>
+                <th class="au-col-data">A header</th>
+                <th class="au-col-data">A header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="au-col-text">Unstyled</td>
+                <td class="au-col-data au-text-percentage">Percentage</td>
+                <td class="au-col-data au-text-dollars">Currency</td>
+              </tr>
+              <tr>
+                <td class="au-col-text">Unstyled</td>
+                <td class="au-col-data au-text-percentage">Percentage</td>
+                <td class="au-col-data au-text-dollars">Currency</td>
+              </tr>
               <tr>
                 <td class="au-col-text">Unstyled</td>
                 <td class="au-col-data au-text-percentage">Percentage</td>
