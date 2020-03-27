@@ -1,0 +1,3070 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700" rel="stylesheet">
+<style>
+.au-accordion {
+  background-color: #fff
+}
+
+.au-accordion-panel {
+  position: relative;
+  height: 37px;
+  overflow: hidden;
+  color: #495357;
+  cursor: pointer;
+  -webkit-transition: height 0.2s ease-out;
+  transition: height 0.2s ease-out;
+}
+
+.au-accordion-panel:not(:first-child) {
+  border-top: 1px solid #dfe4e6;
+}
+
+.au-accordion-header {
+  padding: 9px 10px 7px 25px;
+  display:block;
+  color: #495357;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+}
+
+.au-accordion-body {
+  display: block;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.au-accordion-panel-active {
+  height: auto;
+}
+
+.au-accordion-panel-active:before,
+.au-accordion-panel:not(.au-accordion-panel-active):before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  border: 6px solid transparent;
+  border-right: none;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.au-accordion-panel-active:before {
+  border-left: 6px solid #35738c;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.au-accordion-panel:not(.au-accordion-panel-active):before {
+  border-left: 6px solid #ccd6d9;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+/**
+ * Alerts
+ */
+
+.au-alert {
+  display: block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 40px;
+  border-radius: 2px;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,0.08);
+  background-color: #fff;
+  border-left: 5px solid #ccd6d9;
+}
+
+/* Nested shadows just look funky */
+
+.au-alert-flat,
+.au-modal .au-alert,
+.au-card .au-alert,
+.au-alert .au-alert,
+.au-shadow .au-alert {
+  border: 1px solid #dfe4e6;
+  box-shadow: none;
+}
+
+.au-alert:before {
+  content: "i";
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  padding: 2px 10px;
+  color: #ccd6d9;
+  border: 3px solid #ccd6d9;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.au-alert-info {
+  border-left: 5px solid #679ab1;
+}
+
+.au-alert-info:before {
+  color: #679ab1;
+  border: 3px solid #679ab1;
+}
+
+.au-alert-primary {
+  border-left: 5px solid #35738c;
+}
+
+.au-alert-primary:before {
+  color: #35738c;
+  border: 3px solid #35738c;
+}
+
+.au-alert-danger {
+  border-left: 5px solid #d83c3c;
+}
+
+.au-alert-danger:before {
+  content: "!";
+  color: #d83c3c;
+  border: 3px solid #d83c3c;
+}
+
+.au-alert-warning {
+  border-left: 5px solid #e79d2a;
+}
+
+.au-alert-warning:before {
+  content: "!";
+  color: #e79d2a;
+  border: 3px solid #e79d2a;
+}
+
+.au-alert-success {
+  border-left: 5px solid #5f9535;
+}
+
+.au-alert-success:before {
+  content: "\2713";
+  top: 4px;
+  left: 0;
+  padding: 5px 10px;
+  color: #5f9535;
+  border: 4px solid #5f9535;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+}
+
+.au-alert .au-close,
+.au-alert .au-close:hover,
+.au-alert .au-close:focus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/**
+ * Badges
+ *
+ * Used for notification counts and such.
+ *
+ * The container element must have non-static position.
+ *
+ * The `au-with-badge` helper class will add relative positioning to you element
+ * for badgification.
+ */
+
+.au-with-badge {
+  position: relative;
+  overflow: visible;
+}
+
+.au-badge {
+  position: absolute;
+  top: -11px;
+  right: -4px;
+  text-align: center;
+  border-radius: 200px;
+  padding: 1px 6px;
+  border: 2px solid #dfe4e6;
+  color: #495357;
+  background-color: #fff;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,0.08);
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.au-badge-info { border: 2px solid #679ab1; color: #679ab1; }
+
+.au-badge-primary { border: 2px solid #35738c; color: #35738c; }
+
+.au-badge-success { border: 2px solid #5f9535; color: #5f9535; }
+
+.au-badge-warning { border: 2px solid #e79d2a; color: #e79d2a; }
+
+.au-badge-danger { border: 2px solid #d83c3c; color: #d83c3c; }
+
+/**
+ * Buttons
+ */
+
+/* Buttons - base button */
+
+.au-btn:hover,
+.au-btn:focus {
+  background-color: #e4f6fd;
+  border: 1px solid #679ab1;
+}
+
+.au-btn {
+  outline: none; /* this makes me cry inside */
+  padding: 12px 20px;
+  color: #35738c;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #dfe4e6;
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+}
+
+.au-btn:active {
+  color: #fff;
+  background-color: #35738c;
+}
+
+.au-btn:disabled {
+  color: #ccd6d9;
+  background-color: #f0f4f5;
+  border: 1px solid #ccd6d9;
+}
+
+.au-btn-primary,
+.au-btn-primary:not(:disabled):hover,
+.au-btn-primary:not(:disabled):focus {
+  color: #fff;
+  background-color: #35738c;
+  border: 1px solid #35738c;
+}
+
+.au-btn-primary,
+.au-btn-primary:active {
+  color: #fff;
+  background-color: #35738c;
+  border: 1px solid #35738c;
+}
+
+.au-btn-primary:disabled {
+  color: #fff;
+  background-color: #ccd6d9;
+  border: 1px solid #ccd6d9;
+}
+
+/* Buttons - secondary */
+
+.au-btn-secondary:not(:disabled):hover,
+.au-btn-secondary:not(:disabled):focus {
+  color: #35738c;
+	background-color: #e4f6fd;
+}
+
+.au-btn-secondary {
+  color: #35738c;
+  background-color: #fff;
+  border: 1px solid #35738c;
+}
+
+.au-btn-secondary:active {
+  color: #fff;
+  background-color: #35738c;
+}
+
+.au-btn-secondary:disabled {
+  color: #ccd6d9;
+  background-color: #f0f4f5;
+  border: 1px solid #ccd6d9;
+}
+
+/* Buttons - tertiary */
+
+.au-btn-tertiary:not(:disabled):hover,
+.au-btn-tertiary:not(:disabled):focus {
+  color: #35738c;
+	background-color: #e4f6fd;
+  border: 1px solid #e4f6fd;
+}
+
+.au-btn-tertiary {
+  color: #35738c;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.au-btn-tertiary:active {
+  color: #fff;
+  background-color: #35738c;
+  border: 1px solid #35738c;
+}
+
+.au-btn-tertiary:disabled {
+  color: #ccd6d9;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Buttons - actions */
+
+.au-btn-actions:after {
+  content: "\25BC";
+  font-size: 8px;
+  position: relative;
+  bottom: 2px;
+  left: 4px;
+}
+
+/* Obligatory semantic flavors */
+
+.au-btn-info,
+.au-btn-info:disabled,
+.au-btn-info:not(:disabled):not(:active):hover,
+.au-btn-info:not(:disabled):not(:active):focus {
+  color: #fff;
+  background-color: #679ab1;
+  border: 1px solid #679ab1;
+}
+
+.au-btn-cta,
+.au-btn-cta:disabled,
+.au-btn-cta:not(:disabled):active,
+.au-btn-cta:not(:disabled):not(:active):hover,
+.au-btn-cta:not(:disabled):not(:active):focus,
+.au-btn-success,
+.au-btn-success:disabled,
+.au-btn-success:not(:disabled):active,
+.au-btn-success:not(:disabled):not(:active):hover,
+.au-btn-success:not(:disabled):not(:active):focus {
+  color: #fff;
+  background-color: #5f9535;
+  border: 1px solid #5f9535;
+}
+
+.au-btn-warning,
+.au-btn-warning:disabled,
+.au-btn-warning:not(:disabled):active,
+.au-btn-warning:not(:disabled):not(:active):hover,
+.au-btn-warning:not(:disabled):not(:active):focus {
+  color: #fff;
+  background-color: #e79d2a;
+  border: 1px solid #e79d2a;
+}
+
+.au-btn-danger,
+.au-btn-danger:disabled,
+.au-btn-danger:not(:disabled):active,
+.au-btn-danger:not(:disabled):not(:active):hover,
+.au-btn-danger:not(:disabled):not(:active):focus {
+  color: #fff;
+  background-color: #d83c3c;
+  border: 1px solid #d83c3c;
+}
+
+/* Buttons - dopdown */
+
+.au-btn-dropdown,
+.au-btn-dropdown:hover,
+.au-btn-dropdown:active {
+  position: relative;
+  text-transform: inherit;
+  color: inherit;
+  background-color: #fff;
+  font-family: inherit;
+  font-weight: inherit;
+  border: 1px solid #dfe4e6;
+  padding: 10px 30px 10px 10px;
+  min-width: 200px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.au-btn-dropdown:not(:disabled):hover,
+.au-btn-dropdown:not(:disabled):focus,
+.au-btn-dropdown:not(:disabled):active {
+  border: 1px solid #869297;
+}
+
+.au-btn-dropdown:after {
+  content: " ";
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  border-left: 2px solid #dfe4e6;
+  border-bottom: 2px solid #dfe4e6;
+  background-color: transparent;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.au-btn-dropdown:not(:disabled):hover:after,
+.au-btn-dropdown:not(:disabled):focus:after,
+.au-btn-dropdown:not(:disabled):active:after {
+  border-left: 2px solid #869297;
+  border-bottom: 2px solid #869297;
+}
+
+.au-btn-dropdown:disabled {
+  color: #ccd6d9;
+  background-color: #f0f4f5;
+  border: 1px solid #ccd6d9;
+}
+
+/* Buttons - area add */
+
+.au-btn-area {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  color: #869297;
+  background-color: #f0f4f5;
+  border: 1px dashed #869297;
+}
+
+.au-btn-area:hover,
+.au-btn-area:focus {
+  background-color: #E9EEF0;
+  border: 1px dashed #869297;
+}
+
+.au-btn-area:active {
+  background-color: #f0f4f5;
+}
+
+/* Buttons - small */
+
+.au-btn-sm {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.au-btn-link,
+.au-btn-link:hover,
+.au-btn-link:focus {
+  text-transform: inherit;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-family: Roboto;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  color: #267c9f;
+}
+
+.au-btn-link:hover {
+  text-decoration: underline;
+  outline: none;
+}
+
+.au-btn-link:disabled,
+.au-btn-link:disabled:focus,
+.au-btn-link:disabled:hover {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: #ccd6d9;
+  cursor: not-allowed;
+}
+
+.au-btn-text,
+.au-btn-text:hover,
+.au-btn-text:focus {
+  text-transform: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-family: Roboto;
+  font-weight: normal;
+  cursor: pointer;
+  color: #495357;
+}
+
+.au-btn-text:hover {
+  outline: none;
+}
+
+.au-btn-text:disabled,
+.au-btn-text:disabled:focus,
+.au-btn-text:disabled:hover {
+  background-color: transparent;
+  border: none;
+  color: #ccd6d9;
+  cursor: not-allowed;
+}
+
+/* Helper for notification badges */
+
+.au-btn-badge {
+  position: relative;
+  overflow: visible;
+}
+
+.au-btn-cta:not(:disabled):not(:active):hover, .au-btn.au-btn-cta:not(:disabled):not(:active):focus,
+.au-btn-info:not(:disabled):not(:active):hover, .au-btn.au-btn-info:not(:disabled):not(:active):focus,
+.au-btn-primary:not(:disabled):not(:active):hover, .au-btn.au-btn-primary:not(:disabled):not(:active):focus,
+.au-btn-success:not(:disabled):not(:active):hover, .au-btn.au-btn-success:not(:disabled):not(:active):focus,
+.au-btn-warning:not(:disabled):not(:active):hover, .au-btn.au-btn-warning:not(:disabled):not(:active):focus,
+.au-btn-danger:not(:disabled):not(:active):hover, .au-btn.au-btn-danger:not(:disabled):not(:active):focus {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+/* primary is handled above */
+
+.au-btn-cta:disabled,
+.au-btn-info:disabled,
+.au-btn-success:disabled,
+.au-btn-warning:disabled,
+.au-btn-danger:disabled {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+/**
+ * @todo Perhaps adopt the bootstrap card structure:
+ * https://getbootstrap.com/docs/4.0/components/card/#content-types
+ */
+
+.au-card {
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,0.08);
+  background-color: #fff;
+  border-top: 4px solid #fff;
+  padding: 20px 30px;
+}
+
+.au-card-title {
+  font-family: Roboto;
+  font-weight: bold;
+}
+
+.au-card > h1,
+.au-card h1.au-card-title {
+  margin: 0;
+  line-height: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #dfe4e6;
+}
+
+.au-card-header {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.au-card-muted {
+  border-top: 4px solid #ccd6d9;
+}
+
+.au-card-info {
+  border-top: 4px solid #679ab1;
+}
+
+.au-card-info .au-card-header {
+  color: #679ab1;
+}
+
+.au-card-primary {
+  border-top: 4px solid #35738c;
+}
+
+.au-card-primary .au-card-header {
+  color: #35738c;
+}
+
+.au-card-warning {
+  border-top: 4px solid #e79d2a;
+}
+
+.au-card-warning .au-card-header {
+  color: #e79d2a;
+}
+
+.au-card-success {
+  border-top: 4px solid #5f9535;
+}
+
+.au-card-success .au-card-header {
+  color: #5f9535;
+}
+
+.au-card-danger {
+  border-top: 4px solid #d83c3c;
+}
+
+.au-card-danger .au-card-header {
+  color: #d83c3c;
+}
+
+/**
+ * Checkboxes
+ */
+
+.au-checkbox {
+  position: relative;
+}
+
+.au-checkbox:before {
+  content: "\2713";
+  position: absolute;
+  top: -4px;
+  left: -5px;
+  cursor: pointer;
+  padding: 1px 5px 2px 5px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  font-weight: bold;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #fff;
+  border: 1px solid #dfe4e6;
+}
+
+.au-checkbox:checked:before {
+  content: "\2713";
+  color: #fff;
+  background-color: #679ab1;
+  border: 1px solid #679ab1;
+}
+
+.au-checkbox:hover:before,
+.au-checkbox:focus:before {
+  border: 1px solid #35738c;
+}
+
+.au-checkbox:checked:hover:before,
+.au-checkbox:checked:focus:before {
+  background-color: #35738c;
+  border: 1px solid #35738c;
+}
+
+.au-checkbox:disabled:before,
+.au-checkbox:disabled:focus:before,
+.au-checkbox:disabled:hover:before {
+  cursor: not-allowed;
+  color: #f0f4f5;
+  background-color: #f0f4f5;
+  border: 1px solid #ccd6d9;
+}
+
+.au-checkbox:checked:disabled:before,
+.au-checkbox:checked:disabled:focus:before,
+.au-checkbox:checked:disabled:hover:before {
+  background-color: #ccd6d9;
+  border: 1px solid #ccd6d9;
+}
+
+.au-checkbox:indeterminate:before,
+.au-checkbox:indeterminate:hover:before,
+.au-checkbox:indeterminate:focus:before {
+  content: "\2013";
+  color: #35738c;
+  padding: 1px 5px;
+  font-size: 17px;
+}
+
+.au-checkbox:disabled:indeterminate:before,
+.au-checkbox:disabled:indeterminate:hover:before,
+.au-checkbox:disabled:indeterminate:focus:before {
+  color: #ccd6d9;
+}
+
+/**
+ * A cancel (X) link
+ *
+ * Intended use:
+ *
+ * ```
+ * <a href="..." class="au-close">&times;</a>
+ * ```
+ */
+
+.au-close {
+  position: absolute;
+  /* top should center vertically reletive to text inputs */
+  top: 12px;
+  right: 12px;
+  color: #ccd6d9;
+  font-family: Roboto;
+  font-size: 25px;
+  line-height: 15px;
+  text-decoration: none;
+  font-weight: 300px;
+}
+
+.au-close:hover,
+.au-close:focus {
+  text-decoration: none;
+  color: #869297;
+}
+
+/**
+ * Dropdown things (menus, autocompletes, etc.)
+ *
+ * These require some orchestration, at least three elements:
+ *
+ * ```
+ * .au-dropdown[.au-dropdown-open]
+ *   .au-dropdown-button
+ *   .au-dropdown-backdrop
+ *   .au-dropdown-menu
+ * ```
+ *
+ * The dropdown button can really be anything, it's on the JS framework to
+ * manage add/removing the `au-dropdown-open` class from the overall dropdown.
+ *
+ * The backdrop is optional, it's meant to facilitate closing dropdowns when
+ * you click outside the menu. If used, you should listen for click events on
+ * `.au-dropdown-backdrop` and close the dropdown when this occurs.
+ *
+ * The menu itself is just a wrapper
+ *
+ */
+
+/* The wrapper */
+
+.au-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* The toggle */
+
+.au-dropdown-button {
+  display: inherit;
+}
+
+/* The backdrop */
+
+.au-dropdown-backdrop {
+  display: none;
+  position: fixed;
+  z-index: calc( 1000 - 1);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.au-modal .au-dropdown .au-dropdown-backdrop {
+  z-index: calc( 5000 + 1000 - 1 );
+}
+
+.au-dropdown-open .au-dropdown-backdrop {
+  display: block;
+}
+
+/* The menu */
+
+.au-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 2px;
+  float: left;
+  z-index: 1000;
+  min-width: 160px;
+  border-radius: 2px;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,0.08);
+  background-color: #fff;
+  border: 1px solid #dfe4e6;
+  /* Counteract label styles when we're nested instide a label */
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.au-modal .au-dropdown .au-dropdown-menu {
+  z-index: calc( 5000 + 1000 );
+}
+
+.au-dropdown-menu-open,
+.au-dropdown-open .au-dropdown-menu {
+  display: block;
+}
+
+* {
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  -webkit-transition: border 0.2s linear;
+  transition: border 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+.au-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #495357;
+  outline: none !important;
+  box-sizing: border-box;
+  border: 1px solid #dfe4e6;
+  border-radius: 2px; 
+}
+
+.au-input-hint {
+  font-family: Roboto;
+  font-weight: 500;
+  text-transform: none;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.au-input-label {
+  color: #495357;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+  font-size: 12px;
+  display: block;
+}
+
+/**
+ * Standalone lists and to be support complex components
+ */
+
+.au-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.au-list li,
+.au-list-item {
+  line-height: 16px;
+  padding: 6px 20px;
+}
+
+.au-list-slim li,
+.au-list-slim .au-list-item {
+  padding: 3px 10px;
+}
+
+.au-list-relaxed li,
+.au-list-relaxed .au-list-item {
+  padding: 9px 23px;
+}
+
+.au-list li.active,
+.au-list-selectable li:hover,
+.au-list-selectable .au-list-item:hover,
+.au-list-item.active,
+.au-list-item-active {
+  cursor: pointer;
+  background-color: #e4f6fd;
+}
+
+/**
+ * Markers connect elements on the page
+ *
+ * As such we have a marker for each data viz color as well as semantic flavor
+ * markers.
+ */
+
+.au-marker:before {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #ccd6d9;
+  margin-right: 5px;
+}
+
+.au-marker-placeholder:before { background-color: transparent; }
+
+/* Data-viz markers */
+
+.au-marker-0:before { background-color: #354772; }
+
+.au-marker-1:before { background-color: #E47105; }
+
+.au-marker-2:before { background-color: #49A5A7; }
+
+.au-marker-3:before { background-color: #6D1D48; }
+
+.au-marker-4:before { background-color: #3A6B1E; }
+
+.au-marker-5:before { background-color: #725035; }
+
+.au-marker-6:before { background-color: #AE421A; }
+
+.au-marker-7:before { background-color: #6d9b29; }
+
+.au-marker-8:before { background-color: #B77B08; }
+
+.au-marker-9:before { background-color: #EBAA1D; }
+
+/* Semantic Makers */
+
+.au-marker-muted:before { background-color: #ccd6d9; }
+
+.au-marker-info:before { background-color: #679ab1; }
+
+.au-marker-primary:before { background-color: #35738c; }
+
+.au-marker-success:before { background-color: #5f9535; }
+
+.au-marker-warning:before { background-color: #e79d2a; }
+
+.au-marker-danger:before { background-color: #d83c3c; }
+
+/**
+ * Loading masks and spinners
+ *
+ * Requires parent element to have non-static position
+ */
+
+.au-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.65);
+
+  font-size: 17px;
+  color: #ccd6d9;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.au-modal .au-mask {
+  z-index: calc( 5000 + 100 );
+}
+
+.au-mask-small {
+  font-size: 14px;
+}
+
+.au-mask-spinner {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.au-mask-small .au-mask-spinner {
+  margin: 6px auto;
+}
+
+.au-spinner-dot {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height:18px;
+  width: 18px;
+  border-radius: 100%;
+  background-color: #fff;
+  -webkit-animation: spinner-dot-animation 1.4s infinite ease-in-out both;
+          animation: spinner-dot-animation 1.4s infinite ease-in-out both;
+}
+
+.au-mask-small .au-spinner-dot {
+  height: 12px;
+  width: 12px;
+}
+
+.au-spinner-dot:nth-child(3n + 1) {
+  -webkit-animation-delay: -0.32s;
+          animation-delay: -0.32s;
+}
+
+.au-spinner-dot:nth-child(3n + 2) {
+  -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+}
+
+@-webkit-keyframes spinner-dot-animation {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes spinner-dot-animation {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/**
+ * Modals
+ *
+ * This is largely a placeholder for now to provide classnames for other modals
+ * that allow boosting zIndices for nested children
+ */
+
+.au-modal {
+  position: absolute;
+  z-index: 5000;
+}
+
+.au-modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4999;
+}
+
+/**
+ * Labels and Pills
+ *
+ * Pills are basically rounded labels
+ */
+
+.au-pill,
+.au-label {
+  display: inline-block;
+  padding: 7px 12px;
+  border: 1px solid #ccd6d9;
+  color: #495357;
+  background-color: #fff;
+  line-height: 14px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.au-pill {
+  border-radius: 14px;
+}
+
+.au-label {
+  border-radius: 2px;
+}
+
+.au-label-small {
+  -webkit-transform:scale(0.7);
+          transform:scale(0.7);
+  padding: 1px 6px !important;
+}
+
+.au-pill:hover, .au-pill:focus,
+.au-label:hover, .au-label:focus,
+.au-pill:hover, .au-pill:focus,
+.au-label:hover, .au-label:focus {
+  cursor: pointer;
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  text-decoration: none;
+}
+
+.au-pill-active,
+.au-label-active {
+  background-color: #ccd6d9;
+  color: #fff;
+}
+
+.au-pill-nav,
+.au-label-nav {
+  color: #267c9f;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.au-pill-nav-active,
+.au-label-nav-active {
+  color: #fff;
+  background-color: #c76837;
+  border-color: #c76837;
+}
+
+.au-pill-info,
+.au-label-info {
+  border: 1px solid #679ab1;
+}
+
+.au-pill-info.au-pill-active,
+.au-label-info.au-label-active {
+  background-color: #679ab1;
+}
+
+.au-pill-primary,
+.au-label-primary {
+  border: 1px solid #35738c;
+}
+
+.au-pill-primary.au-pill-active,
+.au-label-primary.au-label-active {
+  background-color: #35738c;
+}
+
+.au-pill-success,
+.au-label-success {
+  border: 1px solid #5f9535;
+}
+
+.au-pill-success.au-pill-active,
+.au-label-success.au-label-active {
+  background-color: #5f9535;
+}
+
+.au-pill-warning,
+.au-label-warning {
+  border: 1px solid #e79d2a;
+}
+
+.au-pill-warning.au-pill-active,
+.au-label-warning.au-label-active {
+  background-color: #e79d2a;
+}
+
+.au-pill-danger,
+.au-label-danger {
+  border: 1px solid #d83c3c;
+}
+
+.au-pill-danger.au-pill-active,
+.au-label-danger.au-label-active {
+  background-color: #d83c3c;
+}
+
+/**
+ * Placeholders for progressively loading content
+ */
+
+.au-placeholder {
+  background-color: #495357;
+  border-radius: 9001px;
+  display: block;
+  width: 100%;
+  height: 12px;
+  margin: 10px 0;
+  -webkit-filter: brightness(220%);
+          filter: brightness(220%);
+}
+
+h1.au-placeholder {
+  width: 60%;
+  height: 20px;
+  margin: 36px 0;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+h2.au-placeholder {
+  width: 55%;
+  height: 16px;
+  margin: 15px 0;
+  -webkit-filter: brightness(140%);
+          filter: brightness(140%);
+}
+
+h3.au-placeholder {
+  width: 50%;
+  height: 14px;
+  margin: 17px 0;
+  -webkit-filter: brightness(140%);
+          filter: brightness(140%);
+}
+
+h4.au-placeholder {
+  width: 50%;
+  height: 12px;
+  margin: 20px 0;
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+h5.au-placeholder {
+  width: 35%;
+  height: 11.5px;
+  margin: 25px 0;
+  -webkit-filter: brightness(180%);
+          filter: brightness(180%);
+}
+
+h6.au-placeholder {
+  width: 35%;
+  height: 9.5px;
+  margin: 25px 0;
+  -webkit-filter: brightness(180%);
+          filter: brightness(180%);
+}
+
+.au-placeholder-circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.au-placeholder-button {
+  background-color: #fff;
+  border: 1px solid #dfe4e6;
+  border-radius: 2px;
+  display: inline-block;
+  width: 75px;
+  height: 42px;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 0.8;
+}
+
+.au-placeholder-button.au-button-small {
+  width: 65px;
+  height: 26px;
+}
+
+.au-placeholder-button-primary { background-color: #35738c; }
+
+.au-placeholder-button-info { background-color: #679ab1; }
+
+.au-placeholder-button-success { background-color: #5f9535; }
+
+.au-placeholder-button-warning { background-color: #e79d2a; }
+
+.au-placeholder-button-danger { background-color: #d83c3c; }
+
+/**
+ * Radio Buttons
+ */
+
+.au-radio {
+  position: relative;
+  height: 16px;
+  width: 16px;
+}
+
+.au-radio:before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #dfe4e6;
+}
+
+.au-radio:checked:before {
+  background-image: radial-gradient(
+    circle,
+    #679ab1,
+    #679ab1 4.9px,
+    #fff 5.1px,
+    #fff 7px,
+    #679ab1 7px,
+    #679ab1
+  );
+  border: 1px solid #679ab1;
+}
+
+.au-radio:hover:before,
+.au-radio:focus:before {
+  border: 1px solid #35738c;
+}
+
+.au-radio:checked:hover:before {
+  background-image: radial-gradient(
+    circle,
+    #35738c,
+    #35738c 4.9px,
+    #fff 5.1px,
+    #fff 7px,
+    #35738c 7px,
+    #35738c
+  );
+  border: 1px solid #35738c;
+}
+
+.au-radio:disabled:before,
+.au-radio:disabled:focus:before,
+.au-radio:disabled:hover:before {
+  cursor: not-allowed;
+  color: #f0f4f5;
+  background-color: #f0f4f5;
+  border: 1px solid #ccd6d9;
+}
+
+.au-radio:checked:disabled:before,
+.au-radio:checked:disabled:focus:before,
+.au-radio:checked:disabled:hover:before {
+  background-image: radial-gradient(
+    circle,
+    #ccd6d9,
+    #ccd6d9 4.9px,
+    #fff 5.1px,
+    #fff 7px,
+    #ccd6d9 7px,
+    #ccd6d9
+  );
+  border: 1px solid #ccd6d9;
+}
+
+/**
+ * Scrollbars for fancy browsers
+ */
+
+::-webkit-scrollbar-track {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background-color: #F0F3F5;
+  box-shadow: inset 0 3px 15px 0 rgba(0,0,0,0.08);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  background-color: #ccd5d9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #45788E;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  width: 10px;
+  height: 10px;
+}
+
+.au-shadow,
+.au-shadow-short {
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,0.08);
+}
+
+.au-shadow-medium {
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.18);
+}
+
+.au-shadow-tall {
+  box-shadow: 0 7px 25px 0 rgba(0,0,0,0.24);
+}
+
+/**
+ * Alerts
+ */
+
+.au-tab-container {
+    -webkit-box-align: baseline;
+            align-items: baseline;
+    border-bottom: 5px solid #869297;
+    display: -webkit-box;
+    display: flex;
+    overflow-y: hidden;
+    overflow: hidden;
+    list-style-type: none;
+    padding: inherit;
+}
+
+.au-tab {
+    background-color: inherit;
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+    cursor: pointer;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    float: left;
+    padding: 5px;
+    text-align: center;
+  }
+
+.au-tab:hover {
+    background-color: #f0f4f5;
+  }
+
+.au-tab.active {
+    background-color: #869297;
+  }
+
+.au-tab-content {
+    background-color: #fff;
+    padding: 10px;
+  }
+
+.au-table,
+.au-grid {
+  font-family: "Roboto Condensed";
+  border-top: 4px solid #ccd6d9;
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,0.08);
+  background-color: #fff;
+  border-radius: 2px;
+  border-collapse: collapse;
+}
+
+.au-grid {
+  display: -ms-grid;
+  display: grid;
+  /* To support ul.au-grid */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.au-table-info,
+.au-grid-info {
+  border-top: 4px solid #679ab1;
+}
+
+.au-table-primary,
+.au-grid-primary {
+  border-top: 4px solid #35738c;
+}
+
+.au-table-success,
+.au-grid-success {
+  border-top: 4px solid #5f9535;
+}
+
+.au-table-warning,
+.au-grid-warning {
+  border-top: 4px solid #e79d2a;
+}
+
+.au-table-danger,
+.au-grid-danger {
+  border-top: 4px solid #d83c3c;
+}
+
+.au-table thead th,
+.au-grid > *.au-cell-header {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid #dfe4e6;
+  border-left: 1px solid #dfe4e6;
+}
+
+/* In support of font-awesome, make sure the icon gets the appropriate
+   line-height */
+
+.au-table thead th,
+.au-table thead th .fa,
+.au-grid > *.au-cell-header,
+.au-grid > *.au-cell-header .fa {
+  line-height: 30px;
+}
+
+.au-table tfoot td,
+.au-grid .au-cell-total {
+  background-color: #f0f4f5;
+}
+
+.au-table tfoot td.au-col-text,
+.au-grid .au-cell-total.au-cell-text {
+  font-weight: bold;
+}
+
+.au-table .au-col-text,
+.au-grid .au-cell-text {
+  text-align: left;
+}
+
+.au-table .au-col-data,
+.au-grid .au-cell-data {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.au-table td.au-col-data {
+  width: 1%;
+}
+
+.au-table .au-col-checkbox,
+.au-grid .au-cell-checkbox {
+  /* silence is golden */
+}
+
+.au-table th,
+.au-table td,
+.au-grid > * {
+  padding: 10px;
+}
+
+.au-table td,
+.au-grid > * {
+  font-size: 14px;
+  border-top: 1px solid #dfe4e6;
+  border-left: 1px solid #dfe4e6;
+}
+
+.au-table th:first-child,
+.au-table td:first-child,
+.au-table-row > *:first-child {
+  border-left: none;
+}
+
+.au-cell-divider {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f0f4f5;
+  color: #869297;
+}
+
+/* Requires from parent:
+ *
+ * ```
+ * grid-column-template: [start] ... [end]
+ * ```
+ */
+
+.au-cell-divider,
+.au-cell-row {
+  -ms-grid-column: start;
+      grid-column-start: start;
+  -ms-grid-column-span: NaN;
+  grid-column-end: end;
+}
+
+.au-tail {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.au-tail > * {
+  background-color: #fff;
+}
+
+.au-tail:after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  background-color: #fff;
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  left: 33px;
+}
+
+.au-shadow:after {
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.18);
+}
+
+.au-shadow-short:after {
+  box-shadow: 0 3px 15px 0 rgba(0,0,0,0.08);
+}
+
+.au-shadow-medium:after {
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.18);
+}
+
+.au-shadow-tall:after {
+  box-shadow: 0 7px 25px 0 rgba(0,0,0,0.24);
+}
+
+/**
+ * Typography
+ *
+ * Copy, text elements, and page ambiance
+ */
+
+html, body {
+  height: 100%;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 20px;
+  color: #495357;
+  background-color: #eaeef0;
+  padding: 0;
+  margin: 0;
+}
+
+.au-voice {
+  font-family: Roboto;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 64px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-weight: bold;
+}
+
+h6 {
+  font-weight: bold;
+}
+
+a {
+  outline: none; /* this makes me cry inside */
+  text-decoration: none;
+  color: #267c9f;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
+label {
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: Roboto;
+}
+
+.au-text-muted { color: #ccd6d9; }
+
+.au-text-info { color: #679ab1; }
+
+.au-text-primary { color: #35738c; }
+
+.au-text-success { color: #5f9535; }
+
+.au-text-warning { color: #e79d2a; }
+
+.au-text-danger { color: #d83c3c; }
+
+.au-text-heavy { font-weight: bold; }
+
+.au-text-dollars:before {
+  content: "$ ";
+  color: #ccd6d9;
+}
+
+.au-text-percentage:after {
+  content: " %";
+  color: #ccd6d9;
+}
+
+.au-text-target:before {
+  content: "\2609";
+  color: #d83c3c;
+  margin-right: 2px;
+  font-weight: bold;
+}
+
+.au-text-target-muted:before {
+  color: #ccd6d9;
+}</style>
+<style>
+.logo {
+  background-image: url("./logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 180px;
+}
+
+.plain-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.plain-list > li {
+  margin-bottom: 2px;
+}
+
+.wrapper {
+  display: grid;
+  width: 768px;
+  margin: 60px auto 0;
+}
+
+nav {
+  position: fixed;
+  left: calc(50% - 535px);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 35px;
+}
+
+.explain {
+  grid-column: 1;
+}
+
+.demo {
+  grid-column: 2 / 6;
+}
+
+.row {
+  display: flex;
+}
+
+.row.row-even > * {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.row > * {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.row > *:first-child {
+  margin-left: 0;
+}
+
+.row > *:last-child {
+  margin-right: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column > * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.column > *:first-child {
+  margin-top: 0;
+}
+
+.column > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Grid stuff */
+#demo-grid-1 {
+  grid-template-columns: [start] minmax(max-content, 1fr) max-content max-content [end];
+}
+
+/* Scrollbar stuff */
+.scrollbar-demo-wrapper {
+  overflow: auto;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.scrollbar-demo-inner {
+  width: 1024px;
+  height: 1024px;
+  background: repeating-radial-gradient(
+    circle at 30px 50px,
+    white,
+    white 40px,
+    #f5d8aa 40px,
+    #f5d8aa 80px,
+    white 80px
+  );
+}
+
+.accordion-wrapper {
+  padding: 10px;
+  background-color: white;
+}
+
+.demo > .shadows > * {
+  background-color:white;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  border-radius: 2px;
+  text-align: center;
+}
+</style>
+<title>Base Styles for iVantage v5.4.1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <ol>
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#body-copy">Body Copy</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#inputs">Inputs</a></li>
+          <li><a href="#alerts">Alerts</a></li>
+          <li><a href="#cards">Cards</a></li>
+          <li><a href="#lists">Lists</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#pills">Pills and Labels</a></li>
+          <li><a href="#badges">Badges</a></li>
+          <li><a href="#markers">Markers</a></li>
+          <li><a href="#scrollbars">Scrollbars</a></li>
+          <li><a href="#accordions">Accordions</a></li>
+          <li><a href="#shadows">Shadows</a></li>
+          <li><a href="#dropdowns">Dropdowns</a></li>
+          <li><a href="#placeholders">Placeholders</a></li>
+          <li><a href="#masks">Loading Masks</a></li>
+          <li><a href="#mini-tail">Mini-Tail</a></li>
+        </ol>
+      </nav>
+
+      <section id="intro">
+        <div class="explain logo">
+        </div>
+        <div class="demo">
+          <h1>First, we apply a base layer.</h1>
+          <p>Goals of this project:</p>
+          <ul>
+            <li>Provide iVantage styled elements with zero dependecies. No CSS
+              frameworks. No JavaScript (period). Just HTML and vanilla
+              CSS.</li>
+            <li>Avoid extra markup to accomodate style. No wrappers, or helpers.
+              Just a single (standard) element and its classname(s) whenever
+              possible.</li>
+            <li>Export theme variables as a plain JavaScript object to be
+              leveraged by React styles, CSS in JS, styled components, PostCSS
+              custom properties, templating engines, etc.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="headings">
+        <div class="explain">
+          <h2>Headings</h2>
+          <p>Say it kinda loud.</p>
+        </div>
+
+        <div class="demo">
+          <h1>h1. iVantage Heading</h1>
+          <h2>h2. iVantage Heading</h2>
+          <h3>h3. iVantage Heading</h3>
+          <h4>h4. iVantage Heading</h4>
+          <h5>h5. iVantage Heading</h5>
+          <h6>h6. iVantage Heading</h6>
+        </div>
+      </section>
+
+      <section id="body-copy">
+        <div class="explain">
+          <h2>Body Copy</h2>
+          <p>Say it kinda normal.</p>
+        </div>
+
+        <div class="demo">
+          <div class="row row-even">
+            <div>
+              <h2>Standard Copy</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              at elit ut augue feugiat rhoncus vitae non neque. Fusce aliquet
+              cursus congue.  Donec malesuada cursus mollis. Vestibulum
+              imperdiet pharetra diam vel auctor. Sed porttitor, est non
+              hendrerit mattis, augue nisl ultricies ligula, et tristique nunc
+              lacus nec quam. Donec eu lectus et metus tristique egestas ut vel
+              metus. Nunc vitae volutpat metus. Integer fringilla dui ex, eu
+              semper metus dapibus non. Aliquam varius pretium diam, in egestas
+              diam volutpat ut.  Vivamus suscipit tortor vitae massa ultricies
+              rhoncus.</p>
+            </div>
+            <div>
+              <h2 class="au-voice">iVantage Voice</h2>
+              <p class="au-voice">Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Duis at elit ut augue feugiat rhoncus vitae non
+              neque. Fusce aliquet cursus congue.  Donec malesuada cursus
+              mollis. Vestibulum imperdiet pharetra diam vel auctor. Sed
+              porttitor, est non hendrerit mattis, augue nisl ultricies ligula,
+              et tristique nunc lacus nec quam. Donec eu lectus et metus
+              tristique egestas ut vel metus. Nunc vitae volutpat metus. Integer
+              fringilla dui ex, eu semper metus dapibus non. Aliquam varius
+              pretium diam, in egestas diam volutpat ut.  Vivamus suscipit
+              tortor vitae massa ultricies rhoncus.</p>
+            </div>
+          </div>
+
+          <h2>Semantic Class Names</h2>
+          <div class="row">
+            <ul class="plain-list">
+              <li class="au-text-muted">Muted</li>
+              <li class="au-text-info">Info</li>
+              <li class="au-text-primary">Primary</li>
+              <li class="au-text-success">Success</li>
+              <li class="au-text-warning">Warning</li>
+              <li class="au-text-danger">Danger</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-text-heavy au-text-muted">Heavy Muted</li>
+              <li class="au-text-heavy au-text-info">Heavy Info</li>
+              <li class="au-text-heavy au-text-primary">Heavy Primary</li>
+              <li class="au-text-heavy au-text-success">Heavy Success</li>
+              <li class="au-text-heavy au-text-warning">Heavy Warning</li>
+              <li class="au-text-heavy au-text-danger">Heavy Danger</li>
+            </ul>
+          </div>
+
+          <h2>Text Formatting</h2>
+          <div class="row">
+            <div>
+              <h3>Currency</h3>
+              <ul>
+                <li class="au-text-dollars">5</li>
+                <li class="au-text-dollars">50</li>
+                <li class="au-text-dollars">500</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Percentages</h3>
+              <ul>
+                <li class="au-text-percentage">5</li>
+                <li class="au-text-percentage">50</li>
+                <li class="au-text-percentage">500</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Targets</h3>
+              <ul>
+                <li class="au-text-target">5</li>
+                <li class="au-text-target">50</li>
+                <li class="au-text-target">500</li>
+              </ul>
+
+              <ul>
+                <li class="au-text-target au-text-target-muted">5</li>
+                <li class="au-text-target au-text-target-muted">50</li>
+                <li class="au-text-target au-text-target-muted">500</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="buttons">
+        <div class="explain">
+          <h2>Buttons</h2>
+          <p>Such clicky. Wow.</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-info"><strong>FYI...</strong> The action
+          buttons here are for display only, actual dropdown fuctionality should
+          be implemented externally.</p>
+
+          <h2>Enabled</h2>
+          <button class="au-btn au-btn-primary">Primary</button>
+          <button class="au-btn au-btn-secondary">Secondary</button>
+          <button class="au-btn au-btn-tertiary">Tertiary</button>
+          <button class="au-btn au-btn-cta">Call to action</button>
+          <button class="au-btn au-btn-actions">Actions</button>
+
+          <h2>Disabled</h2>
+          <button disabled class="au-btn au-btn-primary">Primary</button>
+          <button disabled class="au-btn au-btn-secondary">Secondary</button>
+          <button disabled class="au-btn au-btn-tertiary">Tertiary</button>
+          <button disabled class="au-btn au-btn-actions">Actions</button>
+
+          <h2>Small</h2>
+          <button class="au-btn au-btn-sm au-btn-primary">Primary</button>
+          <button class="au-btn au-btn-sm au-btn-secondary">Secondary</button>
+          <button class="au-btn au-btn-sm au-btn-tertiary">Tertiary</button>
+          <button class="au-btn au-btn-sm au-btn-cta">Call to action</button>
+          <button class="au-btn au-btn-sm au-btn-actions">Actions</button>
+
+          <h2>Small and Disabled</h2>
+          <button disabled class="au-btn au-btn-sm au-btn-primary">Primary</button>
+          <button disabled class="au-btn au-btn-sm au-btn-secondary">Secondary</button>
+          <button disabled class="au-btn au-btn-sm au-btn-tertiary">Tertiary</button>
+          <button disabled class="au-btn au-btn-sm au-btn-actions">Actions</button>
+
+          <h2>Dropdowns</h2>
+          <button class="au-btn au-btn-dropdown">Pick things!</button>
+          <button disabled class="au-btn au-btn-dropdown">No picky for you!</button>
+
+          <h2>Area</h2>
+          <button class="au-btn au-btn-area">A drop zone thing</button>
+
+          <h2>Obligatory Semantic Flavors</h2>
+          <div>
+              <button class="au-btn">Vanilla</button>
+              <button class="au-btn au-btn-info">Info</button>
+              <button class="au-btn au-btn-primary">Primary</button>
+              <button class="au-btn au-btn-success">Success</button>
+              <button class="au-btn au-btn-warning">Warning</button>
+              <button class="au-btn au-btn-danger">Danger</button>
+          </div>
+
+          <br>
+
+          <div>
+            <button class="au-btn au-btn-sm">Vanilla</button>
+            <button class="au-btn au-btn-sm au-btn-info">Info</button>
+            <button class="au-btn au-btn-sm au-btn-primary">Primary</button>
+            <button class="au-btn au-btn-sm au-btn-success">Success</button>
+            <button class="au-btn au-btn-sm au-btn-warning">Warning</button>
+            <button class="au-btn au-btn-sm au-btn-danger">Danger</button>
+          </div>
+
+          <br>
+
+          <div>
+              <button disabled class="au-btn">Vanilla</button>
+              <button disabled class="au-btn au-btn-info">Info</button>
+              <button disabled class="au-btn au-btn-primary">Primary</button>
+              <button disabled class="au-btn au-btn-success">Success</button>
+              <button disabled class="au-btn au-btn-warning">Warning</button>
+              <button disabled class="au-btn au-btn-danger">Danger</button>
+          </div>
+
+          <h2>Link Style</h2>
+
+          <div>
+            <button class="au-btn au-btn-link">This is a link button</button>
+            <br />
+            <button disabled class="au-btn au-btn-link">This is a disabled link button</button>
+            <br />
+            <button class="au-btn au-btn-text">This is a text button</button>
+            <br />
+            <button disabled class="au-btn au-btn-text">This is a disabled text button</button>
+            <br />
+            <a href="javascrip:void(0)">This is just a link ;)</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="inputs">
+        <div class="explain">
+          <h2>Inputs</h2>
+          <p>Question...</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-warning">
+            <strong>Heads up!</strong> Checkboxes and radio buttons revert to
+            browser defaults in non-webkit browsers. I.e. Chrome and Safari get
+            fancy toggles, Firefox and Edge get browser defaults.
+          </p>
+          <h2>Checkboxes</h2>
+          <div class="row">
+            <div>
+              <label>
+                <input type="checkbox" class="au-checkbox">
+                Unchecked
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" id="cb1" class="au-checkbox">
+                Indeterminate
+                <script type="text/javascript">document.getElementById('cb1').indeterminate = true</script>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" checked class="au-checkbox">
+                Checked
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <input type="checkbox" disabled class="au-checkbox">
+                Disabled and unchecked
+              </label>
+              <br>
+              <label>
+                <input id="cb2" type="checkbox" disabled class="au-checkbox">
+                Disabled and indeterminate
+                <script type="text/javascript">document.getElementById('cb2').indeterminate = true</script>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" checked disabled class="au-checkbox">
+                Disabled and checked
+              </label>
+            </div>
+          </div>
+
+          <h2>Radio Buttons</h2>
+          <div class="row">
+            <div>
+              <label>
+                <input type="radio" class="au-radio" name="radio-group-1">
+                Unchecked
+              </label>
+              <br>
+              <label>
+                <input type="radio" class="au-radio" checked name="radio-group-1">
+                Checked
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" class="au-radio" disabled name="radio-group-2">
+                Disabled and unchecked
+              </label>
+              <br>
+              <label>
+                <input type="radio" class="au-radio" disabled checked name="radio-group-2">
+                Disabled and checked
+              </label>
+            </div>
+          </div>
+
+          <h2>Text</h2>
+          <div class="row">
+            <div>
+              <label class="au-input-label">
+                Some text
+                <input type="text" class="au-input" placeholder="Your ad here" />
+              </label>
+            </div>
+            <div>
+              <label class="au-input-label">
+                Other text
+                <input type="text" class="au-input" placeholder="Your ad here" />
+                <span class="au-input-hint au-text-muted">Try harder</span>
+              </label>
+            </div>
+          </div>
+
+          <h2>Text Areas</h2>
+          <div class="row">
+            <div class="full-width">
+              <label class="au-input-label">
+                Small text area
+              </label>
+              <textarea class="au-input" rows=3>All your texts here</textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="full-width">
+              <label class="au-input-label">
+                Bigger text area
+              </label>
+              <textarea class="au-input" rows=5>All the forgotten texts</textarea>
+              <span class="au-input-hint au-text-muted">Try harder</span>
+            </div>
+          </div>
+
+          <h2>Date Picker</h2>
+          <div class="row">
+            <label class="au-input-label">
+              Pick a date, any date
+            </label>
+            <input type="date" class="au-input" />
+            <span class="au-input-hint">Falls back on text input in boring browsers.</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="alerts">
+        <div class="explain">
+          <h2>Alerts</h2>
+          <p>Look out!</p>
+        </div>
+
+        <div class="demo column">
+
+          <p class="au-alert">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Is it still going? I think maybe it froze.
+          </p>
+
+          <p class="au-alert au-alert-info">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Guess what?
+          </p>
+
+          <p class="au-alert au-alert-primary">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            FYI...
+          </p>
+
+          <p class="au-alert au-alert-success">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Huzzah!
+          </p>
+
+          <p class="au-alert au-alert-warning">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Tread carefully...
+          </p>
+
+          <p class="au-alert au-alert-danger">
+            <a class="au-close" href="javascript:void(0)">&times;</a>
+            Oh snap!
+          </p>
+
+          <p class="au-alert au-alert-flat">
+            Alerts go flat when inside an element with height (so no nested
+            shadows). This includes cards, modals, things with shadows, or even
+            other alerts. You can also ask for a flat alert explicitly.
+          </p>
+        </div>
+      </section>
+
+      <section id="cards">
+        <div class="explain">
+          <h2 class="au-card-title">Cards</h2>
+          <p>Because wells were awful.</p>
+        </div>
+
+        <div class="demo column">
+
+          <div class="au-card">
+            <span class="au-card-header">Basic Card with white top border</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>This card can be used in cases where we don't want a top border. Making it white keeps the component pixels consistent.<a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-muted">
+            <h2 class="au-card-title">Card Header Text</h2>
+            <p>Cards with an <code>h1</code> get special treatment (see below),
+            they can also optionally have a special header shelf for labels and
+            icons.</p>
+          </div>
+
+          <div class="au-card au-card-info">
+            <span class="au-card-header">Just FYI</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-primary">
+            <span class="au-card-header">The most prime</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-success">
+            <span class="au-card-header">Such Win</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-warning">
+            <span class="au-card-header">Tread carefully...</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+
+          <div class="au-card au-card-danger">
+            <span class="au-card-header">Welcome to the town of frowns</span>
+            <h1 class="au-card-title">Card Header Text</h1>
+            <p>Card text description. <a href="#">Read More &rsaquo;</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="lists">
+        <div class="explain">
+          <h2>Lists</h2>
+          <p>These area few of my favorite things.</li>
+        </div>
+
+
+        <div class="demo">
+          <p class="au-alert au-alert-info">
+            <strong>FYI...</strong> This demo uses real checkboxes but does
+            not update list item class names to match selected states.
+          </p>
+
+          <h2>Selectable Lists</h2>
+
+          <div class="row">
+            <div>
+              <h3>Slim Fit</h3>
+              <ul class="au-list au-list-selectable au-list-slim">
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Whiskey</li>
+                  </label>
+                <li class="active">
+                  <label>
+                    <input class="au-checkbox"  checked type="checkbox"> Fedora
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Monacle
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Playing Cards
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Stickers
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Regular</h3>
+              <ul class="au-list au-list-selectable">
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Whiskey</li>
+                  </label>
+                <li class="active">
+                  <label>
+                    <input class="au-checkbox"  checked type="checkbox"> Fedora
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Monacle
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Playing Cards
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Stickers
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Relaxed Fit</h3>
+              <ul class="au-list au-list-selectable au-list-relaxed">
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Whiskey</li>
+                  </label>
+                <li class="active">
+                  <label>
+                    <input class="au-checkbox"  checked type="checkbox"> Fedora
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Monacle
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Playing Cards
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="au-checkbox"  type="checkbox"> Stickers
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tables">
+        <div class="explain">
+          <h2>Tables</h2>
+          <p>For tabular data only!</p>
+        </div>
+
+        <div class="demo">
+          <h2>A True Table</h2>
+          <p class="au-text-muted">tr, td, etc.</p>
+          <table class="au-table" style="width: 100%;">
+            <thead>
+              <tr>
+                <th class="au-col-text">A header</th>
+                <th class="au-col-data">A header</th>
+                <th class="au-col-data">A header</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td class="au-col-text">A footer</td>
+                <td class="au-col-data au-text-percentage">A footer</td>
+                <td class="au-col-data au-text-dollars">A footer</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td class="au-col-text">Unstyled</td>
+                <td class="au-col-data au-text-percentage">Percentage</td>
+                <td class="au-col-data au-text-dollars">Currency</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>A Grid</h2>
+          <p class="au-text-muted">Just a bunch of divs, spans, or lis.</p>
+
+          <p class="au-alert au-alert-warning">The generic grid requires you
+          to specify your own column layout. Your layout should minimally
+          support named grid lines <code>start</code> and <code>end</code> to
+          facilitate cells spanning the entire grid width, as in the divider row
+          demonstrated below.</p>
+
+          <div class="au-grid au-grid-success" id="demo-grid-1">
+            <span class="au-cell-header au-cell-text">A Header</span>
+            <span class="au-cell-header au-cell-data">A Header</span>
+            <span class="au-cell-header au-cell-data">A Header</span>
+
+            <span class="au-cell-text">Unstyled</span>
+            <span class="au-cell-data au-text-percentage">Percentage</span>
+            <span class="au-cell-data au-text-dollars">Currency</span>
+
+            <span class="au-cell-row au-cell-divider">Divider</span>
+
+            <span class="au-cell-text">Unstyled</span>
+            <span class="au-cell-data au-text-percentage">Percentage</span>
+            <span class="au-cell-data au-text-dollars">Currency</span>
+
+            <span class="au-cell-total au-cell-text">A Totals Row</span>
+            <span class="au-cell-total au-cell-data au-text-percentage">A Footer</span>
+            <span class="au-cell-total au-cell-data au-text-dollars">A Footer</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="pills">
+        <div class="explain">
+          <h2>Pills and Labels</h2>
+          <p>Little chicklety things.</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-info"><strong>FYI...</strong>
+          <code>a</code> and <code>button</code> labels and pills get special
+          treatment. Other element types will not get hover effects.</p>
+          <h2>Inactive</h2>
+          <div class="demo row">
+            <ul class="plain-list">
+              <li><a href="#" class="au-pill">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-info">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-primary">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-success">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-warning">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-danger">A Pill</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-text-heavy au-pill">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-info">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-primary">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-success">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-warning">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-danger">A Heavy Pill</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-label">A Label</a></li>
+              <li><a href="#" class="au-label au-label-info">A Label</a></li>
+              <li><a href="#" class="au-label au-label-primary">A Label</a></li>
+              <li><a href="#" class="au-label au-label-success">A Label</a></li>
+              <li><a href="#" class="au-label au-label-warning">A Label</a></li>
+              <li><a href="#" class="au-label au-label-danger">A Label</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-text-heavy au-label">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-info">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-primary">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-success">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-warning">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-danger">A Heavy Label</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-label au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-info au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-primary au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-success au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-warning au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-danger au-label-small">Mini</a></li>
+            </ul>
+          </div>
+
+          <h2>Active</h2>
+          <div class="demo row">
+            <ul class="plain-list">
+              <li><a href="#" class="au-pill au-pill-active">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-info">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-primary">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-success">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-warning">A Pill</a></li>
+              <li><a href="#" class="au-pill au-pill-active au-pill-danger">A Pill</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-info">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-primary">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-success">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-warning">A Heavy Pill</a></li>
+              <li><a href="#" class="au-text-heavy au-pill au-pill-active au-pill-danger">A Heavy Pill</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-label au-label-active">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-info">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-primary">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-success">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-warning">A Label</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-danger">A Label</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-text-heavy au-label au-label-active">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-info">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-primary">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-success">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-warning">A Heavy Label</a></li>
+              <li><a href="#" class="au-text-heavy au-label au-label-active au-label-danger">A Heavy Label</a></li>
+            </ul>
+
+            <ul class="plain-list">
+              <li><a href="#" class="au-label au-label-active au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-info au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-primary au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-success au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-warning au-label-small">Mini</a></li>
+              <li><a href="#" class="au-label au-label-active au-label-danger au-label-small">Mini</a></li>
+            </ul>
+          </div>
+
+          <h2>Navigation</h2>
+          <div>
+            <a href="#" class="au-pill au-pill-nav au-pill-nav-active">
+                You're here
+            </a>
+            <a href="#" class="au-pill au-pill-nav">
+              Not here
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="badges">
+        <div class="explain">
+          <h2>Badges</h2>
+          <p>A mark of honor.</p>
+        </div>
+
+        <div class="demo">
+
+          <p class="au-alert au-alert-info"><strong>FYI...</strong> Badges
+          require their containing element to have non-static positioning. Use
+          the <code>au-with-badge</code> classname to apply relative positioning
+          to your badgified element for symantic wins.</p>
+
+          <h2>Must Check Notifications...</h2>
+          <button class="au-btn au-btn-badge">
+            Clicky
+            <span class="au-badge">4</span>
+          </button>
+
+          <h2>Semantic Flavors</h2>
+          <div class="row">
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-info">1</span>
+            </button>
+
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-primary">2</span>
+            </button>
+
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-success">3</span>
+            </button>
+
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-warning">4</span>
+            </button>
+
+            <button class="au-btn au-with-badge">
+              Clicky
+              <span class="au-badge au-badge-danger">!</span>
+            </button>
+          </div>
+
+          <h2>On Other Elements</h2>
+          <div>
+            <button class="au-btn au-btn-sm au-btn-actions au-btn-badge">
+              Clicky
+              <span class="au-badge au-badge-info">
+                5
+              </span>
+            </button>
+          </div>
+
+          <p class="au-alert au-alert-info au-with-badge">
+            <strong>You don't say...</strong> on an alert!
+            <span class="au-badge au-badge-info">
+              9
+            </span>
+          </p>
+
+          <div style="height: 130px;">
+            <div class="au-dropdown au-dropdown-open">
+              <button class="au-btn">On a Menu</button>
+              <div class="au-dropdown-menu">
+                <ul class="au-list au-list-selectable">
+                  <li>First</li>
+                  <li>Second</li>
+                  <li>Third</li>
+                </ul>
+                <span class="au-badge au-badge-warning">7</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="markers">
+        <div class="explain">
+          <h2>Markers</h2>
+          <p>Connecting text and viz.</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-info"><strong>FYI...</strong> The
+          companion JavaScript file contains variables for all marker colors to
+          be used in data visualizations.</p>
+
+          <h2>Viz Colors</h2>
+          <div class="row">
+            <ul class="plain-list">
+              <li class="au-marker au-marker-0">Marked</li>
+              <li class="au-marker au-marker-5">Marked</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-marker au-marker-1">Marked</li>
+              <li class="au-marker au-marker-6">Marked</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-marker au-marker-2">Marked</li>
+              <li class="au-marker au-marker-7">Marked</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-marker au-marker-3">Marked</li>
+              <li class="au-marker au-marker-8">Marked</li>
+            </ul>
+
+            <ul class="plain-list">
+              <li class="au-marker au-marker-4">Marked</li>
+              <li class="au-marker au-marker-9">Marked</li>
+            </ul>
+          </div>
+
+          <h2>Obligatory Semantic Flavors</h2>
+          <ul class="plain-list">
+            <li class="au-marker au-marker-muted">Muted</li>
+            <li class="au-marker au-marker-info">Info</li>
+            <li class="au-marker au-marker-primary">Primary</li>
+            <li class="au-marker au-marker-success">Success</li>
+            <li class="au-marker au-marker-warning">Warning</li>
+            <li class="au-marker au-marker-danger">Danger</li>
+          </ul>
+
+          <h2>The Placeholder Marker</h2>
+          <p class="au-text-muted">Use the placeholder marker to align non-marked
+          text with marked text.</p>
+          <ul class="plain-list">
+            <li class="au-marker">This text is marked.</li>
+            <li class="au-marker au-marker-placeholder">The text has a placeholder marker</li>
+            <li>This has no marker, see how it doesn't like up?</li>
+            <li class="au-marker">Marked again.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="scrollbars">
+        <div class="explain">
+          <h2>Scrollbars</h2>
+          <p>X &amp; Y</p>
+        </div>
+
+        <div class="demo">
+
+          <p class="au-alert au-alert-warning"><strong>Heads up!</strong>
+          Scrollbars will revert to browser defaults in non-webkit browsers.</p>
+
+          <div class="scrollbar-demo-wrapper">
+            <div class="scrollbar-demo-inner"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="accordions">
+        <div class="explain">
+          <h2>Accordions</h2>
+          <p>Vertical</p>
+        </div>
+
+        <div class="demo">
+          <div class="accordion-wrapper">
+            <div class="au-accordion">
+              <div class="au-accordion-panel">
+                  <div class="au-accordion-header">
+                    <span>About Us</span>
+                  </div>
+                  <div class="au-accordion-body">
+                    Rub whiskers on bare skin act innocent plays league of legends scratch the box or then cats take over the world pounce on unsuspecting person flee in terror at cucumber discovered on floor for you call this cat food. Mrow purrrrrr. Loves cheeseburgers jump off balcony, onto stranger's head yet small kitty warm kitty little balls of fur, all of a sudden cat goes crazy, for make meme, make cute face. Scratch at the door then walk away chase dog then run away but nap all day, so stick butt in face, but climb a tree, wait for a fireman jump to fireman then scratch his face so when in doubt, wash licks your face. Kitty kitty intrigued by the shower.
+                  </div>
+              </div>
+              <div class="au-accordion-panel">
+                  <div class="au-accordion-header">
+                    <span>Services</span>
+                  </div>
+                  <div class="au-accordion-body">
+                    Rub whiskers on bare skin act innocent plays league of legends scratch the box or then cats take over the world pounce on unsuspecting person flee in terror at cucumber discovered on floor for you call this cat food. Mrow purrrrrr. Loves cheeseburgers jump off balcony, onto stranger's head yet small kitty warm kitty little balls of fur, all of a sudden cat goes crazy, for make meme, make cute face. Scratch at the door then walk away chase dog then run away but nap all day, so stick butt in face, but climb a tree, wait for a fireman jump to fireman then scratch his face so when in doubt, wash licks your face. Kitty kitty intrigued by the shower.
+                  </div>
+              </div>
+              <div class="au-accordion-panel au-accordion-panel-active">
+                  <div class="au-accordion-header">
+                    <span>Active panel</span>
+                  </div>
+                  <div class="au-accordion-body">
+                    Rub whiskers on bare skin act innocent plays league of legends scratch the box or then cats take over the world pounce on unsuspecting person flee in terror at cucumber discovered on floor for you call this cat food. Mrow purrrrrr. Loves cheeseburgers jump off balcony, onto stranger's head yet small kitty warm kitty little balls of fur, all of a sudden cat goes crazy, for make meme, make cute face. Scratch at the door then walk away chase dog then run away but nap all day, so stick butt in face, but climb a tree, wait for a fireman jump to fireman then scratch his face so when in doubt, wash licks your face. Kitty kitty intrigued by the shower.
+                  </div>
+              </div>
+              <div class="au-accordion-panel">
+                  <div class="au-accordion-header">
+                    <span>Contact</span>
+                  </div>
+                  <div class="au-accordion-body">
+                    Rub whiskers on bare skin act innocent plays league of legends scratch the box or then cats take over the world pounce on unsuspecting person flee in terror at cucumber discovered on floor for you call this cat food. Mrow purrrrrr. Loves cheeseburgers jump off balcony, onto stranger's head yet small kitty warm kitty little balls of fur, all of a sudden cat goes crazy, for make meme, make cute face. Scratch at the door then walk away chase dog then run away but nap all day, so stick butt in face, but climb a tree, wait for a fireman jump to fireman then scratch his face so when in doubt, wash licks your face. Kitty kitty intrigued by the shower.
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shadows">
+        <div class="explain">
+          <h2>Shadows</h2>
+          <p>Tall, dark, and handsome.</p>
+        </div>
+
+        <div class="demo">
+          <div class="row shadows">
+            <div class="au-shadow au-shadow-short">short</div>
+            <div class="au-shadow au-shadow-medium">medium</div>
+            <div class="au-shadow au-shadow-tall">tall</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dropdowns">
+        <div class="explain">
+          <h2>Dropdowns</h2>
+          <p>ohai!</p>
+        </div>
+
+        <div class="demo">
+          <p class="au-alert au-alert-info">
+            Just FYI... these dropdowns are all shown open. Your JS framework of
+            choice would be responsible for hiding and showing dropdown menus.
+          </p>
+          <div class="row" style="min-height: 190px;">
+            <div style="width: 180px; padding-top: 12px;">
+              <div class="au-dropdown au-dropdown-open">
+                <button class="au-btn au-btn-primary au-btn-sm au-btn-actions">
+                  With a button
+                </button>
+                <ul class="au-dropdown-menu au-list au-list-selectable">
+                  <li>First</li>
+                  <li>Second</li>
+                  <li>Third</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="width: 180px;">
+              <div class="au-dropdown au-dropdown-open">
+                <input type="text" class="au-input" placeholder="With a textbox..." />
+                <ul class="au-dropdown-menu au-list au-list-selectable">
+                  <li>First</li>
+                  <li>Second</li>
+                  <li>Third</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="width: 180px; padding-top: 8px;">
+              <div class="au-dropdown au-dropdown-open">
+                <a class="au-pill au-pill-active au-pill-warning" href="javascript:void(0)">
+                  Anything can be a toggle
+                </a>
+                <div class="au-dropdown-menu" style="width: 350px; padding: 3px 10px;">
+                  <span class="au-marker au-marker-success">Anything can be in a menu</span>
+                  <br>
+                  <button class="au-btn au-btn-info">info</button>
+                  <button class="au-btn au-btn-primary">primary</button>
+                  <p class="au-alert au-alert-danger">HALP! I'm in a menu with custom width!</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="placeholders">
+        <div class="explain">
+          <h2>Placeholders</h2>
+          <p>For progressive content.</p>
+        </div>
+
+        <div class="demo">
+          <h2>Placeholder Circle Thing</h2>
+          <span class="au-placeholder au-placeholder-circle"></span>
+
+          <h2>Placeholder Headers</h2>
+          <h1 class="au-placeholder"></h1>
+          <h2 class="au-placeholder"></h2>
+          <h3 class="au-placeholder"></h3>
+          <h4 class="au-placeholder"></h4>
+          <h5 class="au-placeholder"></h5>
+          <h6 class="au-placeholder"></h6>
+
+          <h2>Placeholder Copy</h2>
+          <p>
+            <span class="au-placeholder" style="width: 98%;"></span>
+            <span class="au-placeholder" style="width: 95%;"></span>
+            <span class="au-placeholder" style="width: 99%;"></span>
+            <span class="au-placeholder" style="width: 90%;"></span>
+            <span class="au-placeholder" style="width: 97%;"></span>
+            <span class="au-placeholder" style="width: 23%;"></span>
+          </p>
+
+          <p>
+            <span class="au-placeholder" style="width: 98%;"></span>
+            <span class="au-placeholder" style="width: 95%;"></span>
+            <span class="au-placeholder" style="width: 99%;"></span>
+            <span class="au-placeholder" style="width: 90%;"></span>
+            <span class="au-placeholder" style="width: 97%;"></span>
+            <span class="au-placeholder" style="width: 23%;"></span>
+          </p>
+
+          <h2>Placeholder Buttons</h2>
+          <div style="text-align: right;">
+            <span class="au-placeholder au-placeholder-button"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-primary"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-info"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-success"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-warning"></span>
+            <span class="au-placeholder au-placeholder-button au-placeholder-button-danger"></span>
+          </div>
+
+          <div style="text-align: right;">
+            <span class="au-placeholder au-placeholder-button au-button-small"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-primary"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-info"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-success"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-warning"></span>
+            <span class="au-placeholder au-placeholder-button au-button-small au-placeholder-button-danger"></span>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="masks">
+        <div class="explain">
+          <h2>Loading Masks</h2>
+          <p>You can't see me!</p>
+        </div>
+
+        <div class="demo">
+
+          <div style="position: relative">
+            <div class="au-mask">
+              <div class="au-mask-spinner">
+                <span class="au-spinner-dot"></span>
+                <span class="au-spinner-dot"></span>
+                <span class="au-spinner-dot"></span>
+              </div>
+              Hey! Why don't you grab me a coffee too?
+            </div>
+            <div class="au-card">
+              <span class="au-card-header">HALP!</span>
+              <h1 class="au-card-title">It's Not Really Loading!!!</h1>
+              <p>This is all a lie to keep you from knowing something is broken!</p>
+            </div>
+          </div>
+
+          <div class="row row-even" style="margin-top: 20px">
+            <div style="position: relative; height: 150px; width: 150px; display: inline-block">
+              <div class="au-mask au-mask-small">
+                <div class="au-mask-spinner">
+                  <span class="au-spinner-dot"></span>
+                  <span class="au-spinner-dot"></span>
+                  <span class="au-spinner-dot"></span>
+                </div>
+                A small flavor
+              </div>
+            </div>
+
+            <div style="position: relative; height: 150px; width: 150px; display: inline-block">
+              <div class="au-mask au-mask-small">
+                <div class="au-mask-spinner">
+                  <span class="au-spinner-dot"></span>
+                  <span class="au-spinner-dot"></span>
+                  <span class="au-spinner-dot"></span>
+                </div>
+              </div>
+              <div style="padding: 20px;">
+                <p>Loading text and spinner are borth optional.</p>
+                <p>Also, you can use as many dots as you like!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mini-tail">
+        <div class="explain">
+          <h2>Mini-Tail</h2>
+          <p>For displaying a small tail pointing upwards from drop-down</p>
+        </div>
+
+        <div class="demo">
+          <h3>Short shadow</h3>
+          <div class="au-tail au-shadow au-shadow-short">
+            <ul class="au-list au-list-relaxed au-list-selectable">
+              <li>Foo</li>
+              <li>Bar</li>
+              <li>Barus</li>
+            </ul>
+          </div>
+          <h3>Medium shadow</h3>
+          <div class="au-tail au-shadow au-shadow-medium">
+            <ul class="au-list au-list-relaxed au-list-selectable">
+              <li>Foo</li>
+              <li>Bar</li>
+              <li>Barus</li>
+            </ul>
+          </div>
+            <h3>Tall shadow</h3>
+            <div class="au-tail au-shadow au-shadow-tall">
+            <ul class="au-list au-list-relaxed au-list-selectable">
+              <li>Foo</li>
+              <li>Bar</li>
+              <li>Barus</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab">
+        <div class="explain">
+          <h2>Tab</h2>
+          <p>For delineating content through the use of tabs</p>
+        </div>
+        <div class="demo">
+          <ul class="au-tab-container">
+            <li class="au-tab">
+              <span class="au-marker au-marker-0"></span><span>Tab 1</span>
+            </li>
+            <li class="au-tab">
+              <span class="au-marker au-marker-1"></span><span>Tab 2</span>
+            </li>
+            <li class="au-tab">
+              <span class="au-marker au-marker-2"></span><span>Tab 3</span>
+            </li>
+            <li class="au-tab active">
+              Active Tab
+            </li>
+          </ul>
+          <div class="au-tab-content">
+            <h3>Tab Contents</h3>
+            <p>Here's some tab contents.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
