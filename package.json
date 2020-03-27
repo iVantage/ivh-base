@@ -5,6 +5,7 @@
   ],
   "scripts": {
     "build": "lerna run build",
+    "gh-pages": "node scripts/gh-pages.js",
     "publish": "lerna publish --force-publish=*",
     "test": "lerna run test",
     "ps-cdn": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command scripts/cdn.ps1"
