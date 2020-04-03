@@ -357,6 +357,66 @@ the standard `div`:
 
 
 
+### AuModal
+
+> A dialog for notifications.
+
+**Semantic props**: Yes.
+
+**Additional props**: None.
+
+**Default props**: None.
+
+
+
+### AuModalBackdrop
+
+> Backdrop of a modal. `AuModal` components should generally be nested in a backdrop.
+
+**Semantic props**: Not supported.
+
+**Additional props**: None.
+
+**Default props**: None.
+
+
+
+### AuModalBody
+
+> The body of a modal.
+
+**Semantic props**: Not supported.
+
+**Additional props**: None.
+
+**Default props**: None.
+
+
+
+### AuModalFooter
+
+> The footer of a modal.
+
+**Semantic props**: Not supported.
+
+**Additional props**: None.
+
+**Default props**: None.
+
+
+
+### AuModalHeader
+
+> The header of a modal.
+
+**Semantic props**: Not supported.
+
+**Additional props**: None.
+
+**Default props**: None.
+
+
+
 ### AuPill
 
 > Fancy pills for fancy people.

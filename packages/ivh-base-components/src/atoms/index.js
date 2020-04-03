@@ -847,3 +847,112 @@ export const AuTabContent = (props) => {
     className={_className}
     {...passThroughProps} />
 }
+
+export const AuModal = (props) => {
+  const {
+    className,
+    info,
+    primary,
+    success,
+    warning,
+    danger,
+    ...passThroughProps
+  } = props
+
+  const _className = [
+    className,
+    'au-modal',
+    info && 'au-modal-info',
+    primary && 'au-modal-primary',
+    success && 'au-modal-success',
+    warning && 'au-modal-warning',
+    danger && 'au-modal-danger'
+  ]
+  .filter(Boolean).join(' ')
+
+  const Cmp = props.cmp || 'div'
+
+  return <Cmp
+    className={_className}
+    {...passThroughProps} />
+}
+
+export const AuModalHeader = (props) => {
+  const {
+    className,
+    ...passThroughProps
+  } = props
+
+  const _className = [
+    className,
+    'au-modal',
+    0
+  ]
+  .filter(Boolean).join(' ')
+
+  const Cmp = props.cmp || 'div'
+
+  return <Cmp
+    className={_className}
+    {...passThroughProps} />
+}
+
+export const AuModalBody = (props) => {
+  const {
+    className,
+    ...passThroughProps
+  } = props
+
+  const _className = [
+    className,
+    'au-modal-body',
+    0
+  ]
+  .filter(Boolean).join(' ')
+
+  const Cmp = props.cmp || 'div'
+
+  return <Cmp
+    className={_className}
+    {...passThroughProps} />
+}
+
+export const AuModalFooter = (props) => {
+  const {
+    className,
+    ...passThroughProps
+  } = props
+
+  const _className = [
+    className,
+    'au-modal-footer',
+    0
+  ]
+  .filter(Boolean).join(' ')
+
+  const Cmp = props.cmp || 'div'
+
+  return <Cmp
+    className={_className}
+    {...passThroughProps} />
+}
+
+export const AuModalBackdrop = (props) => {
+  const {
+    className,
+    ...passThroughProps
+  } = props
+
+  const _className = [
+    className,
+    'au-modal-backdrop',
+    0
+  ]
+  .filter(Boolean).join(' ')
+
+  const Cmp = props.cmp || 'div'
+
+  return <Cmp
+    className={_className}
+    {...passThroughProps} />
+}

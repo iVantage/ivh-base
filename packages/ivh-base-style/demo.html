@@ -29,6 +29,8 @@
           <li><a href="#placeholders">Placeholders</a></li>
           <li><a href="#masks">Loading Masks</a></li>
           <li><a href="#mini-tail">Mini-Tail</a></li>
+          <li><a href="#tab">Tabs</a></li>
+          <li><a href="#modals">Modals</a></li>
         </ol>
       </nav>
 
@@ -1362,6 +1364,110 @@
           <div class="au-tab-content">
             <h3>Tab Contents</h3>
             <p>Here's some tab contents.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="modals">
+        <div class="explain">
+          <h2>Modals</h2>
+          <p>Dialogs for notifications or the like. Kyle's favorite!</p>
+        </div>
+        <div class="demo">
+          <p class="au-alert au-alert-warning">
+            The examples below are static modals which have had their position
+            and size overriden. Normally, modals should be nested inside of a
+            <code>au-modal-backdrop</code>, which provides a gray backdrop over
+            the page and allows the modal to position itself in the center
+            of the page.
+          </p>
+          <div class="au-modal au-modal-info" style="position: relative; top: 0; width: 420px;">
+            <div class="au-modal-header">
+              <a class="au-close" href="javascript:void(0)">&times;</a>
+              Check me out!
+            </div>
+            <div class="au-modal-body">
+              No, seriously. Check me out!
+            </div>
+            <div class="au-modal-footer">
+              <div style="display: flex; justify-content: space-around;">
+                <button class="au-btn au-btn-secondary">
+                  No thanks
+                </button>
+                <button class="au-btn au-btn-primary">
+                  Okay fine
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="au-modal au-modal-primary" style="position: relative; top: 0; margin-top: 20px;">
+            <div class="au-modal-header">
+              <a class="au-close" href="javascript:void(0)">&times;</a>
+              The most interesting modal in the world
+            </div>
+            <div class="au-modal-body">
+              This one has no footer, and that's just fine. You do you!
+              Did you know that modals will expand up to a certain width?
+              They also have a minimum width so don't worry that they'll
+              shrink in the wash.
+            </div>
+          </div>
+          <div class="au-modal au-modal-success" style="position: relative; top: 0; width: 420px; margin-top: 20px;">
+            <div class="au-modal-header">
+              <a class="au-close" href="javascript:void(0)">&times;</a>
+              Good on ya, mate!
+            </div>
+            <div class="au-modal-body">
+              You deserve a cookie.
+            </div>
+            <div class="au-modal-footer">
+              <div style="display: flex; justify-content: space-around;">
+                <button class="au-btn au-btn-secondary">
+                  I'm good
+                </button>
+                <button class="au-btn au-btn-success">
+                  Yum!
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="au-modal au-modal-warning" style="position: relative; top: 0; width: 420px; margin-top: 20px;">
+            <div class="au-modal-header">
+              <a class="au-close" href="javascript:void(0)">&times;</a>
+              Are you sure you wanna do that?
+            </div>
+            <div class="au-modal-body">
+              Why do I bother? You won't listen to me anyway.
+            </div>
+            <div class="au-modal-footer">
+              <div style="display: flex; justify-content: space-around;">
+                <button class="au-btn au-btn-secondary">
+                  If you insist
+                </button>
+                <button class="au-btn au-btn-warning">
+                  Not listening
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="au-modal au-modal-danger" style="position: relative; top: 0; width: 420px; margin-top: 20px;">
+            <div class="au-modal-header">
+              <a class="au-close" href="javascript:void(0)">&times;</a>
+              You shouldn't have done that
+            </div>
+            <div class="au-modal-body">
+              Now we're really in trouble.
+            </div>
+            <div class="au-modal-footer">
+              <div style="display: flex; justify-content: space-around;">
+                <button class="au-btn au-btn-secondary">
+                  We'll be fine
+                </button>
+                <button class="au-btn au-btn-danger">
+                  I've been bad
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
