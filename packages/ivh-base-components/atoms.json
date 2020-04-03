@@ -338,6 +338,56 @@
       false,
       [],
       "A panel for contents of a tab."
+    ],
+
+    [
+      "AuModal",
+      "div",
+      ["au-modal"],
+      [],
+      true,
+      [],
+      "A dialog for notifications."
+    ],
+
+    [
+      "AuModalHeader",
+      "div",
+      ["au-modal"],
+      [],
+      false,
+      [],
+      "The header of a modal."
+    ],
+
+    [
+      "AuModalBody",
+      "div",
+      ["au-modal-body"],
+      [],
+      false,
+      [],
+      "The body of a modal."
+    ],
+
+    [
+      "AuModalFooter",
+      "div",
+      ["au-modal-footer"],
+      [],
+      false,
+      [],
+      "The footer of a modal."
+    ],
+
+    [
+      "AuModalBackdrop",
+      "div",
+      ["au-modal-backdrop"],
+      [],
+      false,
+      [],
+      "Backdrop of a modal. `AuModal` components should generally be nested in a backdrop."
     ]
   ]
 }

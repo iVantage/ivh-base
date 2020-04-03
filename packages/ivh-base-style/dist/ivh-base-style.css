@@ -9,6 +9,7 @@
   overflow: hidden;
   color: #495357;
   cursor: pointer;
+  -webkit-transition: height 0.2s ease-out;
   transition: height 0.2s ease-out;
 }
 
@@ -44,6 +45,7 @@
   left: 10px;
   border: 6px solid transparent;
   border-right: none;
+  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
@@ -799,8 +801,11 @@
 }
 
 * {
+  -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
+  -webkit-transition: border 0.2s linear;
   transition: border 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 
@@ -943,10 +948,15 @@
 
   font-size: 17px;
   color: #ccd6d9;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .au-modal .au-mask {
@@ -1024,14 +1034,90 @@
 
 /**
  * Modals
- *
- * This is largely a placeholder for now to provide classnames for other modals
- * that allow boosting zIndices for nested children
  */
 
 .au-modal {
   position: absolute;
+  left: 50%;
+  top: 100px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   z-index: 5000;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.18);
+  color: #000;
+  background-color: #fff;
+  max-width: 680px;
+  min-width: 420px;
+}
+
+.au-modal-header {
+  font-size: 20px;
+  padding: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #dfe4e6;
+}
+
+.au-modal-primary .au-modal-header {
+  color: #fff;
+  background-color: #35738c;
+  border-bottom: none;
+}
+
+.au-modal-info .au-modal-header {
+  color: #fff;
+  background-color: #679ab1;
+  border-bottom: none;
+}
+
+.au-modal-warning .au-modal-header {
+  color: #fff;
+  background-color: #e79d2a;
+  border-bottom: none;
+}
+
+.au-modal-success .au-modal-header {
+  color: #fff;
+  background-color: #5f9535;
+  border-bottom: none;
+}
+
+.au-modal-danger .au-modal-header {
+  color: #fff;
+  background-color: #d83c3c;
+  border-bottom: none;
+}
+
+/* Cancel links in modal headers with a colorful background should be lighter */
+
+.au-modal-info .au-modal-header .au-close,
+.au-modal-primary .au-modal-header .au-close,
+.au-modal-success .au-modal-header .au-close,
+.au-modal-warning .au-modal-header .au-close,
+.au-modal-danger .au-modal-header .au-close {
+  color: #fff;
+}
+
+.au-modal-info .au-modal-header .au-close:hover,
+.au-modal-info .au-modal-header .au-close:focus,
+.au-modal-primary .au-modal-header .au-close:hover,
+.au-modal-primary .au-modal-header .au-close:focus,
+.au-modal-success .au-modal-header .au-close:hover,
+.au-modal-success .au-modal-header .au-close:focus,
+.au-modal-warning .au-modal-header .au-close:hover,
+.au-modal-warning .au-modal-header .au-close:focus,
+.au-modal-danger .au-modal-header .au-close:hover,
+.au-modal-danger .au-modal-header .au-close:focus {
+  color: #ccd6d9;
+}
+
+.au-modal-body {
+  padding: 20px;
+}
+
+.au-modal-footer {
+  padding: 10px 20px 30px;
 }
 
 .au-modal-backdrop {
@@ -1040,6 +1126,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 4999;
 }
 
@@ -1393,8 +1480,10 @@ body::-webkit-scrollbar-track {
  */
 
 .au-tab-container {
-    align-items: baseline;
+    -webkit-box-align: baseline;
+            align-items: baseline;
     border-bottom: 5px solid #869297;
+    display: -webkit-box;
     display: flex;
     overflow-y: hidden;
     overflow: hidden;
@@ -1407,7 +1496,8 @@ body::-webkit-scrollbar-track {
     border-radius: 10px 10px 0px 0px;
     border: none;
     cursor: pointer;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
     float: left;
     padding: 5px;
     text-align: center;

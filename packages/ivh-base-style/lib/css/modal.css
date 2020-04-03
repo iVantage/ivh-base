@@ -1,14 +1,89 @@
 
 /**
  * Modals
- *
- * This is largely a placeholder for now to provide classnames for other modals
- * that allow boosting zIndices for nested children
  */
 
 .au-modal {
   position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, 0);
   z-index: var(--z-index-modal);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-medium);
+  color: var(--color-text-black);
+  background-color: var(--color-white);
+  max-width: 680px;
+  min-width: 420px;
+}
+
+.au-modal-header {
+  font-size: 20px;
+  padding: 15px;
+  font-weight: var(--font-weight-heavy);
+  border-bottom: 1px solid var(--color-lines);
+}
+
+.au-modal-primary .au-modal-header {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-bottom: none;
+}
+
+.au-modal-info .au-modal-header {
+  color: var(--color-white);
+  background-color: var(--color-info);
+  border-bottom: none;
+}
+
+.au-modal-warning .au-modal-header {
+  color: var(--color-white);
+  background-color: var(--color-warning);
+  border-bottom: none;
+}
+
+.au-modal-success .au-modal-header {
+  color: var(--color-white);
+  background-color: var(--color-success);
+  border-bottom: none;
+}
+
+.au-modal-danger .au-modal-header {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  border-bottom: none;
+}
+
+/* Cancel links in modal headers with a colorful background should be lighter */
+
+.au-modal-info .au-modal-header .au-close,
+.au-modal-primary .au-modal-header .au-close,
+.au-modal-success .au-modal-header .au-close,
+.au-modal-warning .au-modal-header .au-close,
+.au-modal-danger .au-modal-header .au-close {
+  color: var(--color-white);
+}
+
+.au-modal-info .au-modal-header .au-close:hover,
+.au-modal-info .au-modal-header .au-close:focus,
+.au-modal-primary .au-modal-header .au-close:hover,
+.au-modal-primary .au-modal-header .au-close:focus,
+.au-modal-success .au-modal-header .au-close:hover,
+.au-modal-success .au-modal-header .au-close:focus,
+.au-modal-warning .au-modal-header .au-close:hover,
+.au-modal-warning .au-modal-header .au-close:focus,
+.au-modal-danger .au-modal-header .au-close:hover,
+.au-modal-danger .au-modal-header .au-close:focus {
+  color: var(--color-muted);
+}
+
+.au-modal-body {
+  padding: 20px;
+}
+
+.au-modal-footer {
+  padding: 10px 20px 30px;
 }
 
 .au-modal-backdrop {
@@ -17,5 +92,6 @@
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: var(--z-index-modal-backdrop);
 }
