@@ -353,7 +353,7 @@
     [
       "AuModalHeader",
       "div",
-      ["au-modal"],
+      ["au-modal-header"],
       [],
       false,
       [],

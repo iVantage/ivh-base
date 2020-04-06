@@ -159,7 +159,7 @@ exports[`Its a party, all The atoms are there The AuModalFooter atom 1`] = `
 
 exports[`Its a party, all The atoms are there The AuModalHeader atom 1`] = `
 <div
-  className="au-modal"
+  className="au-modal-header"
 />
 `;
 

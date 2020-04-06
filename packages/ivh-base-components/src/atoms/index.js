@@ -885,7 +885,7 @@ export const AuModalHeader = (props) => {
 
   const _className = [
     className,
-    'au-modal',
+    'au-modal-header',
     0
   ]
   .filter(Boolean).join(' ')
