@@ -1,6 +1,6 @@
 {
   "name": "@ivantagehealth/ivh-base-components",
-  "version": "5.6.0",
+  "version": "5.6.1",
   "description": "Dead simple React components for iVantage.",
   "main": "dist/ivh-base-components.js",
   "files": [
