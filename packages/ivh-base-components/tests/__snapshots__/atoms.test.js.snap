@@ -133,6 +133,36 @@ exports[`Its a party, all The atoms are there The AuMarker atom 1`] = `
 />
 `;
 
+exports[`Its a party, all The atoms are there The AuModal atom 1`] = `
+<div
+  className="au-modal"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuModalBackdrop atom 1`] = `
+<div
+  className="au-modal-backdrop"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuModalBody atom 1`] = `
+<div
+  className="au-modal-body"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuModalFooter atom 1`] = `
+<div
+  className="au-modal-footer"
+/>
+`;
+
+exports[`Its a party, all The atoms are there The AuModalHeader atom 1`] = `
+<div
+  className="au-modal"
+/>
+`;
+
 exports[`Its a party, all The atoms are there The AuPill atom 1`] = `
 <span
   className="au-pill"

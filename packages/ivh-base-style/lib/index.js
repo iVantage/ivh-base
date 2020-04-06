@@ -19,6 +19,7 @@ const theme = {
   colorSelectionBlue: '#e4f6fd',
   colorSelectionYellow: '#f5d8aa',
   colorTextGray: '#495357',
+  colorTextBlack: '#000',
   colorWhite: '#fff',
   colorYellow: '#eeba69',
   colorNavActive: '#c76837',
@@ -106,6 +107,7 @@ theme.colorDone = theme.colorSuccess
  * Utilitarian colors
  */
 theme.colorText = theme.colorTextGray
+theme.colorTextDark = theme.colorTextBlack
 theme.colorLines = theme.colorLinesGray
 
 /**
