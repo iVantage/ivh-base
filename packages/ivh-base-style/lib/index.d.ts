@@ -21,6 +21,7 @@ declare namespace Theme {
   export const colorSelectionBlue: string
   export const colorSelectionYellow: string
   export const colorTextGray: string
+  export const colorTextBlack: string
   export const colorWhite: string
   export const colorYellow: string
   export const colorNavActive: string
@@ -102,6 +103,7 @@ declare namespace Theme {
    * Utilitarian colors
    */
   export const colorText: string
+  export const colorTextDark: string
   export const colorLines: string
 
   /**
