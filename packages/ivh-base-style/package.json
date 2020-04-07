@@ -3,6 +3,7 @@
   "version": "5.6.2",
   "description": "A base style layer for iVantage apps.",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "yarn run build:dev && yarn run build:prod",
     "build:dev": "cross-env NODE_ENV=development postcss -o dist/ivh-base-style.css lib/index.css",
