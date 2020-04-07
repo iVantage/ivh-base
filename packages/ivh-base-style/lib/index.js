@@ -111,7 +111,7 @@ theme.colorTextDark = theme.colorTextBlack
 theme.colorLines = theme.colorLinesGray
 
 /**
- * Viz colors by series count
+ * Viz colors
  */
 theme.vizColors = [
   theme.colorViz0,
