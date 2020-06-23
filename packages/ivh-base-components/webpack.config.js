@@ -5,7 +5,7 @@ const srcPath = path.join(__dirname, 'src')
 const distPath = path.join(__dirname, 'dist')
 
 module.exports = {
-  mode: 'development', //process.env.NODE_ENV,
+  mode: 'development', // process.env.NODE_ENV,
   bail: true,
   entry: ['./src/index.js'],
   resolve: {

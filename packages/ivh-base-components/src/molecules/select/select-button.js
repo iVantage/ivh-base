@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import AuSelectContext from './select-context'
 
 const noop = () => {}
 
@@ -37,10 +38,6 @@ SelectButton.propTypes = {
   children: PropTypes.any
 }
 
-SelectButton.contextTypes = {
-  children: PropTypes.any,
-  toggle: PropTypes.func,
-  kind: PropTypes.oneOf(['dropdown', 'typeahead'])
-}
+SelectButton.contextType = AuSelectContext
 
 export default SelectButton

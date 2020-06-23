@@ -28,7 +28,7 @@ export const AuBadge = (props) => {
     warning && 'au-badge-warning',
     danger && 'au-badge-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'span'
 
@@ -48,7 +48,7 @@ export const AuWithBadge = (props) => {
     'au-with-badge',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'span'
 
@@ -68,7 +68,7 @@ export const AuAccordion = (props) => {
     'au-accordion',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -89,7 +89,7 @@ export const AuAccordionPanel = (props) => {
     'au-accordion-panel',
     active && 'au-accordion-panel-active'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -109,7 +109,7 @@ export const AuAccordionHeader = (props) => {
     'au-accordion-header',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -129,7 +129,7 @@ export const AuAccordionBody = (props) => {
     'au-accordion-body',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -160,7 +160,7 @@ export const AuAlert = (props) => {
     warning && 'au-alert-warning',
     danger && 'au-alert-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'p'
 
@@ -207,7 +207,7 @@ export const AuButton = (props) => {
     warning && 'au-btn-warning',
     danger && 'au-btn-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'button'
 
@@ -238,7 +238,7 @@ export const AuCard = (props) => {
     warning && 'au-card-warning',
     danger && 'au-card-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -258,7 +258,7 @@ export const AuCardHeader = (props) => {
     'au-card-header',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -278,7 +278,7 @@ export const AuClose = (props) => {
     'au-close',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'span'
 
@@ -299,7 +299,7 @@ export const AuDropdown = (props) => {
     'au-dropdown',
     open && 'au-dropdown-open'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -319,7 +319,7 @@ export const AuDropdownButton = (props) => {
     'au-dropdown-button',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -339,7 +339,7 @@ export const AuDropdownBackdrop = (props) => {
     'au-dropdown-backdrop',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -359,7 +359,7 @@ export const AuDropdownMenu = (props) => {
     'au-dropdown-menu',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -379,7 +379,7 @@ export const AuInput = (props) => {
     'au-input',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'input'
 
@@ -399,7 +399,7 @@ export const AuCheckbox = (props) => {
     'au-checkbox',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'input'
 
@@ -420,7 +420,7 @@ export const AuRadio = (props) => {
     'au-radio',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'input'
 
@@ -446,7 +446,7 @@ export const AuList = (props) => {
     relaxed && 'au-list-relaxed',
     selectable && 'au-list-selectable'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'ul'
 
@@ -467,7 +467,7 @@ export const AuListItem = (props) => {
     'au-list-item',
     active && 'au-list-item-active'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'li'
 
@@ -500,7 +500,7 @@ export const AuMarker = (props) => {
     warning && 'au-marker-warning',
     danger && 'au-marker-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'span'
 
@@ -531,7 +531,7 @@ export const AuPill = (props) => {
     warning && 'au-pill-warning',
     danger && 'au-pill-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'span'
 
@@ -553,7 +553,7 @@ export const AuPillNav = (props) => {
     'au-pill',
     active && 'au-pill-nav-active'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'a'
 
@@ -584,7 +584,7 @@ export const AuLabel = (props) => {
     warning && 'au-label-warning',
     danger && 'au-label-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'span'
 
@@ -609,7 +609,7 @@ export const AuShadow = (props) => {
     medium && 'au-shadow-medium',
     tall && 'au-shadow-tall'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -646,7 +646,7 @@ export const AuTable = (props) => {
     warning && 'au-table-warning',
     danger && 'au-table-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'table'
 
@@ -666,7 +666,7 @@ export const AuTableRow = (props) => {
     'au-table-row',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'tr'
 
@@ -691,7 +691,7 @@ export const AuTableCol = (props) => {
     text && 'au-col-text',
     data && 'au-col-data'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'td'
 
@@ -720,7 +720,7 @@ export const AuGrid = (props) => {
     warning && 'au-grid-warning',
     danger && 'au-grid-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -759,7 +759,7 @@ export const AuCell = (props) => {
     warning && 'au-cell-warning',
     danger && 'au-cell-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -779,7 +779,7 @@ export const AuTextarea = (props) => {
     'au-input',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'textarea'
 
@@ -799,7 +799,7 @@ export const AuTabContainer = (props) => {
     'au-tab-container',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'ul'
 
@@ -819,7 +819,7 @@ export const AuTab = (props) => {
     'au-tab',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'li'
 
@@ -839,7 +839,7 @@ export const AuTabContent = (props) => {
     'au-tab-content',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -868,7 +868,7 @@ export const AuModal = (props) => {
     warning && 'au-modal-warning',
     danger && 'au-modal-danger'
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -888,7 +888,7 @@ export const AuModalHeader = (props) => {
     'au-modal-header',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -908,7 +908,7 @@ export const AuModalBody = (props) => {
     'au-modal-body',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -928,7 +928,7 @@ export const AuModalFooter = (props) => {
     'au-modal-footer',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
@@ -948,7 +948,7 @@ export const AuModalBackdrop = (props) => {
     'au-modal-backdrop',
     0
   ]
-  .filter(Boolean).join(' ')
+    .filter(Boolean).join(' ')
 
   const Cmp = props.cmp || 'div'
 
