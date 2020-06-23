@@ -1,7 +1,7 @@
 import AuSelect from './select'
 import AuSelectButton from './select-button'
 import AuSelectMenu from './select-menu'
-import AuSelectMenuItem from './select-menu-item'
+import AuSelectMenuItem, { AuSelectMenuItemLink } from './select-menu-item'
 
 AuSelect.Button = AuSelectButton
 AuSelect.Menu = AuSelectMenu
@@ -12,5 +12,6 @@ export {
   AuSelect,
   AuSelectButton,
   AuSelectMenu,
-  AuSelectMenuItem
+  AuSelectMenuItem,
+  AuSelectMenuItemLink
 }

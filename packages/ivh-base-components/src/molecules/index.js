@@ -3,5 +3,6 @@ export {
   default as AuSelect,
   AuSelectButton,
   AuSelectMenu,
-  AuSelectMenuItem
+  AuSelectMenuItem,
+  AuSelectMenuItemLink
 } from './select'

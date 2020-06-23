@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
+import AuSelectContext from './select-context'
 import theme from '@ivantagehealth/ivh-base-style'
 
 class AuSelectMenu extends Component {
@@ -81,13 +81,7 @@ class AuSelectMenu extends Component {
   }
 }
 
-AuSelectMenu.contextTypes = {
-  getContainerEl: PropTypes.func,
-  getIsOpen: PropTypes.func,
-  getFocusIndex: PropTypes.func,
-  registerMenuEl: PropTypes.func,
-  unRegisterMenuEl: PropTypes.func
-}
+AuSelectMenu.contextType = AuSelectContext
 
 AuSelectMenu.defaultProps = {
   // Use this prop to the menu to the bottom right corner of the button rather

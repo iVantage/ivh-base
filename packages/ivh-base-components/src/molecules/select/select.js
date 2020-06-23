@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AuSelectContext from './select-context'
 import PropTypes from 'prop-types'
 import './select.css'
 
@@ -71,22 +72,6 @@ class AuSelect extends Component {
     }
   }
 
-  getChildContext () {
-    return {
-      getContainerEl: () => this.containerEl,
-      getIsOpen: () => this.state.isOpen,
-      getFocusIndex: () => this.state.focusIndex,
-      registerMenuEl: el => {
-        this.menuEl = el
-      },
-      unRegisterMenuEl: () => {
-        this.menuEl = null
-      },
-      toggle: this.toggle,
-      kind: this.props.kind
-    }
-  }
-
   _toggle () {
     if (this.props.disabled || this.props.hasOwnProperty('isOpen')) {
       // In a controlled state the caller will determine whether we are open or
@@ -127,7 +112,7 @@ class AuSelect extends Component {
    * As a "managed input" we won't have a chance to reset focus in response to
    * our own toggling
    */
-  componentWillReceiveProps ({ isOpen }) {
+  UNSAFE_componentWillReceiveProps ({ isOpen }) {
     if (isOpen !== this.props.isOpen) {
       this.setState({
         focusIndex: -1,
@@ -313,30 +298,36 @@ class AuSelect extends Component {
       .filter(Boolean)
       .join(' ')
 
+    const ctx = {
+      getContainerEl: () => this.containerEl,
+      getIsOpen: () => this.state.isOpen,
+      getFocusIndex: () => this.state.focusIndex,
+      registerMenuEl: el => {
+        this.menuEl = el
+      },
+      unRegisterMenuEl: () => {
+        this.menuEl = null
+      },
+      toggle: this.toggle,
+      kind: this.props.kind
+    }
+
     return (
-      <div
-        className={className}
-        style={this.props.style}
-        ref={el => {
-          this.containerEl = el
-        }}
-        onKeyDown={this.handleKeyDown}
-        onBlur={this.handleBlur}
-      >
-        {this.props.children}
-      </div>
+      <AuSelectContext.Provider value={ctx}>
+        <div
+          className={className}
+          style={this.props.style}
+          ref={el => {
+            this.containerEl = el
+          }}
+          onKeyDown={this.handleKeyDown}
+          onBlur={this.handleBlur}
+        >
+          {this.props.children}
+        </div>
+      </AuSelectContext.Provider>
     )
   }
-}
-
-AuSelect.childContextTypes = {
-  getContainerEl: PropTypes.func,
-  getIsOpen: PropTypes.func,
-  getFocusIndex: PropTypes.func,
-  registerMenuEl: PropTypes.func,
-  unRegisterMenuEl: PropTypes.func,
-  toggle: PropTypes.func,
-  kind: PropTypes.oneOf(['dropdown', 'typeahead'])
 }
 
 AuSelect.propTypes = {
